@@ -14,6 +14,9 @@ var gulp = require('gulp'),
 	rimraf = require('rimraf'),
 	autoprefixer = require('gulp-autoprefixer'),
 	browserSync = require('browser-sync'),
+	svgSprite = require('gulp-svg-sprites'),
+	svgmin = require('gulp-svgmin'),
+	cheerio = require('gulp-cheerio'),
 	reload = browserSync.reload;
 
 var path = {
@@ -31,7 +34,8 @@ var path = {
 		img: 'src/i/**',
 		fonts: 'src/fonts/**',
 		cssLibs: 'src/style/libs/*.css',
-		jsLibs: 'src/js/libs/*.js'
+		jsLibs: 'src/js/libs/*.js',
+		svg: 'src/i/svg/*.svg'
 	},
 	watch: {
 		html: 'src/**/*.html',
@@ -40,7 +44,8 @@ var path = {
 		img: 'src/i/**',
 		fonts: 'src/fonts/**',
 		cssLibs: 'src/style/libs/**/*.css',
-		jsLibs: 'src/js/libs/**/*.js'
+		jsLibs: 'src/js/libs/**/*.js',
+		svg: 'src/i/svg/**/*.svg'
 	},
 	clean: './dist'
 };
@@ -130,6 +135,30 @@ gulp.task('img:build', function() {
 	gulp.src(path.src.img)
 		.pipe(gulp.dest(path.build.img));
 });
+gulp.task('svg:build', function() {
+	return gulp.src(path.src.svg)
+		.pipe(svgmin({
+			js2svg: {
+				pretty: true
+			}
+		}))
+		.pipe(cheerio({
+			run: function ($) {
+				$('[fill]').removeAttr('fill');
+				$('[style]').removeAttr('style');
+			},
+			parserOptions: { xmlMode: true }
+		}))
+		.pipe(svgSprite({
+			mode: "symbols",
+			preview: false,
+			selector: "icon-%f",
+			svg: {
+				symbols: 'inline-svg.html'
+			}
+		}))
+		.pipe(gulp.dest('src/template'));
+});
 gulp.task('build', [
 	'html:build',
 	'js:build',
@@ -137,7 +166,8 @@ gulp.task('build', [
 	'cssLibs:build',
 	'jsLibs:build',
 	'img:build',
-	'fonts:build'
+	'fonts:build',
+	'svg:build'
 ]);
 gulp.task('build-final', [
 	'html:build',
@@ -146,7 +176,8 @@ gulp.task('build-final', [
 	'cssLibs-no-map:build',
 	'jsLibs-no-map:build',
 	'img:build',
-	'fonts:build'
+	'fonts:build',
+	'svg:build'
 ]);
 gulp.task('watch', function() {
 	watch([path.watch.js], function(ev, callback) {
@@ -169,6 +200,9 @@ gulp.task('watch', function() {
 	});
 	watch([path.watch.jsLibs], function(ev, callback) {
 		gulp.start('jsLibs:build');
+	});
+	watch([path.watch.svg], function(ev, callback) {
+		gulp.start('svg:build');
 	});
 });
 gulp.task('clean', function(callback) {

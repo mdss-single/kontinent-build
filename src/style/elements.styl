@@ -1,0 +1,80 @@
+@require "vars.styl";
+
+/*  <buttons>  */
+.btn
+	display inline-flex
+	justify-content center
+	align-items center
+	height 62px
+	color $colorBlue
+	font-size 2.4rem
+	background-color $colorWhite
+	border 0
+	border-radius (@height / 2)
+	padding 0 20px
+	box-shadow 0 5px 0 #d8d7d7
+	cursor pointer
+	transition all .2s
+	&:hover
+		text-decoration none
+		background-color darken($colorWhite, 5)
+	&:active
+		background-color darken($colorWhite, 5)
+		box-shadow 0 5px 0 transparent
+		transform translateY(3px)
+	&--orange
+		color $colorWhite
+		background-color $colorOrange
+		box-shadow 0 5px 0 #bb661a
+		&:hover
+		&:active
+			background-color darken($colorOrange, 5)
+/*  </buttons>  */
+
+/*  <inputs>  */
+.input-text
+	width 100%
+	height 56px
+	font-size 1.8rem
+	background-color $colorWhite
+	border 0
+	padding 0 15px
+	&::placeholder
+		opacity 1
+		color #292929
+	&--icon
+		padding-left 52px
+/*  </inputs>  */
+
+/*  <layout>  */
+.form
+	&__row
+		margin-bottom 15px
+		&:first-child
+			margin-top 0
+		&:last-child
+			margin-bottom 0
+		&--icon
+			position relative
+			.input-text
+				padding-left 52px
+				&:focus + svg
+					fill $colorOrange
+			svg
+				position absolute
+				top 50%
+				left 11px
+				width 30px
+				height @width
+				fill #292929
+				transform translateY(-50%)
+				transition all .2s
+/*  </layout>  */
+
+/*  <animation>  */
+@keyframes fadeIn
+	from
+		opacity 0
+	to
+		opacity 1
+/*  </animation>  */

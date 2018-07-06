@@ -352,28 +352,28 @@
 					<form action="">
 						<div class="homepage-order__facade">
 							<div class="homepage-order__facade-item">
-								<input type="radio" name="facade" id="facade1" class="homepage-order-facade-input">
+								<input type="radio" name="facade" id="facade1" class="homepage-order__facade-input">
 								<label for="facade1">
 									<span class="homepage-order__facade-name">Двухтонный фасад, визуально разделяющий этажи дома</span>
 									<img src="i/facade/1.png" alt="" class="homepage-order__facade-pic">
 								</label>
 							</div>
 							<div class="homepage-order__facade-item">
-								<input type="radio" name="facade" id="facade2" class="homepage-order-facade-input">
+								<input type="radio" name="facade" id="facade2" class="homepage-order__facade-input">
 								<label for="facade2">
 									<span class="homepage-order__facade-name">Однотонный фасад с декоративными элементами</span>
 									<img src="i/facade/2.png" alt="" class="homepage-order__facade-pic">
 								</label>
 							</div>
 							<div class="homepage-order__facade-item">
-								<input type="radio" name="facade" id="facade3" class="homepage-order-facade-input">
+								<input type="radio" name="facade" id="facade3" class="homepage-order__facade-input">
 								<label for="facade3">
 									<span class="homepage-order__facade-name">Однотонный фасад выполненный в одной фактуре</span>
 									<img src="i/facade/3.png" alt="" class="homepage-order__facade-pic">
 								</label>
 							</div>
 							<div class="homepage-order__facade-item">
-								<input type="radio" name="facade" id="facade4" class="homepage-order-facade-input">
+								<input type="radio" name="facade" id="facade4" class="homepage-order__facade-input">
 								<label for="facade4">
 									<span class="homepage-order__facade-name">Фасад, выполненный в комбинации двух фактур</span>
 									<img src="i/facade/4.png" alt="" class="homepage-order__facade-pic">
@@ -424,16 +424,16 @@
 							</div>
 							<div class="homepage-order__sub">
 								<div class="homepage-order__sub-title">Подсистема <i class="homepage-order__sub-help"></i></div>
-								<input type="radio" name="sub" id="sub1" class="homapage-order__sub-input">
+								<input type="radio" name="sub" id="sub1" class="homepage-order__sub-input">
 								<label for="sub1">да</label>
-								<input type="radio" name="sub" id="sub2" class="homapage-order__sub-input">
+								<input type="radio" name="sub" id="sub2" class="homepage-order__sub-input">
 								<label for="sub2">нет</label>
 							</div>
 							<div class="homepage-order__sub">
 								<div class="homepage-order__sub-title">Утеплитель <i class="homepage-order__sub-help"></i></div>
-								<input type="radio" name="insulation" id="insul1" class="homapage-order__sub-input">
+								<input type="radio" name="insulation" id="insul1" class="homepage-order__sub-input">
 								<label for="insul1">да</label>
-								<input type="radio" name="sub" id="insul2" class="homapage-order__sub-input">
+								<input type="radio" name="insulation" id="insul2" class="homepage-order__sub-input">
 								<label for="insul2">нет</label>
 							</div>
 						</div>
@@ -445,12 +445,20 @@
 			<div class="container">
 				<div class="homepage-callback__main">
 					<div class="homepage-callback__title">Наш руководитель проекта свяжется с в течении 15 минут</div>
-					<input type="text" name="" id="" class="homepage-callback__input homepage-callback__input--name" placeholder="Ваше имя">
-					<input type="text" name="" id="" class="homepage-callback__input homepage-callback__input--phone" placeholder="+7 (123) 456-78-90">
-					<div class="homepage-callback__btn">
-						<button class="btn btn--orange">Заказать точный расчет</button>
-						<div class="homepage-callback__notice">Я согласен на обработку <a href="#">персональных данных</a></div>
-					</div>
+					<form action="">
+						<div class="form__row form__row--icon">
+							<input type="text" name="" id="" class="homepage-callback__input" placeholder="Ваше имя">
+							<svg><use xlink:href="#icon-user"></use></svg>
+						</div>
+						<div class="form__row form__row--icon">
+							<input type="text" name="" id="" class="homepage-callback__input" placeholder="+7 (123) 456-78-90">
+							<svg><use xlink:href="#icon-phone"></use></svg>
+						</div>
+						<div class="form__row homepage-callback__btn">
+							<button class="btn btn--orange">Заказать точный расчет</button>
+							<div class="homepage-callback__notice">Я согласен на обработку <a href="#">персональных данных</a></div>
+						</div>
+					</form>
 				</div>
 			</div>
 		</div>
@@ -476,22 +484,22 @@
 					<div class="homepage-reviews__subtitle">ИЗУЧИТЕ ИХ ПИСМЕННЫЕ ОТЗЫВЫ И БЛАГОДАРНОСТИ:</div>
 					<div class="homepage-reviews__items js-homepage-reviews">
 						<div class="homepage-reviews__item">
-							<a href="#"><img src="i/reviews/1.png" alt=""></a>
+							<a href="#"><img src="i/reviews/1.jpg" alt=""></a>
 						</div>
 						<div class="homepage-reviews__item">
-							<a href="#"><img src="i/reviews/1.png" alt=""></a>
+							<a href="#"><img src="i/reviews/1.jpg" alt=""></a>
 						</div>
 						<div class="homepage-reviews__item">
-							<a href="#"><img src="i/reviews/1.png" alt=""></a>
+							<a href="#"><img src="i/reviews/1.jpg" alt=""></a>
 						</div>
 						<div class="homepage-reviews__item">
-							<a href="#"><img src="i/reviews/1.png" alt=""></a>
+							<a href="#"><img src="i/reviews/1.jpg" alt=""></a>
 						</div>
 						<div class="homepage-reviews__item">
-							<a href="#"><img src="i/reviews/1.png" alt=""></a>
+							<a href="#"><img src="i/reviews/1.jpg" alt=""></a>
 						</div>
 						<div class="homepage-reviews__item">
-							<a href="#"><img src="i/reviews/1.png" alt=""></a>
+							<a href="#"><img src="i/reviews/1.jpg" alt=""></a>
 						</div>
 					</div>
 				</div>
@@ -502,6 +510,7 @@
 				<div class="homepage-contacts__title">МЫ ГОТОВЫ ОТВЕТИТЬ НА ВСЕ ВАШИ ВОПРОСЫ</div>
 				<div class="homepage-contacts__phone">
 					<div class="homepage-contacts__phone-title">Звоните нам по единому номеру</div>
+					<svg><use xlink:href="#icon-callback"></use></svg>
 					<a href="tel:+78005506097" class="homepage-contacts__phone-number">8 (800) 550-60-97</a>
 				</div>
 				<div class="homepage-contacts__workhours">
@@ -516,12 +525,12 @@
 					<div class="homepage-invite__item">
 						<p>Хотите посмотреть на панели Коношима и пообщаться с нашим руководителем строительного отдела?</p>
 						<p>Тогда приглашаем Вас посетить наш <a href="#">шоу-рум в Москве</a>. <span>Мы будем рады Вас видеть.</span></p>
+						<div class="homepage-invite__delimiter">или</div>
 					</div>
 					<div class="homepage-invite__item">
-						<div>Отправьте заявку и мы отправим Вам образцы наших панелей – БЕСПЛАТНО!</div>
+						<div><a href="#">Отправьте заявку</a> и мы отправим Вам образцы наших панелей – БЕСПЛАТНО!</div>
 						<div>Тот случай, когда Вы ничем не рискуете…</div>
 					</div>
-					<div class="homepage-invite__delimiter">или</div>
 				</div>
 			</div>
 		</div>
@@ -535,22 +544,22 @@
 					</div>
 					<div class="homepage-try__items js-homepage-showroom">
 						<div class="homepage-try__item">
-							<a href="#"><img src="i/showroom/1.png" alt=""></a>
+							<a href="#"><img src="i/showroom/1.jpg" alt=""></a>
 						</div>
 						<div class="homepage-try__item">
-							<a href="#"><img src="i/showroom/1.png" alt=""></a>
+							<a href="#"><img src="i/showroom/2.jpg" alt=""></a>
 						</div>
 						<div class="homepage-try__item">
-							<a href="#"><img src="i/showroom/1.png" alt=""></a>
+							<a href="#"><img src="i/showroom/3.jpg" alt=""></a>
 						</div>
 						<div class="homepage-try__item">
-							<a href="#"><img src="i/showroom/1.png" alt=""></a>
+							<a href="#"><img src="i/showroom/4.jpg" alt=""></a>
 						</div>
 						<div class="homepage-try__item">
-							<a href="#"><img src="i/showroom/1.png" alt=""></a>
+							<a href="#"><img src="i/showroom/1.jpg" alt=""></a>
 						</div>
 						<div class="homepage-try__item">
-							<a href="#"><img src="i/showroom/1.png" alt=""></a>
+							<a href="#"><img src="i/showroom/1.jpg" alt=""></a>
 						</div>
 					</div>
 				</div>
@@ -558,37 +567,45 @@
 		</div>
 		<div class="homepage-address">
 			<div class="container">
-				<div class="homepage-address__section">
-					<div class="homepage-address__section-title">Центральный офис продаж</div>
-					<div class="homepage-address__section-descr">
-						<address>Москва, ул. Южнопортовая, 5/2</address>
-						<p>Режим работы: Пн. – Пт.: с 9:00 до 18:00</p>
+				<div class="homepage-address__map">
+					<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A54c6ceaeaf69c24cee130bed144a43b99ebba3253186197134356adc0df7c04d&amp;lang=ru_RU&amp;scroll=true"></script>
+				</div>
+				<div class="homepage-address__main">
+					<div class="homepage-address__section">
+						<svg><use xlink:href="#icon-office"></use></svg>
+						<div class="homepage-address__section-title">Центральный офис продаж</div>
+						<div class="homepage-address__section-descr">
+							<address>Москва, ул. Южнопортовая, 5/2</address>
+							<p>Режим работы: Пн. – Пт.: с 9:00 до 18:00</p>
+						</div>
+					</div>
+					<div class="homepage-address__section">
+						<svg><use xlink:href="#icon-warehouse"></use></svg>
+						<div class="homepage-address__section-title">Склад:</div>
+						<div class="homepage-address__section-descr">
+							<address>Москва, ул. Шоссе Энтузиастов, 31 стр.50</address>
+							<p>Режим работы: Пн. – Пт.: с 9:00 до 17:00</p>
+						</div>
+					</div>
+					<div class="homepage-address__section">
+						<svg><use xlink:href="#icon-mobile"></use></svg>
+						<div class="homepage-address__section-descr">
+							<p>Единый номер для звонков:</p>
+							<a href="tel:+78005506097">8 (800) 550-60-97</a>
+						</div>
+					</div>
+					<div class="homepage-address__section">
+						<svg><use xlink:href="#icon-mail"></use></svg>
+						<div class="homepage-address__section-descr">
+							<p>Адрес электронной почты:</p>
+							<a href="mailto:info@fasad.su">info@fasad.su</a>
+						</div>
+					</div>
+					<div class="homepage-address__section">
+						<a href="#" class="btn btn--orange">заказать звонок</a>
+						<a href="#" class="btn">задать вопрос</a>
 					</div>
 				</div>
-				<div class="homepage-address__section">
-					<div class="homepage-address__section-title">Склад:</div>
-					<div class="homepage-address__section-descr">
-						<address>Москва, ул. Шоссе Энтузиастов, 31 стр.50</address>
-						<p>Режим работы: Пн. – Пт.: с 9:00 до 17:00</p>
-					</div>
-				</div>
-				<div class="homepage-address__section">
-					<div class="homepage-address__section-descr">
-						<p>Единый номер для звонков:</p>
-						<a href="tel:+78005506097">8 (800) 550-60-97</a>
-					</div>
-				</div>
-				<div class="homepage-address__section">
-					<div class="homepage-address__section-descr">
-						<p>Адрес электронной почты:</p>
-						<a href="mailto:info@fasad.su">info@fasad.su</a>
-					</div>
-				</div>
-				<div class="homepage-address__section">
-					<a href="#" class="btn btn--orange">заказать звонок</a>
-					<a href="#" class="btn">задать вопрос</a>
-				</div>
-				<div class="homepage-address__map">%yandex map here%</div>
 			</div>
 		</div>
 //= template/footer.html

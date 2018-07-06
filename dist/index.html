@@ -404,28 +404,28 @@
 					<form action="">
 						<div class="homepage-order__facade">
 							<div class="homepage-order__facade-item">
-								<input type="radio" name="facade" id="facade1" class="homepage-order-facade-input">
+								<input type="radio" name="facade" id="facade1" class="homepage-order__facade-input">
 								<label for="facade1">
 									<span class="homepage-order__facade-name">Двухтонный фасад, визуально разделяющий этажи дома</span>
 									<img src="i/facade/1.png" alt="" class="homepage-order__facade-pic">
 								</label>
 							</div>
 							<div class="homepage-order__facade-item">
-								<input type="radio" name="facade" id="facade2" class="homepage-order-facade-input">
+								<input type="radio" name="facade" id="facade2" class="homepage-order__facade-input">
 								<label for="facade2">
 									<span class="homepage-order__facade-name">Однотонный фасад с декоративными элементами</span>
 									<img src="i/facade/2.png" alt="" class="homepage-order__facade-pic">
 								</label>
 							</div>
 							<div class="homepage-order__facade-item">
-								<input type="radio" name="facade" id="facade3" class="homepage-order-facade-input">
+								<input type="radio" name="facade" id="facade3" class="homepage-order__facade-input">
 								<label for="facade3">
 									<span class="homepage-order__facade-name">Однотонный фасад выполненный в одной фактуре</span>
 									<img src="i/facade/3.png" alt="" class="homepage-order__facade-pic">
 								</label>
 							</div>
 							<div class="homepage-order__facade-item">
-								<input type="radio" name="facade" id="facade4" class="homepage-order-facade-input">
+								<input type="radio" name="facade" id="facade4" class="homepage-order__facade-input">
 								<label for="facade4">
 									<span class="homepage-order__facade-name">Фасад, выполненный в комбинации двух фактур</span>
 									<img src="i/facade/4.png" alt="" class="homepage-order__facade-pic">
@@ -476,16 +476,16 @@
 							</div>
 							<div class="homepage-order__sub">
 								<div class="homepage-order__sub-title">Подсистема <i class="homepage-order__sub-help"></i></div>
-								<input type="radio" name="sub" id="sub1" class="homapage-order__sub-input">
+								<input type="radio" name="sub" id="sub1" class="homepage-order__sub-input">
 								<label for="sub1">да</label>
-								<input type="radio" name="sub" id="sub2" class="homapage-order__sub-input">
+								<input type="radio" name="sub" id="sub2" class="homepage-order__sub-input">
 								<label for="sub2">нет</label>
 							</div>
 							<div class="homepage-order__sub">
 								<div class="homepage-order__sub-title">Утеплитель <i class="homepage-order__sub-help"></i></div>
-								<input type="radio" name="insulation" id="insul1" class="homapage-order__sub-input">
+								<input type="radio" name="insulation" id="insul1" class="homepage-order__sub-input">
 								<label for="insul1">да</label>
-								<input type="radio" name="sub" id="insul2" class="homapage-order__sub-input">
+								<input type="radio" name="insulation" id="insul2" class="homepage-order__sub-input">
 								<label for="insul2">нет</label>
 							</div>
 						</div>
@@ -497,12 +497,20 @@
 			<div class="container">
 				<div class="homepage-callback__main">
 					<div class="homepage-callback__title">Наш руководитель проекта свяжется с в течении 15 минут</div>
-					<input type="text" name="" id="" class="homepage-callback__input homepage-callback__input--name" placeholder="Ваше имя">
-					<input type="text" name="" id="" class="homepage-callback__input homepage-callback__input--phone" placeholder="+7 (123) 456-78-90">
-					<div class="homepage-callback__btn">
-						<button class="btn btn--orange">Заказать точный расчет</button>
-						<div class="homepage-callback__notice">Я согласен на обработку <a href="#">персональных данных</a></div>
-					</div>
+					<form action="">
+						<div class="form__row form__row--icon">
+							<input type="text" name="" id="" class="homepage-callback__input" placeholder="Ваше имя">
+							<svg><use xlink:href="#icon-user"></use></svg>
+						</div>
+						<div class="form__row form__row--icon">
+							<input type="text" name="" id="" class="homepage-callback__input" placeholder="+7 (123) 456-78-90">
+							<svg><use xlink:href="#icon-phone"></use></svg>
+						</div>
+						<div class="form__row homepage-callback__btn">
+							<button class="btn btn--orange">Заказать точный расчет</button>
+							<div class="homepage-callback__notice">Я согласен на обработку <a href="#">персональных данных</a></div>
+						</div>
+					</form>
 				</div>
 			</div>
 		</div>
@@ -528,22 +536,22 @@
 					<div class="homepage-reviews__subtitle">ИЗУЧИТЕ ИХ ПИСМЕННЫЕ ОТЗЫВЫ И БЛАГОДАРНОСТИ:</div>
 					<div class="homepage-reviews__items js-homepage-reviews">
 						<div class="homepage-reviews__item">
-							<a href="#"><img src="i/reviews/1.png" alt=""></a>
+							<a href="#"><img src="i/reviews/1.jpg" alt=""></a>
 						</div>
 						<div class="homepage-reviews__item">
-							<a href="#"><img src="i/reviews/1.png" alt=""></a>
+							<a href="#"><img src="i/reviews/1.jpg" alt=""></a>
 						</div>
 						<div class="homepage-reviews__item">
-							<a href="#"><img src="i/reviews/1.png" alt=""></a>
+							<a href="#"><img src="i/reviews/1.jpg" alt=""></a>
 						</div>
 						<div class="homepage-reviews__item">
-							<a href="#"><img src="i/reviews/1.png" alt=""></a>
+							<a href="#"><img src="i/reviews/1.jpg" alt=""></a>
 						</div>
 						<div class="homepage-reviews__item">
-							<a href="#"><img src="i/reviews/1.png" alt=""></a>
+							<a href="#"><img src="i/reviews/1.jpg" alt=""></a>
 						</div>
 						<div class="homepage-reviews__item">
-							<a href="#"><img src="i/reviews/1.png" alt=""></a>
+							<a href="#"><img src="i/reviews/1.jpg" alt=""></a>
 						</div>
 					</div>
 				</div>
@@ -554,6 +562,7 @@
 				<div class="homepage-contacts__title">МЫ ГОТОВЫ ОТВЕТИТЬ НА ВСЕ ВАШИ ВОПРОСЫ</div>
 				<div class="homepage-contacts__phone">
 					<div class="homepage-contacts__phone-title">Звоните нам по единому номеру</div>
+					<svg><use xlink:href="#icon-callback"></use></svg>
 					<a href="tel:+78005506097" class="homepage-contacts__phone-number">8 (800) 550-60-97</a>
 				</div>
 				<div class="homepage-contacts__workhours">
@@ -568,12 +577,12 @@
 					<div class="homepage-invite__item">
 						<p>Хотите посмотреть на панели Коношима и пообщаться с нашим руководителем строительного отдела?</p>
 						<p>Тогда приглашаем Вас посетить наш <a href="#">шоу-рум в Москве</a>. <span>Мы будем рады Вас видеть.</span></p>
+						<div class="homepage-invite__delimiter">или</div>
 					</div>
 					<div class="homepage-invite__item">
-						<div>Отправьте заявку и мы отправим Вам образцы наших панелей – БЕСПЛАТНО!</div>
+						<div><a href="#">Отправьте заявку</a> и мы отправим Вам образцы наших панелей – БЕСПЛАТНО!</div>
 						<div>Тот случай, когда Вы ничем не рискуете…</div>
 					</div>
-					<div class="homepage-invite__delimiter">или</div>
 				</div>
 			</div>
 		</div>
@@ -587,22 +596,22 @@
 					</div>
 					<div class="homepage-try__items js-homepage-showroom">
 						<div class="homepage-try__item">
-							<a href="#"><img src="i/showroom/1.png" alt=""></a>
+							<a href="#"><img src="i/showroom/1.jpg" alt=""></a>
 						</div>
 						<div class="homepage-try__item">
-							<a href="#"><img src="i/showroom/1.png" alt=""></a>
+							<a href="#"><img src="i/showroom/2.jpg" alt=""></a>
 						</div>
 						<div class="homepage-try__item">
-							<a href="#"><img src="i/showroom/1.png" alt=""></a>
+							<a href="#"><img src="i/showroom/3.jpg" alt=""></a>
 						</div>
 						<div class="homepage-try__item">
-							<a href="#"><img src="i/showroom/1.png" alt=""></a>
+							<a href="#"><img src="i/showroom/4.jpg" alt=""></a>
 						</div>
 						<div class="homepage-try__item">
-							<a href="#"><img src="i/showroom/1.png" alt=""></a>
+							<a href="#"><img src="i/showroom/1.jpg" alt=""></a>
 						</div>
 						<div class="homepage-try__item">
-							<a href="#"><img src="i/showroom/1.png" alt=""></a>
+							<a href="#"><img src="i/showroom/1.jpg" alt=""></a>
 						</div>
 					</div>
 				</div>
@@ -610,37 +619,45 @@
 		</div>
 		<div class="homepage-address">
 			<div class="container">
-				<div class="homepage-address__section">
-					<div class="homepage-address__section-title">Центральный офис продаж</div>
-					<div class="homepage-address__section-descr">
-						<address>Москва, ул. Южнопортовая, 5/2</address>
-						<p>Режим работы: Пн. – Пт.: с 9:00 до 18:00</p>
+				<div class="homepage-address__map">
+					<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A54c6ceaeaf69c24cee130bed144a43b99ebba3253186197134356adc0df7c04d&amp;lang=ru_RU&amp;scroll=true"></script>
+				</div>
+				<div class="homepage-address__main">
+					<div class="homepage-address__section">
+						<svg><use xlink:href="#icon-office"></use></svg>
+						<div class="homepage-address__section-title">Центральный офис продаж</div>
+						<div class="homepage-address__section-descr">
+							<address>Москва, ул. Южнопортовая, 5/2</address>
+							<p>Режим работы: Пн. – Пт.: с 9:00 до 18:00</p>
+						</div>
+					</div>
+					<div class="homepage-address__section">
+						<svg><use xlink:href="#icon-warehouse"></use></svg>
+						<div class="homepage-address__section-title">Склад:</div>
+						<div class="homepage-address__section-descr">
+							<address>Москва, ул. Шоссе Энтузиастов, 31 стр.50</address>
+							<p>Режим работы: Пн. – Пт.: с 9:00 до 17:00</p>
+						</div>
+					</div>
+					<div class="homepage-address__section">
+						<svg><use xlink:href="#icon-mobile"></use></svg>
+						<div class="homepage-address__section-descr">
+							<p>Единый номер для звонков:</p>
+							<a href="tel:+78005506097">8 (800) 550-60-97</a>
+						</div>
+					</div>
+					<div class="homepage-address__section">
+						<svg><use xlink:href="#icon-mail"></use></svg>
+						<div class="homepage-address__section-descr">
+							<p>Адрес электронной почты:</p>
+							<a href="mailto:info@fasad.su">info@fasad.su</a>
+						</div>
+					</div>
+					<div class="homepage-address__section">
+						<a href="#" class="btn btn--orange">заказать звонок</a>
+						<a href="#" class="btn">задать вопрос</a>
 					</div>
 				</div>
-				<div class="homepage-address__section">
-					<div class="homepage-address__section-title">Склад:</div>
-					<div class="homepage-address__section-descr">
-						<address>Москва, ул. Шоссе Энтузиастов, 31 стр.50</address>
-						<p>Режим работы: Пн. – Пт.: с 9:00 до 17:00</p>
-					</div>
-				</div>
-				<div class="homepage-address__section">
-					<div class="homepage-address__section-descr">
-						<p>Единый номер для звонков:</p>
-						<a href="tel:+78005506097">8 (800) 550-60-97</a>
-					</div>
-				</div>
-				<div class="homepage-address__section">
-					<div class="homepage-address__section-descr">
-						<p>Адрес электронной почты:</p>
-						<a href="mailto:info@fasad.su">info@fasad.su</a>
-					</div>
-				</div>
-				<div class="homepage-address__section">
-					<a href="#" class="btn btn--orange">заказать звонок</a>
-					<a href="#" class="btn">задать вопрос</a>
-				</div>
-				<div class="homepage-address__map">%yandex map here%</div>
 			</div>
 		</div>
 	</main>
@@ -792,6 +809,10 @@
 		
 			<symbol id="icon-user" viewBox="0 0 1200 1200">
 				<path d="M591.28 0h18.33c40.62 1.6 81.78 7.08 119.51 22.92 35.05 14.56 66.91 37.79 89.41 68.56 24.28 33.04 37.93 72.99 43.02 113.45 3.04 22.25 2.33 44.74 2.48 67.14.01 26.31.03 52.62-.07 78.93-.34 4.08 2.88 7.07 4.57 10.47 27.64 47.75 16.56 113.92-24.72 150.4-2.4 2.05-2.74 5.38-3.78 8.18-11.39 34.47-26.91 67.69-47.16 97.87-4.54 7.02-9.77 13.57-14.52 20.43-.57 4.17-.09 8.41-.22 12.62.16 13.04-.77 26.23 1.92 39.09 5.01 26.27 20.87 50.16 42.92 65.24 15.57 10.75 34.17 17.06 53.08 17.95 28.31.72 56.64.83 84.95 1.59 15.79 4.16 30.58 11.55 45.03 19.06 33.26 17.91 63.49 41.19 90.26 67.79 40.3 40.02 72.57 87.67 97.38 138.65 3.83 6.46 4.31 14.1 6.33 21.19v75.99c-1.19 17.83-6.33 35.47-15.76 50.7-9.96 16.34-24.34 29.95-41.21 38.98-13.98 7.64-29.7 11.67-45.53 12.8H101.77c-21.43-1.59-42.5-9.04-59.5-22.28C16.87 1158.48.95 1127.55 0 1095.7v-6.28c1.4-27.18 2.35-54.38 3.55-81.56.03-.98.2-1.92.51-2.81 32.57-68.69 78.99-131.78 139.5-178.37 26.94-20.59 56.39-38.32 88.37-49.86 7.62-2.96 15.91-3.57 24.02-3.41 17.02.02 34.04 0 51.06.01 8.61-.03 17.27.27 25.81-.99 13.71-1.87 27.02-6.58 38.87-13.72 25.69-15.29 44.14-42.21 48.81-71.78 2.34-14.52 1.01-29.27 1.4-43.9-.19-2.55.66-5.56-1.17-7.67-27.73-35.81-49.36-76.5-62.35-119.94-.57-2.4-2.53-3.99-4.21-5.62-26.17-25.28-40.26-62.43-37.49-98.71 1.42-19.82 7.85-39.25 18.53-56.01 1.42-2.08.86-4.71.96-7.06-.29-33.35-.35-66.7-.1-100.05-.51-51.05 10.86-103.53 39.55-146.38 31.82-48.08 84.37-80.27 140.24-92.36C540.6 3.55 565.93.77 591.28 0m-67.8 84.57c-30.75 8.22-59.7 25.27-79.58 50.42-18.62 23.67-28.05 53.33-31.43 82.95-1.78 13.96-1.35 28.06-1.5 42.1-.16 31.32.06 62.64-.03 93.97-.12 4.97.73 9.97-.15 14.91-1.49 9.33-6.27 17.69-11.53 25.37-7.12 11.93-9.1 26.76-5.67 40.2 2.44 9.52 7.78 18.53 15.84 24.34 7.48 5.61 12.72 13.7 16.33 22.22 2.81 6.46 4.46 13.33 6.79 19.96 9.15 26.96 22.04 52.66 38.36 75.99 7.94 11.58 17 22.31 25.97 33.08v31.91c-.15 20.52.98 41.25-3.15 61.48-7.35 39.43-28.69 75.99-59.18 102.01-30.28 26.14-69.61 41.57-109.61 42.79-23.5.41-47.01-.08-70.5.26-13.9 4.76-26.91 11.87-39.46 19.45-30.69 18.96-57.71 43.5-80.9 71.05-23.17 27.54-42.54 58.16-58.54 90.37-.74 1.42-.51 3.06-.57 4.62.07 17 .01 34.01.03 51.01.03 5.28-.34 10.69 1.17 15.83 2.76 10.25 10.83 18.87 20.88 22.29 6.39 2.42 13.3 1.75 19.97 1.83 325.01 0 650.02.01 975.03 0 9.82.09 19.52-4.55 25.65-12.23 4.97-6.07 7.53-13.97 7.31-21.8-.07-20.04.1-40.08-.09-60.11-5.29-11.89-11.94-23.19-18.46-34.46-21.15-35.48-47.03-68.35-77.97-95.81-23.81-21.02-50.48-39.26-80.05-51.12-2.95-1.46-6.28-1-9.43-1.03-9.68.01-19.35 0-29.03 0-20.99-.15-42.23 1.03-62.92-3.33-46.63-8.9-88.92-37.59-114.81-77.33-18.63-28.24-28.85-61.91-29.09-95.74-.08-20.24-.05-40.48-.01-60.71 9.12-10.72 18.18-21.52 26.07-33.2 18.8-27.49 32.91-58.09 42.5-89.95 2.02-11.7 9.74-21.38 18.53-28.94 15.84-13.35 22.75-36.96 15.04-56.44-2.34-6.23-7.01-11.15-9.97-17.05-4.3-7.84-6.71-16.78-6.33-25.75.05-38.34.11-76.68-.07-115.02.05-10.67-.53-21.36-1.92-31.94-4.04-30.85-14.79-61.78-35.62-85.4-21.96-24.71-53.27-39.31-85.24-45.94-46.96-9.53-96.2-9.29-142.66 2.89z"></path>
+			</symbol>
+		
+			<symbol id="icon-warehouse" viewBox="0 0 48 46">
+				<path d="M0 12.48C7.67 7.74 16.01 4.14 24.03.01 32.06 4 40.13 7.92 48 12.22v33.24c-2.92.66-5.95.52-8.89.06-.04-9.26-.02-18.51-.02-27.77-10.01-.02-20.03-.01-30.04 0-.15 9.27.08 18.54-.17 27.81-2.94.42-5.95.5-8.88-.05V12.48m3.41 1.77c.04 9.46-.01 18.92.02 28.38l2.12-.23c.21-8.85-.11-17.71.13-26.56-.22-1.86 2.18-1.44 3.29-1.55 10.01.01 20.02.02 30.03 0 1.18.09 3.63-.31 3.41 1.63.17 8.92-.01 17.84.07 26.76l2.19-.44c-.01-9.34-.01-18.67-.02-28.01-6.86-3.51-13.77-6.94-20.62-10.48-6.84 3.56-13.77 6.96-20.62 10.5z"></path><path d="M22.82 20.69c4.49-.47 9.03-.35 13.53-.06.06 8.24.18 16.49-.06 24.73-8.17.22-16.36.24-24.53-.01-.14-4.52-.17-9.04.03-13.56 3.68-.16 7.36-.09 11.04-.11-.02-3.66-.03-7.33-.01-10.99m4.17 2.11c.84.96 1.69 1.89 2.55 2.82.87-.92 1.73-1.85 2.58-2.8-1.71-.02-3.42-.03-5.13-.02m-1.68 1.72c-.05 1.8-.09 3.59-.13 5.39.93-.83 1.85-1.65 2.77-2.48-.86-.99-1.74-1.95-2.64-2.91m5.86 2.69c.95.92 1.92 1.82 2.91 2.71-.01-1.72-.01-3.43-.02-5.14-.97.8-1.94 1.61-2.89 2.43m-1.57 1.78c-.88.89-1.75 1.8-2.61 2.71 1.77 0 3.53-.02 5.3-.05-.89-.9-1.78-1.79-2.69-2.66m-13.72 5.2c.82.91 1.65 1.81 2.48 2.71.92-.89 1.82-1.78 2.71-2.7-1.73-.02-3.46-.02-5.19-.01m11.08.01c.81.85 1.61 1.7 2.49 2.48 1.18-.44 1.93-1.62 2.87-2.4-1.78-.07-3.57-.1-5.36-.08m-12.87 1.75c0 1.75.01 3.49.03 5.24.9-.83 1.8-1.67 2.7-2.5-.9-.92-1.81-1.83-2.73-2.74m5.99 2.57c.89.93 1.8 1.82 2.73 2.71.02-1.75.04-3.49.05-5.24-.93.84-1.85 1.68-2.78 2.53m5.13-2.56c.01 1.78.04 3.56.09 5.34.9-.9 1.79-1.81 2.67-2.73-.92-.88-1.84-1.75-2.76-2.61m5.99 2.57c.9.88 1.83 1.73 2.88 2.42v-4.88c-.98.8-1.94 1.62-2.88 2.46m-12.83 1.66c-.77.97-1.55 1.94-2.31 2.91 1.62.01 3.24 0 4.86-.03-.83-.97-1.69-1.93-2.55-2.88m8.73 2.89c1.63.02 3.25.02 4.88.01-.75-.98-1.52-1.94-2.29-2.91-.88.95-1.75 1.92-2.59 2.9z"></path>
 			</symbol>
 		
 	</svg>

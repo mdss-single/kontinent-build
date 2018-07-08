@@ -329,7 +329,7 @@ img
 			position relative
 	@media $1024
 		&__logo
-			width calc(40% - 10px)
+			width 330px
 	&__slogan
 		font-size 1.8rem
 		margin 15px 0 25px
@@ -1268,6 +1268,8 @@ img
 		text-align left
 		background $colorGreen url('../i/homepage-design.png') no-repeat 122% bottom / auto 570px
 		padding-bottom 73px
+	@media $1440
+		background-position 110% bottom
 	&__main
 		position relative
 		padding-bottom 392px
@@ -1489,6 +1491,8 @@ img
 		margin 10px 0 20px
 		@media $768
 			text-align left
+		@media $1280
+			margin-bottom 35px
 	&__items
 		position relative
 		width 196px
@@ -2082,6 +2086,9 @@ img
 			left -78px
 		&__main
 			width 45%
+	@media $1440
+		&::before
+			left 3px
 	&__title
 		position relative
 		color $colorBlue
@@ -2498,6 +2505,8 @@ img
 			height auto
 		@media $1280
 			width 585px
+		@media $1440
+			width 663px
 	&__main
 		color $colorWhite
 		background-color $colorBlue

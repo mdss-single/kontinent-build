@@ -214,6 +214,8 @@ img
 			margin-right 18px
 			margin-left @margin-right
 			margin-bottom 25px
+		@media $640
+			margin 0 0 30px
 		&-item
 			position relative
 			color $colorWhite
@@ -225,6 +227,8 @@ img
 				width 30%
 				text-align left
 				margin-bottom 0
+			@media $640
+				text-align center
 			&::after
 				position absolute
 				bottom 0
@@ -250,29 +254,61 @@ img
 				@media $480
 					left 0
 					transform none
+				@media $640
+					left 50%
+					transform translateX(-50%)
 			a:hover&
 				color $colorOrange
 				svg
 					fill @color
 			&:last-child
 				margin-bottom 0
+	@media $640
+		&__cols
+			display flex
+			flex-wrap wrap
+			justify-content space-between
+			text-align left
+		&__col
+			width 32%
+			&:nth-child(1)
+				display flex
+				justify-content space-between
+				align-items center
+			&:first-child
+			&:last-child
+				width 100%
 	&__copyright
 		font-size 1.8rem
 		margin 25px 0
 		@media $480
 			margin-bottom 8px
+		@media $640
+			width 31%
+			margin 0
+			font-size 1.6rem
 		p
 			display inline
+			@media $640
+				display block
+				margin 0
 	&__privacy
 		font-weight 300
 		font-size 1.6rem
 		padding 0 30px
+		@media $640
+			width 66%
+			text-align left
+			padding 0
 	&__nav
 		display flex
 		flex-direction column
 		align-items center
 		font-size 1.8rem
 		margin 30px 0
+		@media $640
+			font-size 1.6rem
+			align-items flex-start
 		&-title
 			color $colorBlue
 			font-weight 500
@@ -284,6 +320,8 @@ img
 		font-size 1.8rem
 		border-top 1px solid #121212
 		padding-top 25px
+		@media $640
+			text-align center
 	&__phone
 		&-number
 			color $colorOrange
@@ -309,6 +347,8 @@ img
 
 /*  <homepage>  */
 .homepage-general
+	@media $640
+		background url('../i/homepage-general-bg.jpg') no-repeat center -2px / cover
 	&__about
 		color $colorWhite
 		text-align center
@@ -320,6 +360,8 @@ img
 			background linear-gradient(rgba(#fff, 0) 0, rgba(#fff, 0) 42px, rgba(#ff8901, .68) 42px, rgba(#ff8901, .68) 100%), url('../i/homepage-general-bg.jpg') no-repeat center -2px
 			background-size cover
 			padding-top 65px
+		@media $640
+			background linear-gradient(rgba(#fff, 0) 0, rgba(#fff, 0) 42px, rgba(#ff8901, .68) 42px, rgba(#ff8901, .68) 100%)
 		&-title
 			font-weight bold
 			font-size 3.3rem
@@ -333,6 +375,9 @@ img
 		background-color #2f2f2f
 		padding 42px 8px 28px
 		margin 0 -8px
+		@media $640
+			background-color transparent
+			margin 0 40px
 		&-main
 			position relative
 			text-align center
@@ -388,6 +433,8 @@ img
 				@media $480
 					width auto
 					margin auto
+				@media $640
+					padding 0 34px
 		&-info
 			color $colorWhite
 			font-size 1.8rem
@@ -429,6 +476,9 @@ img
 		text-align center
 		padding-top 40px
 		margin-top 25px
+		@media $640
+			text-align left
+			padding-left 258px
 		&::before
 			position absolute
 			top 0
@@ -437,11 +487,22 @@ img
 			height 16px
 			background-color $colorBlue
 			content ''
-		img
+		&-pic
 			max-width 244px
+			@media $640
+				position absolute
+				top 46px
+				left 0
+				max-width 234px
 		&-descr
 			font-size 2.4rem
 			margin-top 10px
+			@media $640
+				font-weight 300
+				line-height 3rem
+				margin-top 0
+				strong
+					font-weight bold
 		&-attention
 			font-weight 500
 			font-size 2.4rem
@@ -496,6 +557,9 @@ img
 		justify-content space-around
 		text-align center
 		margin 30px 0
+		@media $640
+			justify-content space-between
+			margin 30px -10px
 		&-item
 			position relative
 			width 40%
@@ -504,6 +568,19 @@ img
 			padding-top 65px
 			@media $480
 				width 45%
+			@media $640
+				display flex
+				align-items center
+				width 48%
+				line-height 2.4rem
+				text-align left
+				padding-top 0
+				&:first-child svg
+					width 43px
+					height 57px
+				&:last-child svg
+					width 64px
+					height 48px
 			svg
 				position absolute
 				top 0
@@ -513,6 +590,11 @@ img
 				fill @color
 				transform translateX(-50%)
 				transition all .2s
+				@media $640
+					flex-shrink 0
+					position static
+					margin-right 18px
+					transform none
 			a:hover&
 				color $colorOrange
 				text-decoration none
@@ -520,6 +602,8 @@ img
 					fill @color
 	&__items
 		margin 0 -8px
+		@media $640
+			margin 0 -43px
 	&__item
 		position relative
 		margin-bottom 27px
@@ -545,6 +629,7 @@ img
 			@media $480
 				height 475px
 			img
+				width 100%
 				height 100%
 				object-fit cover
 		&-name
@@ -560,6 +645,12 @@ img
 			background-color $colorWhite
 			padding 15px 5px
 			transform translateY(-50%)
+			@media $640
+				right auto
+				left 50%
+				width 342px
+				line-height 3rem
+				transform translate(-50%, -50%)
 			&::before
 				position absolute
 				top -12px
@@ -604,6 +695,8 @@ img
 		padding-top 35px
 		@media $480
 			margin-bottom 20px
+		@media $640
+			line-height 4.8rem
 		&::before
 			position absolute
 			top 0
@@ -623,6 +716,10 @@ img
 		&-pic
 			height 410px
 			object-fit cover
+			@media $640
+				^[-1]:hover &
+					border 10px solid #fff
+					transition all .2s
 		&-name
 			font-size 2.4rem
 			padding 0 8px
@@ -636,18 +733,28 @@ img
 			bottom 0
 			left 0
 	&__more
+		@media $640
+			text-align center
+			margin-top 40px
 		.btn
 			width 100%
 			font-size 2.07rem
+			@media $640
+				width auto
+				padding 0 30px
 .homepage-calc
 	background url('../i/homepage-calc-bg.jpg') no-repeat 35% 0 / cover
 	padding-top 42px
+	@media $640
+		background linear-gradient(rgba($colorBlue, .2) 0, rgba($colorBlue, .2) 100%), url('../i/homepage-calc-bg.jpg') no-repeat 35% 0 / cover
 	&__text
 		color #fff
 		text-align center
 		background-color rgba(#ff8901, .83)
 		padding 20px 8px 25px
 		margin 0 -8px
+		@media $640
+			margin 0 -43px
 		&-title
 			font-weight 500
 			font-size 3.6rem
@@ -692,6 +799,8 @@ img
 				display block
 				color $colorWhite
 				font-weight bold
+				@media $640
+					display inline
 		&-another
 			font-size 2.4rem
 			margin-top 30px
@@ -699,6 +808,9 @@ img
 		background-color #4b4c4c
 		padding 20px 0 30px
 		margin 0 -8px
+		@media $640
+			background-color transparent
+			padding 47px 40px 40px
 		&-title
 			position relative
 			color #2257a1
@@ -710,6 +822,10 @@ img
 			margin 8px 0 28px
 			@media $480
 				margin 8px 28px 34px
+			@media $640
+				font-weight 500
+				line-height 3.6rem
+				padding 20px 0
 			&::before
 			&::after
 				position absolute
@@ -770,6 +886,10 @@ img
 				display block
 				@media $480
 					display inline
+				@media $640
+					text-decoration underline
+					&:hover
+						text-decoration none
 .homepage-design
 	text-align center
 	background-color $colorGreen
@@ -777,6 +897,8 @@ img
 	&__main
 		position relative
 		padding-bottom 392px
+		@media $640
+			padding-bottom 600px
 		&::after
 			position absolute
 			right -8px
@@ -787,6 +909,10 @@ img
 			content ''
 			@media $480
 				background-position 46% 0
+			@media $640
+				right -43px
+				left @right
+				height 569px
 	&__title
 		position relative
 		color #97f189
@@ -884,6 +1010,8 @@ img
 		position relative
 		width 196px
 		margin auto
+		@media $640
+			width 408px
 		.slick-arrow
 			position absolute
 			top 50%
@@ -906,10 +1034,14 @@ img
 			border-width 3px 3px 0 0
 			transform rotate(45deg) translateY(-50%)
 	&__item
+		@media $640
+			padding 0 8px
 		img
 			width 100%
 .homepage-mount
 	padding-top 25px
+	@media $640
+		padding-bottom 10px
 	&__title
 		position relative
 		font-weight 500
@@ -931,11 +1063,15 @@ img
 		margin 0 -8px
 	&__item
 		margin-bottom 15px
-		img
+		&-pic
 			vertical-align top
 			@media $480
 				height 444px
 				object-fit cover
+			@media $640
+				^[-1]:hover &
+					border 10px solid $colorGreen
+					transition all .2s
 		&-name
 			font-size 2.4rem
 			text-align center
@@ -948,6 +1084,9 @@ img
 	@media $480
 		background-size 144% auto
 		padding-bottom 380px
+	@media $640
+		background-size 130% auto
+		padding-bottom 450px
 	&__title
 		position relative
 		font-weight 500
@@ -969,6 +1108,8 @@ img
 		font-size 3rem
 		line-height 3.6rem
 		padding 0 20px
+		@media $640
+			padding 0
 .homepage-order
 	background url('../i/homepage-order-bg.jpg')
 	padding 32px 0
@@ -981,6 +1122,10 @@ img
 		text-align center
 		padding-top 35px
 		margin-bottom 10px
+		@media $640
+			background url('../i/ruler.jpg') no-repeat 0 bottom / 100% auto
+			padding-bottom 50px
+			margin-bottom 50px
 		&::before
 			position absolute
 			top 0
@@ -994,6 +1139,8 @@ img
 		margin 0 -8px
 		@media $480
 			margin 0
+		@media $640
+			margin 0 50px
 		&-item
 			margin-bottom 22px
 		&-input
@@ -1068,6 +1215,8 @@ img
 				text-decoration underline
 				@media $480
 					display block
+				@media $640
+					display inline
 				&:hover
 					text-decoration none
 		&-items
@@ -1117,12 +1266,22 @@ img
 			text-align center
 			padding 0 20px
 			margin-top 10px
+	@media $640
+		&__system
+			display flex
+			flex-wrap wrap
+			justify-content space-between
 	&__area
 		text-align center
+		@media $640
+			width 100%
 		&-title
 			font-size 3rem
 			line-height 3.6rem
 			margin-bottom 15px
+			@media $640
+				span
+					display block
 		&-input
 			position relative
 			height 170px
@@ -1136,6 +1295,8 @@ img
 				align-items center
 				height 90px
 				padding 0 25px
+			@media $640
+				margin-bottom 50px
 			input
 				position absolute
 				top 0
@@ -1160,6 +1321,10 @@ img
 			justify-content space-between
 			width 270px
 			margin 25px auto 0
+		@media $640
+			width 240px
+			padding-left 0
+			margin 0
 		&-title
 			font-size 3rem
 			margin-bottom 12px
@@ -1224,6 +1389,8 @@ img
 		font-weight 500
 		font-size 3.6rem
 		text-align center
+		@media $640
+			line-height 4.8rem
 	&__input
 		width calc(100% - 18px)
 		height 70px
@@ -1321,9 +1488,13 @@ img
 		margin-top 10px
 		@media $480
 			margin 20px
+		@media $640
+			margin 20px 0
 	&__items
 		width 210px
 		margin 25px auto 0
+		@media $640
+			width 430px
 		.slick-arrow
 			position absolute
 			top 50%
@@ -1347,6 +1518,13 @@ img
 			transform rotate(45deg) translateY(-50%)
 	&__item
 		border 6px solid $colorBlue
+		@media $640
+			border 0
+			padding 0 8px
+			&:hover
+				img
+					border 6px solid $colorBlue
+					transition all .2s
 .homepage-contacts
 	text-align center
 	padding 40px 0 48px
@@ -1394,6 +1572,9 @@ img
 		margin-top 10px
 		@media $480
 			font-size 3rem
+		@media $640
+			margin-right 30px
+			margin-left @margin-right
 		a
 			font-weight 500
 			text-decoration underline
@@ -1409,6 +1590,10 @@ img
 		@media $480
 			padding-right 10px
 			padding-left @padding-right
+		@media $640
+			padding-right 50px
+			padding-left @padding-right
+			margin 0 -43px
 		*
 			position relative
 			z-index 2
@@ -1429,6 +1614,9 @@ img
 			padding-top 56px
 			@media $480
 				padding-top 46px
+			@media $640
+				padding-top 56px
+				padding-bottom 40px
 			&::before
 				border-bottom-color @background-color
 		p
@@ -1474,6 +1662,9 @@ img
 			text-transform none
 			padding-right 20px
 			padding-left @padding-right
+		@media $640
+			padding-right 0
+			padding-left @padding-right
 		&::before
 			position absolute
 			top 0
@@ -1494,11 +1685,15 @@ img
 			margin 20px -8px 10px
 	&__descr
 		font-size 2.4rem
-		p
-			margin 0
 		@media $480
 			line-height 3rem
 			padding 0 20px
+		@media $640
+			padding 0
+		p
+			margin 0
+			@media $640
+				display inline
 	&__items
 		width 194px
 		margin 20px auto 0
@@ -1532,27 +1727,44 @@ img
 	&__item
 		border 8px solid $colorBlue
 		@media $480
+			height 150px
 			border 0
 			padding-right 8px
 			padding-left @padding-right
 			img
-				border 8px solid $colorBlue
+				width 100%
+				height 100%
+				object-fit cover
+			&:hover
+				img
+					border 8px solid $colorBlue
+					transition all .2s
 .homepage-address
 	&__map
 		height 325px
 		margin 0 -8px
+		@media $640
+			margin 0 -43px
 	&__main
 		color $colorWhite
 		background-color $colorBlue
 		padding 40px 8px 50px
 		margin 0 -8px
+		@media $640
+			margin 0 -43px
 	&__section
 		position relative
 		color $colorWhite
 		padding-left 76px
 		margin-top 40px
+		@media $640
+			padding-left 130px
 		&:first-child
 			margin-top 0
+		@media $640
+			&:nth-child(2)
+				svg
+					height 46px
 		&:nth-child(3)
 			svg
 				height 63px
@@ -1561,14 +1773,23 @@ img
 			margin-top 25px
 			@media $480
 				text-align center
+			@media $640
+				display flex
+				justify-content center
 			.btn
 				width 100%
 				font-size 2.2rem
 				text-transform uppercase
 				@media $480
 					width 310px
+				@media $640
+					width 274px
+					margin-right 18px
 				&:last-child
 					margin-top 22px
+					@media $640
+						margin-top 0
+						margin-right 0
 		svg
 			position absolute
 			top 8px
@@ -1576,6 +1797,9 @@ img
 			width 46px
 			height @width
 			fill $colorWhite
+			@media $640
+				left 40px
+				height 56px
 		&-title
 			font-weight 500
 			font-size 3rem
@@ -1583,6 +1807,8 @@ img
 			margin-bottom 10px
 		&-descr
 			font-size 2.4rem
+			@media $640
+				line-height 3rem
 			address
 				font-style normal
 				text-decoration underline

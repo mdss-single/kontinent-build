@@ -51,6 +51,10 @@ img
 			display block
 			position relative
 			padding-top 170px
+	@media $1024
+		&__main
+			height 196px
+			padding-top 0
 	&__target
 		font-size 1.8rem
 		text-transform uppercase
@@ -68,11 +72,18 @@ img
 			width auto
 			border-bottom 0
 			padding 0
+		@media $1024
+			display block
+			right auto
+			left 260px
 		span
 			display block
 			margin-top 10px
 			@media $480
 				margin-top 0
+			@media $1024
+				display inline
+				margin-left 30px
 	&__logo
 		margin 20px 0
 		@media $480
@@ -89,6 +100,8 @@ img
 		&-slogan
 			font-size 1.8rem
 			margin-top 5px
+			@media $1024
+				width 180px
 	&__contacts
 		font-size 1.8rem
 		border-bottom 6px solid #dfdddb
@@ -107,6 +120,13 @@ img
 			padding-right 155px
 			padding-bottom 0
 			margin-top 0
+		@media $1024
+			top 20px
+			right 0
+			left auto
+			width 250px
+			text-align center
+			padding-right 0
 		&-phone
 			color $colorText
 			font-weight bold
@@ -125,13 +145,26 @@ img
 				right 0
 				margin-top 0
 				transform translateY(-50%)
+			@media $1024
+				position static
+				margin-top 15px
 			a
 				color $colorGreen
 				text-decoration underline
+				@media $1024
+					color currentColor
+					text-decoration none
+					margin-right 10px
 				&:last-child
 					display none
+					@media $1024
+						display inline
+						margin-right 0
 				&:hover
 					text-decoration none
+					@media $1024
+						color $colorGreen
+						text-decoration underline
 	&__action
 		display flex
 		flex-direction column
@@ -151,6 +184,13 @@ img
 			border-top 0
 			padding-top 0
 			margin-bottom 0
+		@media $1024
+			display flex
+			justify-content space-between
+			position absolute
+			top 67px
+			left 260px
+			width 440px
 		&-item
 			position relative
 			color $colorText
@@ -163,6 +203,16 @@ img
 			@media $768
 				width auto
 				white-space nowrap
+			@media $1024
+				text-align left
+				white-space pre-wrap
+				margin-bottom 0
+				&:first-child
+					width 156px
+				&:nth-child(2)
+					width 84px
+				&:last-child
+					width 136px
 			&::after
 				position absolute
 				bottom 0
@@ -191,6 +241,9 @@ img
 				@media $768
 					left 50%
 					transform translateX(-50%)
+				@media $1024
+					left 0
+					transform none
 			a:hover&
 				color $colorOrange
 				svg
@@ -209,6 +262,10 @@ img
 		margin-bottom 15px
 		@media $480
 			margin-left -28px
+		@media $1024
+			flex-wrap nowrap
+			justify-content space-between
+			margin-left 0
 	&__item
 		width 55%
 		color $colorWhite
@@ -219,6 +276,8 @@ img
 			width auto
 			margin-top 15px
 			margin-left 28px
+		@media $1024
+			margin-left 0
 		&:nth-child(even)
 			width 45%
 			@media $480
@@ -244,11 +303,20 @@ img
 		color $colorWhite
 		text-align center
 		margin 40px 0 35px
+		@media $1024
+			display flex
+			flex-wrap wrap
+			justify-content space-between
+	@media $1024
+		&__logo
+			width calc(40% - 10px)
 	&__slogan
 		font-size 1.8rem
 		margin 15px 0 25px
 		span
 			display block
+		@media $1024
+			display none
 	&__action
 		display flex
 		flex-direction column
@@ -263,6 +331,8 @@ img
 			margin-bottom 25px
 		@media $640
 			margin 0 0 30px
+		@media $1024
+			width calc(60% - 5px)
 		&-item
 			position relative
 			color $colorWhite
@@ -279,6 +349,17 @@ img
 			@media $768
 				width auto
 				white-space nowrap
+			@media $1024
+				width calc(33% - 5px)
+				white-space pre-wrap
+				text-align left
+				/*
+				&:nth-child(1)
+					width 152px
+				&:nth-child(2)
+					width 85px
+				&:nth-child(3)
+					width 135px*/
 			&::after
 				position absolute
 				bottom 0
@@ -307,6 +388,9 @@ img
 				@media $640
 					left 50%
 					transform translateX(-50%)
+				@media $1024
+					left 0
+					transform none
 			a:hover&
 				color $colorOrange
 				svg
@@ -328,6 +412,15 @@ img
 			&:first-child
 			&:last-child
 				width 100%
+	@media $1024
+		&__cols
+			width 100%
+		&__col
+			width calc(20% - 10px)
+			&:first-child
+			&:last-child
+				display block
+				width calc(20% - 10px)
 	&__copyright
 		font-size 1.8rem
 		margin 25px 0
@@ -337,6 +430,9 @@ img
 			width 31%
 			margin 0
 			font-size 1.6rem
+		@media $1024
+			width auto
+			margin-top 100px
 		p
 			display inline
 			@media $640
@@ -350,6 +446,9 @@ img
 			width 66%
 			text-align left
 			padding 0
+		@media $1024
+			width auto
+			margin-top 30px
 	&__nav
 		display flex
 		flex-direction column
@@ -359,6 +458,8 @@ img
 		@media $640
 			font-size 1.6rem
 			align-items flex-start
+		@media $1024
+			margin 0
 		&-title
 			color $colorBlue
 			font-weight 500
@@ -377,11 +478,16 @@ img
 			justify-content space-between
 			font-size 1.6rem
 			text-align left
+		@media $1024
+			border-top 0
+			padding-top 0
 	&__phone
 		@media $768
 			width calc(25% - 15px)
 			&-title
 				margin-bottom 10px
+		@media $1024
+			width auto
 		&-number
 			color $colorOrange
 			font-weight 500
@@ -393,11 +499,16 @@ img
 		@media $768
 			width calc(25% - 15px)
 			margin 0
+		@media $1024
+			width auto
+			margin 15px 0
 		p
 			display inline
 	&__address
 		@media $768
 			width calc(25% - 15px)
+		@media $1024
+			width auto
 		&-title
 			font-weight bold
 			padding 0 40px
@@ -411,6 +522,9 @@ img
 		@media $768
 			width calc(25% - 15px)
 			margin 0
+		@media $1024
+			width auto
+			margin-top 15px
 		&-main
 			color $colorOrange
 			font-weight bold
@@ -420,6 +534,12 @@ img
 .homepage-general
 	@media $640
 		background url('../i/homepage-general-bg.jpg') no-repeat center -2px / cover
+	@media $1024
+		&__wrap
+			display flex
+			justify-content space-between
+			align-items center
+			padding 47px 0 40px
 	&__about
 		color $colorWhite
 		text-align center
@@ -435,6 +555,11 @@ img
 			background linear-gradient(rgba(#fff, 0) 0, rgba(#fff, 0) 42px, rgba(#ff8901, .68) 42px, rgba(#ff8901, .68) 100%)
 		@media $768
 			margin 0
+		@media $1024
+			width calc(50% - 20px)
+			text-align left
+			background rgba(#ff8901, .68)
+			padding 15px 30px 35px
 		&-title
 			font-weight bold
 			font-size 3.3rem
@@ -453,6 +578,10 @@ img
 			margin 0 40px
 		@media $768
 			margin 0 100px
+		@media $1024
+			width calc(50% - 20px)
+			padding 0
+			margin 0
 		&-main
 			position relative
 			text-align center
@@ -524,11 +653,19 @@ img
 				padding 5px 8px
 				margin 0 12px
 .homepage-company
+	@media $1024
+		display flex
+		align-items flex-start
+		padding 40px 0
 	&__text
 		text-align center
 		margin-top 28px
 		@media $768
 			text-align left
+		@media $1024
+			flex 1
+			margin-top 0
+			margin-right 40px
 		&-title
 			position relative
 			font-weight 500
@@ -551,6 +688,8 @@ img
 		&-descr
 			font-weight 300
 			font-size 2.4rem
+			@media $1024
+				line-height 3rem
 	&__cert
 		position relative
 		text-align center
@@ -562,6 +701,12 @@ img
 		@media $768
 			min-height 370px
 			padding-left 264px
+		@media $1024
+			width 410px
+			text-align center
+			padding-top 0
+			padding-left 30px
+			margin-top 0
 		&::before
 			position absolute
 			top 0
@@ -570,6 +715,12 @@ img
 			height 16px
 			background-color $colorBlue
 			content ''
+			@media $1024
+				right auto
+				bottom 0
+				left 0
+				height auto
+				width 16px
 		&-pic
 			max-width 244px
 			@media $640
@@ -577,6 +728,8 @@ img
 				top 46px
 				left 0
 				max-width 234px
+			@media $1024
+				position static
 		&-descr
 			font-size 2.4rem
 			margin-top 10px
@@ -586,6 +739,8 @@ img
 				margin-top 0
 				strong
 					font-weight bold
+			@media $1024
+				margin-top 10px
 		&-attention
 			font-weight 500
 			font-size 2.4rem
@@ -710,11 +865,17 @@ img
 			margin 0 -43px
 		@media $768
 			margin 30px 0 0
+		@media $1024
+			display flex
+			flex-wrap wrap
+			justify-content space-between
 	&__item
 		position relative
 		margin-bottom 27px
 		@media $480
 			margin-bottom 36px
+		@media $1024
+			width calc(50% - 6px)
 		&:hover
 			&::before
 				animation fadeIn .5s
@@ -728,12 +889,16 @@ img
 				content ''
 		&:last-child
 			margin-bottom 0
+			@media $1024
+				margin-bottom 36px
 		&-pic
 			position relative
 			z-index 3
 			height 360px
 			@media $480
 				height 475px
+			@media $1024
+				height 356px
 			img
 				width 100%
 				height 100%
@@ -805,6 +970,8 @@ img
 			margin-bottom 20px
 		@media $640
 			line-height 4.8rem
+		@media $1024
+			text-align left
 		&::before
 			position absolute
 			top 0
@@ -814,6 +981,9 @@ img
 			background-color $colorOrange
 			content ''
 			transform translateX(-50%)
+			@media $1024
+				left 0
+				transform none
 	&__items
 		margin 0 -8px
 		@media $768
@@ -831,6 +1001,8 @@ img
 			width calc(50% - 10px)
 			text-align left
 			margin-bottom 25px
+		@media $1024
+			width calc(33.33% - 10px)
 		&-pic
 			width 100%
 			height 410px
@@ -873,6 +1045,12 @@ img
 	padding-top 42px
 	@media $640
 		background linear-gradient(rgba($colorBlue, .2) 0, rgba($colorBlue, .2) 100%), url('../i/homepage-calc-bg.jpg') no-repeat 35% 0 / cover
+	@media $1024
+		padding 45px 0
+		&__main
+			display flex
+			justify-content space-between
+			align-items center
 	&__text
 		color #fff
 		text-align center
@@ -884,12 +1062,19 @@ img
 			margin 0 -43px
 		@media $768
 			margin 0
+		@media $1024
+			flex 1
+			text-align left
+			padding 15px 20px
+			margin-right 28px
 		&-title
 			font-weight 500
 			font-size 3.6rem
 		&-descr
 			font-size 2.4rem
 			margin 5px 30px 0
+			@media $1024
+				margin 15px 0
 			p
 				margin 0
 		&-help
@@ -900,6 +1085,8 @@ img
 				@media $480
 					text-align left
 					margin-left 80px
+				@media $1024
+					margin 0
 			ul
 				list-style none
 				font-size 2rem
@@ -908,6 +1095,8 @@ img
 				margin-left 30px
 				@media $480
 					margin-left 50px
+				@media $1024
+					margin 0
 			li
 				position relative
 				padding-left 30px
@@ -930,6 +1119,8 @@ img
 				font-weight bold
 				@media $640
 					display inline
+				@media $1024
+					display block
 		&-another
 			font-size 2.4rem
 			margin-top 30px
@@ -943,6 +1134,10 @@ img
 		@media $768
 			padding 47px 0 50px
 			margin 0 120px
+		@media $1024
+			width 445px
+			margin 0
+			padding 0
 		&-title
 			position relative
 			color #2257a1
@@ -958,6 +1153,8 @@ img
 				font-weight 500
 				line-height 3.6rem
 				padding 20px 0
+			@media $1024
+				margin 8px 8px 34px
 			&::before
 			&::after
 				position absolute
@@ -984,6 +1181,8 @@ img
 			margin 0 8px
 			@media $480
 				margin 0 18px
+			@media $1024
+				margin 0
 		&-btn
 			margin-top 25px
 			@media $480
@@ -1171,6 +1370,8 @@ img
 			width 408px
 		@media $768
 			width 618px
+		@media $1024
+			width 742px
 		.slick-arrow
 			position absolute
 			top 50%
@@ -1195,6 +1396,8 @@ img
 	&__item
 		@media $640
 			padding 0 8px
+		@media $1024
+			padding 0 20px
 		img
 			width 100%
 .homepage-mount
@@ -1236,6 +1439,8 @@ img
 		margin-bottom 15px
 		@media $768
 			width calc(50% - 12px)
+		@media $1024
+			width calc(25% - 10px)
 		&-pic
 			vertical-align top
 			@media $480
@@ -1248,6 +1453,8 @@ img
 					transition all .2s
 			@media $768
 				height 250px
+			@media $1024
+				height 170px
 		&-name
 			font-size 2.4rem
 			text-align center
@@ -1268,6 +1475,11 @@ img
 		padding-bottom 450px
 	@media $768
 		background-size 106% auto
+	@media $1024
+		text-align left
+		background-position right bottom
+		background-size auto 70%
+		padding-bottom 65px
 	&__title
 		position relative
 		font-weight 500
@@ -1276,6 +1488,9 @@ img
 		text-align center
 		padding-top 35px
 		margin-bottom 10px
+		@media $1024
+			width 725px
+			text-align left
 		&::before
 			position absolute
 			top 0
@@ -1291,6 +1506,8 @@ img
 		padding 0 20px
 		@media $640
 			padding 0
+		@media $1024
+			width 384px
 .homepage-order
 	background url('../i/homepage-order-bg.jpg')
 	padding 32px 0
@@ -1333,8 +1550,16 @@ img
 			margin 0 50px
 		@media $768
 			margin 0 120px
+		@media $1024
+			display flex
+			flex-wrap wrap
+			justify-content space-between
+			margin 0
 		&-item
 			margin-bottom 22px
+			@media $1024
+				width calc(50% - 18px)
+				margin-bottom 46px
 		&-input
 			position absolute
 			left -9999px
@@ -1360,6 +1585,9 @@ img
 					width 100%
 					border 10px solid $colorGreen
 					transition all .2s
+					@media $1024
+						height 296px
+						object-fit cover
 			&:checked + label
 				&::after
 					animation fadeIn .5s
@@ -1431,6 +1659,8 @@ img
 			@media $768
 				width calc(50% - 15px)
 				margin-bottom 30px
+			@media $1024
+				width calc(25% - 9px)
 		&-check
 			position absolute
 			left -9999px
@@ -1487,12 +1717,17 @@ img
 			justify-content space-between
 			@media $768
 				justify-content flex-start
+			@media $1024
+				justify-content space-between
+				align-items flex-end
 	&__area
 		text-align center
 		@media $640
 			width 100%
 		@media $768
 			text-align left
+		@media $1024
+			width 460px
 		&-title
 			font-size 3rem
 			line-height 3.6rem
@@ -1500,6 +1735,8 @@ img
 			@media $640
 				span
 					display block
+			@media $1024
+				width 100%
 		&-input
 			position relative
 			height 170px
@@ -1515,6 +1752,8 @@ img
 				padding 0 25px
 			@media $640
 				margin-bottom 50px
+			@media $1024
+				margin-bottom 0
 			input
 				position absolute
 				top 0
@@ -1547,6 +1786,8 @@ img
 			margin-right 100px
 			&:last-of-type
 				margin-right 0
+		@media $1024
+			margin-right 0
 		&-title
 			font-size 3rem
 			margin-bottom 12px
@@ -1618,6 +1859,9 @@ img
 			display flex
 			flex-wrap wrap
 			justify-content space-between
+			@media $1024
+				width 720px
+				margin auto
 		.form__row
 			width calc(50% - 15px)
 			margin-bottom 0
@@ -1667,6 +1911,23 @@ img
 	@media $768
 		background-position 66% -130px
 		background-size 200% auto
+	@media $1024
+		position relative
+		background-position center 0
+		background-size cover
+		padding 0
+		&::before
+			position absolute
+			bottom -27px
+			left -178px
+			width 705px
+			height 406px
+			background-image url('../i/homepage-delivery.png')
+			content ''
+		&__main
+			width 425px
+			padding 48px 0 60px
+			margin-left auto
 	&__title
 		position relative
 		color $colorBlue
@@ -1683,6 +1944,8 @@ img
 			padding-top 50px
 		@media $768
 			color $colorWhite
+		@media $1024
+			text-align left
 		&::before
 			position absolute
 			top 0
@@ -1692,6 +1955,9 @@ img
 			background-color @color
 			content ''
 			transform translateX(-50%)
+			@media $1024
+				left 0
+				transform none
 	&__descr
 		color $colorWhite
 		font-size 3.6rem
@@ -1699,10 +1965,14 @@ img
 		text-shadow 2px 2px 3px rgba(#000, .17)
 		@media $480
 			line-height 4.8rem
+		@media $1024
+			text-align left
 .homepage-reviews
 	overflow hidden
 	background url('../i/homepage-reviews-bg.jpg') no-repeat center 0 / cover
 	padding 22px 0 42px
+	@media $1024
+		padding 60px 0 55px
 	&__descr
 		text-align center
 		&-title
@@ -1736,6 +2006,8 @@ img
 			width 430px
 		@media $768
 			width 645px
+		@media $1024
+			width 768px
 		.slick-arrow
 			position absolute
 			top 50%
@@ -1860,10 +2132,14 @@ img
 			@media $768
 				top -36px
 				border-width 0 30px 36px
+			@media $1024
+				transform none
 		&:nth-child(1)
 			background-color $colorGreen
 			&::before
 				border-bottom-color @background-color
+				@media $1024
+					left 94px
 		&:nth-child(2)
 			background-color $colorBlue
 			padding-top 56px
@@ -1878,6 +2154,9 @@ img
 				padding-left 90px
 			&::before
 				border-bottom-color @background-color
+				@media $1024
+					right 94px
+					left auto
 		p
 			&:first-child
 				margin-top 0
@@ -1972,6 +2251,8 @@ img
 			width 410px
 		@media $768
 			width 626px
+		@media $1024
+			width 768px
 		.slick-arrow
 			position absolute
 			top 50%
@@ -2012,20 +2293,30 @@ img
 				img
 					border 8px solid $colorBlue
 					transition all .2s
+		@media $1024
+			height 182px
 .homepage-address
 	@media $768
 		.container
 			max-width none
 			padding 0
+	@media $1024
+		.container
+			display flex
 	&__map
 		height 325px
 		margin 0 -8px
 		@media $768
 			margin 0
+		@media $1024
+			width 50%
+			height auto
 	&__main
 		color $colorWhite
 		background-color $colorBlue
 		padding 40px 8px 50px
+		@media $1024
+			width 50%
 	&__section
 		position relative
 		color $colorWhite
@@ -2064,6 +2355,8 @@ img
 				@media $640
 					width 274px
 					margin-right 18px
+				@media $1024
+					font-size 1.8rem
 				&:last-child
 					margin-top 22px
 					@media $640

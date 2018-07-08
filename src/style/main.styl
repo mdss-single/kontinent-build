@@ -76,6 +76,8 @@ img
 			display block
 			right auto
 			left 260px
+		@media $1280
+			left 300px
 		span
 			display block
 			margin-top 10px
@@ -127,6 +129,15 @@ img
 			width 250px
 			text-align center
 			padding-right 0
+		@media $1280
+			display flex
+			flex-direction column
+			top 30px
+			width 260px
+			line-height 1
+			text-align right
+			&-title
+				margin-bottom 15px
 		&-phone
 			color $colorText
 			font-weight bold
@@ -134,8 +145,12 @@ img
 			text-decoration none
 			@media $768
 				font-size 2.4rem
+			@media $1280
+				margin 10px 0
 		&-workhours
 			font-weight 300
+			@media $1280
+				margin 10px 0
 		&-links
 			font-weight 500
 			margin-top 5px
@@ -191,6 +206,10 @@ img
 			top 67px
 			left 260px
 			width 440px
+		@media $1280
+			top 76px
+			left 300px
+			width 482px
 		&-item
 			position relative
 			color $colorText
@@ -307,6 +326,7 @@ img
 			display flex
 			flex-wrap wrap
 			justify-content space-between
+			position relative
 	@media $1024
 		&__logo
 			width calc(40% - 10px)
@@ -316,7 +336,11 @@ img
 		span
 			display block
 		@media $1024
-			display none
+			position absolute
+			top 118px
+			left 0
+			width calc(20% - 10px)
+			text-align left
 	&__action
 		display flex
 		flex-direction column
@@ -540,6 +564,9 @@ img
 			justify-content space-between
 			align-items center
 			padding 47px 0 40px
+	@media $1280
+		&__wrap
+			align-items stretch
 	&__about
 		color $colorWhite
 		text-align center
@@ -560,6 +587,11 @@ img
 			text-align left
 			background rgba(#ff8901, .68)
 			padding 15px 30px 35px
+		@media $1280
+			flex 1
+			width auto
+			padding 20px 45px 35px
+			margin-right 100px
 		&-title
 			font-weight bold
 			font-size 3.3rem
@@ -582,6 +614,8 @@ img
 			width calc(50% - 20px)
 			padding 0
 			margin 0
+		@media $1280
+			width 444px
 		&-main
 			position relative
 			text-align center
@@ -707,6 +741,9 @@ img
 			padding-top 0
 			padding-left 30px
 			margin-top 0
+		@media $1280
+			width 540px
+			padding-left 50px
 		&::before
 			position absolute
 			top 0
@@ -1067,6 +1104,8 @@ img
 			text-align left
 			padding 15px 20px
 			margin-right 28px
+		@media $1280
+			margin-right 64px
 		&-title
 			font-weight 500
 			font-size 3.6rem
@@ -1225,6 +1264,10 @@ img
 	text-align center
 	background-color $colorGreen
 	padding-top 54px
+	@media $1280
+		text-align left
+		background $colorGreen url('../i/homepage-design.png') no-repeat 122% bottom / auto 570px
+		padding-bottom 73px
 	&__main
 		position relative
 		padding-bottom 392px
@@ -1232,6 +1275,10 @@ img
 			padding-bottom 600px
 		@media $768
 			overflow hidden
+		@media $1280
+			overflow initial
+			max-width 630px
+			padding-bottom 0
 		&::after
 			position absolute
 			right -8px
@@ -1246,6 +1293,8 @@ img
 				right -43px
 				left @right
 				height 569px
+			@media $1280
+				display none
 	&__title
 		position relative
 		color #97f189
@@ -1258,6 +1307,10 @@ img
 			line-height 4.8rem
 			padding-right 30px
 			padding-left @padding-right
+		@media $1280
+			width 300px
+			text-align left
+			padding 35px 0 0
 		&::before
 			position absolute
 			top 0
@@ -1267,6 +1320,9 @@ img
 			background-color @color
 			content ''
 			transform translateX(-50%)
+			@media $1280
+				left 0
+				transform none
 	&__notice
 		color $colorWhite
 		font-size 3rem
@@ -1275,17 +1331,24 @@ img
 		@media $480
 			line-height 3.6rem
 			margin-top 10px
+		@media $1280
+			margin 15px 0
 	&__descr
 		color $colorWhite
 		font-size 2rem
 		padding 0 20px
 		@media $768
 			padding 0
+		@media $1280
+			max-width 566px
 	&__btn
 		margin 20px 0 22px
 		@media $480
 			margin-right 8px
 			margin-left @margin-right
+		@media $1280
+			margin-bottom 0
+			margin-left 0
 		.btn
 			width 100%
 			height 72px
@@ -1301,6 +1364,68 @@ img
 	@media $768
 		&__main
 			columns 2
+			@media $1280
+				display flex
+				justify-content space-between
+				columns 1
+	@media $1280
+		background-repeat no-repeat
+		background-size cover
+		&__col
+			&:first-child
+			&:last-child
+				width 295px
+			&:nth-child(2)
+				display flex
+				flex-direction column
+				justify-content space-between
+				position relative
+				width 420px
+				min-height 860px
+				text-align center
+				&::before
+				&::after
+					position absolute
+					top 50%
+					left 50%
+					width 521px
+					height @width
+					border-radius 50%
+					content ''
+					transform translate(-50%, -50%)
+				&::before
+					background-image url('../i/homepage-pluses.png')
+				&::after
+					border 7px solid $colorBlue
+			&:first-child
+				svg
+					top -20px
+					right 0
+					left auto
+				& ^[0]__item:last-child
+					svg
+						right 40px
+			&:nth-child(2)
+				svg
+					top -20px
+					right 30px
+					left auto
+				& ^[0]__item
+					margin 0
+			&:last-child
+				text-align right
+				svg
+					top -15px
+				& ^[0]__item:first-child
+					svg
+						top -25px
+				& ^[0]__item:nth-child(2)
+					svg
+						left 30px
+				& ^[0]__item:last-child
+					svg
+						top 5px
+						left 0
 	&__item
 		position relative
 		padding-left 80px
@@ -1313,6 +1438,8 @@ img
 			break-inside avoid
 			padding-left 95px
 			margin 0 0 30px
+		@media $1280
+			padding-left 0
 		&-name
 			font-weight 500
 			font-size 2.4rem
@@ -1372,6 +1499,8 @@ img
 			width 618px
 		@media $1024
 			width 742px
+		@media $1280
+			width 1010px
 		.slick-arrow
 			position absolute
 			top 50%
@@ -1480,6 +1609,9 @@ img
 		background-position right bottom
 		background-size auto 70%
 		padding-bottom 65px
+	@media $1280
+		background-position right bottom
+		background-size auto 100%
 	&__title
 		position relative
 		font-weight 500
@@ -1491,6 +1623,8 @@ img
 		@media $1024
 			width 725px
 			text-align left
+		@media $1280
+			width 520px
 		&::before
 			position absolute
 			top 0
@@ -1500,6 +1634,9 @@ img
 			background-color $colorWhite
 			content ''
 			transform translateX(-50%)
+			@media $1024
+				left 0
+				transform none
 	&__descr
 		font-size 3rem
 		line-height 3.6rem
@@ -1508,6 +1645,8 @@ img
 			padding 0
 		@media $1024
 			width 384px
+		@media $1280
+			width 520px
 .homepage-order
 	background url('../i/homepage-order-bg.jpg')
 	padding 32px 0
@@ -1854,19 +1993,27 @@ img
 		text-align center
 		@media $640
 			line-height 4.8rem
-	@media $768
-		form
+	form
+		@media $768
 			display flex
 			flex-wrap wrap
 			justify-content space-between
-			@media $1024
-				width 720px
-				margin auto
+		@media $1024
+			width 720px
+			margin auto
+		@media $1280
+			width auto
+			margin-top 40px
 		.form__row
 			width calc(50% - 15px)
 			margin-bottom 0
+			@media $1280
+				align-self flex-start
+				width calc(33% - 15px)
 			&:last-child
 				width 100%
+				@media $1280
+					width calc(33% - 15px)
 	&__input
 		width calc(100% - 18px)
 		height 70px
@@ -1885,6 +2032,8 @@ img
 		margin-top 35px
 		@media $480
 			text-align center
+		@media $1280
+			margin-top 0
 		.btn
 			width 100%
 			height 50px
@@ -1928,6 +2077,11 @@ img
 			width 425px
 			padding 48px 0 60px
 			margin-left auto
+	@media $1280
+		&::before
+			left -78px
+		&__main
+			width 45%
 	&__title
 		position relative
 		color $colorBlue
@@ -1946,6 +2100,8 @@ img
 			color $colorWhite
 		@media $1024
 			text-align left
+		@media $1280
+			color $colorBlue
 		&::before
 			position absolute
 			top 0
@@ -2008,6 +2164,8 @@ img
 			width 645px
 		@media $1024
 			width 768px
+		@media $1280
+			width 1030px
 		.slick-arrow
 			position absolute
 			top 50%
@@ -2100,6 +2258,9 @@ img
 			padding 0
 		&__main
 			display flex
+	@media $1280
+		.container
+			max-width 1156px
 	&__item
 		position relative
 		color $colorWhite
@@ -2118,6 +2279,8 @@ img
 			text-align left
 			padding 30px
 			margin 0
+		@media $1280
+			padding 30px 0
 		*
 			position relative
 			z-index 2
@@ -2157,6 +2320,26 @@ img
 				@media $1024
 					right 94px
 					left auto
+		@media $1280
+			&:nth-child(1)
+				padding-right 110px
+				&::after
+					position absolute
+					top 0
+					bottom 0
+					left -10000%
+					width 10000%
+					background-color $colorGreen
+					content ''
+			&:nth-child(2)
+				&::after
+					position absolute
+					top 0
+					bottom 0
+					left 100%
+					width 10000%
+					background-color $colorBlue
+					content ''
 		p
 			&:first-child
 				margin-top 0
@@ -2253,6 +2436,8 @@ img
 			width 626px
 		@media $1024
 			width 768px
+		@media $1280
+			width 1030px
 		.slick-arrow
 			position absolute
 			top 50%
@@ -2311,12 +2496,17 @@ img
 		@media $1024
 			width 50%
 			height auto
+		@media $1280
+			width 585px
 	&__main
 		color $colorWhite
 		background-color $colorBlue
 		padding 40px 8px 50px
 		@media $1024
 			width 50%
+		@media $1280
+			flex 1
+			width auto
 	&__section
 		position relative
 		color $colorWhite

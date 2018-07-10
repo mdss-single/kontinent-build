@@ -78,14 +78,19 @@ img
 			left 260px
 		@media $1280
 			left 300px
-		span
-			display block
-			margin-top 10px
-			@media $480
-				margin-top 0
-			@media $1024
-				display inline
-				margin-left 30px
+		a
+			color currentColor
+			text-decoration underline
+			&:hover
+				text-decoration none
+			&:last-child
+				display block
+				margin-top 10px
+				@media $480
+					margin-top 0
+				@media $1024
+					display inline
+					margin-left 30px
 	&__logo
 		margin 20px 0
 		@media $480
@@ -97,7 +102,7 @@ img
 			top 26px
 			left 0
 			margin 0
-		img
+		@media $1280
 			max-width 222px
 		&-slogan
 			font-size 1.8rem
@@ -281,6 +286,8 @@ img
 		margin-bottom 15px
 		@media $480
 			margin-left -28px
+		@media $640
+			margin-left -25px
 		@media $1024
 			flex-wrap nowrap
 			justify-content space-between
@@ -295,6 +302,8 @@ img
 			width auto
 			margin-top 15px
 			margin-left 28px
+		@media $640
+			margin-left 25px
 		@media $1024
 			margin-left 0
 		&:nth-child(even)
@@ -327,9 +336,14 @@ img
 			flex-wrap wrap
 			justify-content space-between
 			position relative
-	@media $1024
-		&__logo
+	&__logo
+		@media $480
+			display block
+			max-width 80%
+			margin auto
+		@media $1024
 			width 330px
+			margin 0
 	&__slogan
 		font-size 1.8rem
 		margin 15px 0 25px
@@ -365,25 +379,30 @@ img
 			padding-bottom 5px
 			margin-bottom 20px
 			@media $480
-				width 30%
 				text-align left
 				margin-bottom 0
+				&:first-child
+					width 152px
+				&:nth-child(2)
+					width 85px
+				&:last-child
+					width 135px
 			@media $640
 				text-align center
+				&:first-child
+				&:nth-child(2)
+				&:last-child
+					width auto
 			@media $768
 				width auto
 				white-space nowrap
 			@media $1024
-				width calc(33% - 5px)
 				white-space pre-wrap
 				text-align left
-				/*
-				&:nth-child(1)
-					width 152px
+				&:first-child
 				&:nth-child(2)
-					width 85px
-				&:nth-child(3)
-					width 135px*/
+				&:last-child
+					width calc(33% - 5px)
 			&::after
 				position absolute
 				bottom 0
@@ -491,6 +510,9 @@ img
 		&-item
 			color $colorWhite
 			margin 5px 0
+			&--franchise
+				@media $1680
+					display none
 	&__contacts
 		font-size 1.8rem
 		border-top 1px solid #121212
@@ -558,14 +580,17 @@ img
 .homepage-general
 	@media $640
 		background url('../i/homepage-general-bg.jpg') no-repeat center -2px / cover
-	@media $1024
-		&__wrap
+	.container
+		@media $max1024
+			max-width none
+			padding 0
+	&__wrap
+		@media $1024
 			display flex
 			justify-content space-between
 			align-items center
 			padding 47px 0 40px
-	@media $1280
-		&__wrap
+		@media $1280
 			align-items stretch
 	&__about
 		color $colorWhite
@@ -603,11 +628,11 @@ img
 				font-weight 500
 	&__consult
 		background-color #2f2f2f
-		padding 42px 8px 28px
+		padding 42px 18px 28px
 		margin 0 -8px
 		@media $640
 			background-color transparent
-			margin 0 40px
+			margin 0 60px
 		@media $768
 			margin 0 100px
 		@media $1024
@@ -670,9 +695,8 @@ img
 				font-size 2.2rem
 				@media $480
 					width auto
-					margin auto
-				@media $640
 					padding 0 34px
+					margin auto
 		&-info
 			color $colorWhite
 			font-size 1.8rem
@@ -807,7 +831,7 @@ img
 				text-decoration none
 				background-color $colorOrange
 .homepage-catalog
-	background url('../i/homepage-catalog-bg.jpg') repeat 32% 0
+	background url('../i/homepage-catalog-bg.jpg') no-repeat 0 0 / cover
 	padding 36px 0
 	margin-top 38px
 	@media $768
@@ -826,6 +850,8 @@ img
 		@media $768
 			width 180px
 			text-align left
+		@media $1280
+			width auto
 		&::before
 			position absolute
 			top 0
@@ -953,7 +979,7 @@ img
 			background-color $colorWhite
 			padding 15px 5px
 			transform translateY(-50%)
-			@media $640
+			@media $480
 				right auto
 				left 50%
 				width 342px
@@ -988,13 +1014,17 @@ img
 		p
 			display inline
 			margin 0
+		a
+			text-decoration underline
+			&:hover
+				text-decoration none
 .homepage-examples
 	background-color $colorBlue
 	padding 40px 0 35px
 	@media $480
-		padding-top 60px
+		padding 60px 0
 	@media $768
-		background linear-gradient(rgba($colorBlue, .7) 0, rgba($colorBlue, .7) 100%), url('../i/homepage-catalog-bg.jpg') repeat 32% 0
+		background url('../i/homepage-examples-bg.jpg') no-repeat 0 0 / cover
 	&__title
 		position relative
 		color $colorWhite
@@ -1007,8 +1037,10 @@ img
 			margin-bottom 20px
 		@media $640
 			line-height 4.8rem
-		@media $1024
+		@media $768
+			max-width 696px
 			text-align left
+			margin-bottom 40px
 		&::before
 			position absolute
 			top 0
@@ -1018,7 +1050,7 @@ img
 			background-color $colorOrange
 			content ''
 			transform translateX(-50%)
-			@media $1024
+			@media $768
 				left 0
 				transform none
 	&__items
@@ -1068,13 +1100,13 @@ img
 			bottom 0
 			left 0
 	&__more
-		@media $640
+		@media $480
 			text-align center
 			margin-top 40px
 		.btn
 			width 100%
 			font-size 2.07rem
-			@media $640
+			@media $480
 				width auto
 				padding 0 30px
 .homepage-calc
@@ -1109,8 +1141,12 @@ img
 		&-title
 			font-weight 500
 			font-size 3.6rem
+			line-height 4.8rem
+			@media $1280
+				white-space nowrap
 		&-descr
 			font-size 2.4rem
+			line-height 3rem
 			margin 5px 30px 0
 			@media $1024
 				margin 15px 0
@@ -1124,7 +1160,11 @@ img
 				@media $480
 					text-align left
 					margin-left 80px
+				@media $768
+					text-align center
+					margin-left 0
 				@media $1024
+					text-align left
 					margin 0
 			ul
 				list-style none
@@ -1134,6 +1174,8 @@ img
 				margin-left 30px
 				@media $480
 					margin-left 50px
+				@media $768
+					margin-left 40px
 				@media $1024
 					margin 0
 			li
@@ -1160,6 +1202,8 @@ img
 					display inline
 				@media $1024
 					display block
+				@media $1280
+					display inline
 		&-another
 			font-size 2.4rem
 			margin-top 30px
@@ -1269,7 +1313,7 @@ img
 		background $colorGreen url('../i/homepage-design.png') no-repeat 122% bottom / auto 570px
 		padding-bottom 73px
 	@media $1440
-		background-position 110% bottom
+		background-position calc(50% + 380px) bottom
 	&__main
 		position relative
 		padding-bottom 392px
@@ -1309,6 +1353,10 @@ img
 			line-height 4.8rem
 			padding-right 30px
 			padding-left @padding-right
+		@media $640
+			padding-right 0
+			padding-left @padding-right
+			margin 0 -10px
 		@media $1280
 			width 300px
 			text-align left
@@ -1357,95 +1405,152 @@ img
 			font-size 2rem
 			text-align center
 			border-radius (@height / 2)
-			@media $768
+			@media $640
 				width auto
 				padding 0 48px
 .homepage-pluses
 	background-image url('../i/homepage-pluses-bg.jpg')
 	padding 42px 0
-	@media $768
-		&__main
-			columns 2
-			@media $1280
-				display flex
-				justify-content space-between
-				columns 1
 	@media $1280
 		background-repeat no-repeat
 		background-size cover
-		&__col
-			&:first-child
-			&:last-child
-				width 295px
-			&:nth-child(2)
-				display flex
-				flex-direction column
-				justify-content space-between
-				position relative
-				width 420px
-				min-height 860px
-				text-align center
-				&::before
-				&::after
-					position absolute
-					top 50%
-					left 50%
-					width 521px
-					height @width
-					border-radius 50%
-					content ''
-					transform translate(-50%, -50%)
-				&::before
-					background-image url('../i/homepage-pluses.png')
-				&::after
-					border 7px solid $colorBlue
-			&:first-child
-				svg
-					top -20px
-					right 0
-					left auto
-				& ^[0]__item:last-child
-					svg
-						right 40px
-			&:nth-child(2)
-				svg
-					top -20px
-					right 30px
-					left auto
-				& ^[0]__item
-					margin 0
-			&:last-child
-				text-align right
-				svg
-					top -15px
-				& ^[0]__item:first-child
-					svg
-						top -25px
-				& ^[0]__item:nth-child(2)
-					svg
-						left 30px
-				& ^[0]__item:last-child
-					svg
-						top 5px
-						left 0
+		padding-top 70px
+	&__main
+		@media $768
+			display flex
+			flex-wrap wrap
+			justify-content space-between
+		@media $1280
+			position relative
+			height 978px
+			&::before
+			&::after
+				position absolute
+				top 50%
+				left 50%
+				width 521px
+				height @width
+				border-radius 50%
+				content ''
+				transform translate(-50%, -50%)
+			&::before
+				background-image url('../i/homepage-pluses.png')
+			&::after
+				border 7px solid $colorBlue
 	&__item
 		position relative
 		padding-left 80px
 		margin 30px 0
 		@media $480
+			padding-right 10px
 			padding-left 110px
 		@media $768
-			-webkit-column-break-inside avoid
-			page-break-inside avoid
-			break-inside avoid
+			width calc(50% - 20px)
+			padding-right 0
 			padding-left 95px
 			margin 0 0 30px
 		@media $1280
+			width calc(30% - 40px)
 			padding-left 0
+			&:nth-child(1)
+				position absolute
+				top 0
+				left 0
+			&:nth-child(2)
+				position absolute
+				top 0
+				left 50%
+				transform translateX(-50%)
+			&:nth-child(3)
+				position absolute
+				top 0
+				right 0
+			&:nth-child(4)
+				position absolute
+				top 230px
+				left 0
+			&:nth-child(5)
+				position absolute
+				top 300px
+				right 0
+			&:nth-child(6)
+				position absolute
+				top 515px
+				right 0
+			&:nth-child(7)
+				position absolute
+				top 610px
+				left 0
+			&:nth-child(8)
+				position absolute
+				top 800px
+				left 50%
+				transform translateX(-50%)
+			&:nth-child(2)
+			&:nth-child(8)
+				width 33%
+				text-align center
+				svg
+					position absolute
+					top 10px
+					left auto
+			&:nth-child(2)
+				svg
+					right 26px
+			&:nth-child(8)
+				svg
+					right 6px
+			&:nth-child(3)
+			&:nth-child(5)
+			&:nth-child(6)
+				width calc(28% - 40px)
+				text-align right
 		&-name
 			font-weight 500
 			font-size 2.4rem
 			text-transform uppercase
+			@media $1280
+				display flex
+				align-items center
+				^[-1]:nth-child(1) &
+				^[-1]:nth-child(4) &
+				^[-1]:nth-child(7) &
+					svg
+						order 2
+						margin-left 20px
+				^[-1]:nth-child(1) &
+					svg
+						margin-top -30px
+				^[-1]:nth-child(4) &
+					position relative
+					svg
+						position absolute
+						top -25px
+						left 100%
+						margin-left 50px
+						transform translateX(-200%)
+				^[-1]:nth-child(3) &
+				^[-1]:nth-child(5) &
+				^[-1]:nth-child(6) &
+					justify-content flex-end
+					svg
+						margin-right 12px
+				^[-1]:nth-child(3) &
+					svg
+						margin-top -36px
+				^[-1]:nth-child(5) &
+					svg
+						margin-top -16px
+				^[-1]:nth-child(6) &
+					svg
+						margin-left 40px
+				^[-1]:nth-child(2) &
+				^[-1]:nth-child(8) &
+					justify-content center
+					svg
+						order 2
+						margin-top -40px
+						margin-left 12px
 			svg
 				position absolute
 				top -10px
@@ -1457,9 +1562,15 @@ img
 					left 20px
 				@media $768
 					left 10px
+				@media $1280
+					flex-shrink 0
+					display inline-block
+					position static
 		&-descr
 			font-size 1.8rem
 			margin-top 5px
+			p
+				margin 0
 .homepage-cert
 	overflow hidden
 	padding 32px 0 25px
@@ -1515,6 +1626,7 @@ img
 			border solid $colorText
 			margin-top -(@height / 2)
 			cursor pointer
+			outline 0
 			transition all .2s
 			&:hover
 				border-color $colorBlue
@@ -1599,7 +1711,7 @@ img
 	color $colorWhite
 	text-align center
 	background $colorGreen url('../i/homepage-weather.png') no-repeat 80% bottom / 170% auto
-	padding 50px 0 312px
+	padding 50px 0 98%
 	@media $480
 		background-size 144% auto
 		padding-bottom 380px
@@ -1614,8 +1726,10 @@ img
 		background-size auto 70%
 		padding-bottom 65px
 	@media $1280
-		background-position right bottom
+		background-position 170% bottom
 		background-size auto 100%
+	@media $1440
+		background-position right bottom
 	&__title
 		position relative
 		font-weight 500
@@ -1626,6 +1740,7 @@ img
 		margin-bottom 10px
 		@media $1024
 			width 725px
+			line-height 4.8rem
 			text-align left
 		@media $1280
 			width 520px
@@ -1673,6 +1788,8 @@ img
 			text-align left
 			padding-top 40px
 			padding-bottom 60px
+		@media $1440
+			padding-bottom 80px
 		&::before
 			position absolute
 			top 0
@@ -1913,14 +2030,12 @@ img
 					text-align left
 					padding 0 15px 0 290px
 	&__sub
-		padding-left 32px
-		margin-top 25px
+		width 250px
+		margin 25px auto 0
 		@media $480
 			display flex
 			flex-wrap wrap
 			justify-content space-between
-			width 270px
-			margin 25px auto 0
 		@media $640
 			width 240px
 			padding-left 0
@@ -1963,6 +2078,8 @@ img
 				padding-left 80px
 				margin-right 16px
 				cursor pointer
+				&:last-of-type
+					margin-right 0
 				@media $480
 					margin-right 0
 				&::before
@@ -2008,16 +2125,17 @@ img
 		@media $1280
 			width auto
 			margin-top 40px
-		.form__row
+	.form__row
+		@media $1024
 			width calc(50% - 15px)
 			margin-bottom 0
-			@media $1280
-				align-self flex-start
-				width calc(33% - 15px)
 			&:last-child
 				width 100%
-				@media $1280
-					width calc(33% - 15px)
+		@media $1280
+			align-self flex-start
+			width calc(33% - 15px)
+			&:last-child
+				width calc(33% - 15px)
 	&__input
 		width calc(100% - 18px)
 		height 70px
@@ -2134,6 +2252,8 @@ img
 	overflow hidden
 	background url('../i/homepage-reviews-bg.jpg') no-repeat center 0 / cover
 	padding 22px 0 42px
+	@media $640
+		padding 35px 0 32px
 	@media $1024
 		padding 60px 0 55px
 	&__descr
@@ -2183,6 +2303,7 @@ img
 			border solid $colorText
 			margin-top -(@height / 2)
 			cursor pointer
+			outline 0
 			transition all .2s
 			&:hover
 				border-color $colorBlue
@@ -2259,21 +2380,21 @@ img
 			&:hover
 				text-decoration none
 .homepage-invite
-	@media $768
-		.container
-			max-width none
-			padding 0
-		&__main
-			display flex
-	@media $1280
-		.container
+	overflow hidden
+	.container
+		max-width none
+		padding 0
+		@media $1280
 			max-width 1156px
+	&__main
+		@media $768
+			display flex
 	&__item
 		position relative
 		color $colorWhite
 		font-size 2.4rem
 		text-align center
-		padding 20px 0
+		padding 20px 8px
 		@media $480
 			padding-right 10px
 			padding-left @padding-right
@@ -2455,6 +2576,7 @@ img
 			border solid $colorText
 			margin-top -(@height / 2)
 			cursor pointer
+			outline 0
 			transition all .2s
 			&:hover
 				border-color $colorBlue
@@ -2488,25 +2610,24 @@ img
 		@media $1024
 			height 182px
 .homepage-address
-	@media $768
-		.container
-			max-width none
-			padding 0
+	.container
+		max-width none
+		padding 0
 	@media $1024
 		.container
 			display flex
 	&__map
 		height 325px
-		margin 0 -8px
-		@media $768
-			margin 0
 		@media $1024
 			width 50%
 			height auto
 		@media $1280
 			width 585px
 		@media $1440
-			width 663px
+			width 45%
+		iframe
+			width 100%
+			height @width
 	&__main
 		color $colorWhite
 		background-color $colorBlue
@@ -2540,6 +2661,7 @@ img
 			@media $640
 				display flex
 				justify-content center
+				margin-top 35px
 			@media $768
 				text-align left
 				justify-content flex-start
@@ -2594,6 +2716,10 @@ img
 				margin-left -69px
 				@media $480
 					margin-left 0
+				@media $640
+					text-decoration none
 				&:hover
 					text-decoration none
+					@media $640
+						text-decoration underline
 /*  </homepage>  */

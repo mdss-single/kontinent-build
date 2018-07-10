@@ -101,9 +101,14 @@ img
 			position absolute
 			top 26px
 			left 0
+			max-width 260px
 			margin 0
-		@media $1280
+			img
+				max-width 200px
+		@media $1024
 			max-width 222px
+			img
+				max-width 100%
 		&-slogan
 			font-size 1.8rem
 			margin-top 5px
@@ -173,7 +178,6 @@ img
 				text-decoration underline
 				@media $1024
 					color currentColor
-					text-decoration none
 					margin-right 10px
 				&:last-child
 					display none
@@ -184,7 +188,6 @@ img
 					text-decoration none
 					@media $1024
 						color $colorGreen
-						text-decoration underline
 	&__action
 		display flex
 		flex-direction column

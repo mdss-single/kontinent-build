@@ -832,9 +832,15 @@ img
 				text-decoration none
 				background-color $colorOrange
 .homepage-catalog
-	background url('../i/homepage-catalog-bg.jpg') no-repeat 0 0 / cover
+	background url('../i/homepage-catalog-bg-480.jpg') no-repeat 0 0 / cover
 	padding 36px 0
 	margin-top 38px
+	@media $640
+		background url('../i/homepage-catalog-bg-640.jpg') no-repeat 0 0 / cover
+	@media $768
+		background url('../i/homepage-catalog-bg-768.jpg') no-repeat 0 0 / cover
+	@media $1024
+		background url('../i/homepage-catalog-bg.jpg') no-repeat 0 0 / cover
 	@media $768
 		&__main
 			display flex
@@ -1111,11 +1117,14 @@ img
 				width auto
 				padding 0 30px
 .homepage-calc
-	background url('../i/homepage-calc-bg.jpg') no-repeat 35% 0 / cover
-	padding-top 42px
+	background url('../i/homepage-calc-bg-480.jpg') no-repeat 0 0 / 100% 65.5%
 	@media $640
-		background linear-gradient(rgba($colorBlue, .2) 0, rgba($colorBlue, .2) 100%), url('../i/homepage-calc-bg.jpg') no-repeat 35% 0 / cover
+		background linear-gradient(rgba($colorBlue, .2) 0, rgba($colorBlue, .2) 100%), url('../i/homepage-calc-bg-640.jpg') no-repeat 0 0 / cover
+		padding-top 42px
+	@media $768
+		background linear-gradient(rgba($colorBlue, .2) 0, rgba($colorBlue, .2) 100%), url('../i/homepage-calc-bg-768.jpg') no-repeat 0 0 / cover
 	@media $1024
+		background url('../i/homepage-calc-bg.jpg') no-repeat 0 0 / cover
 		padding 45px 0
 		&__main
 			display flex
@@ -2112,8 +2121,14 @@ img
 					transform translateY(-50%)
 .homepage-callback
 	color $colorWhite
-	background url('../i/homepage-callback-bg.jpg') no-repeat center 0 / cover
+	background url('../i/homepage-callback-bg-480.jpg') no-repeat 0 0 / cover
 	padding 30px 0 35px
+	@media $640
+		background url('../i/homepage-callback-bg-640.jpg') no-repeat 0 0 / cover
+	@media $768
+		background url('../i/homepage-callback-bg-768.jpg') no-repeat 0 0 / cover
+	@media $1024
+		background url('../i/homepage-callback-bg.jpg') no-repeat 0 0 / cover
 	&__title
 		font-weight 500
 		font-size 3.6rem
@@ -2124,7 +2139,7 @@ img
 		@media $768
 			display flex
 			flex-wrap wrap
-			justify-content space-between
+			justify-content center
 		@media $1024
 			width 720px
 			margin auto
@@ -2182,17 +2197,17 @@ img
 			&:hover
 				text-decoration none
 .homepage-delivery
-	background url('../i/homepage-delivery-bg.jpg') no-repeat center 0 / cover
+	background url('../i/homepage-delivery-bg-480.jpg') no-repeat 0 0 / cover
 	padding 46px 0 15px
 	@media $480
 		padding-bottom 25px
+	@media $640
+		background url('../i/homepage-delivery-bg-640.jpg') no-repeat 0 0 / cover
 	@media $768
-		background-position 66% -130px
-		background-size 200% auto
+		background url('../i/homepage-delivery-bg-768.jpg') no-repeat 0 0 / cover
 	@media $1024
 		position relative
-		background-position center 0
-		background-size cover
+		background url('../i/homepage-delivery-bg.jpg') no-repeat 0 0 / cover
 		padding 0
 		&::before
 			position absolute
@@ -2513,10 +2528,15 @@ img
 .homepage-try
 	overflow hidden
 	text-align center
-	background url('../i/homepage-try-bg.jpg') no-repeat center 0 / cover
+	background url('../i/homepage-try-bg-480.jpg') no-repeat 0 0 / cover
 	padding 43px 0 38px
+	@media $640
+		background url('../i/homepage-try-bg-640.jpg') no-repeat 0 0 / cover
 	@media $768
 		text-align left
+		background url('../i/homepage-try-bg-768.jpg') no-repeat 0 0 / cover
+	@media $1024
+		background url('../i/homepage-try-bg.jpg') no-repeat 0 0 / cover
 	&__title
 		position relative
 		font-size 3.6rem

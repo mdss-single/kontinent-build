@@ -33,6 +33,24 @@ button
 		&:hover
 		&:active
 			background-color darken($colorOrange, 5)
+	&--blue
+		color $colorWhite
+		background-color $colorBlue
+		box-shadow 0 5px 0 #015276
+		&:hover
+		&:active
+			background-color darken($colorBlue, 5)
+	&--small
+		height 40px
+		font-size 1.65rem
+		padding 0 40px
+	&--large
+		height 78px
+		font-size 3rem
+		border-radius (@height / 2)
+		padding 0 40px
+	&--fullwidth
+		width 100%
 /*  </buttons>  */
 
 /*  <inputs>  */
@@ -74,6 +92,46 @@ button
 				fill #292929
 				transform translateY(-50%)
 				transition all .2s
+.page-title
+	position relative
+	font-weight 500
+	font-size 3.6rem
+	text-transform uppercase
+	text-align center
+	padding-top 40px
+	@media $768
+		text-align left
+	&::before
+		position absolute
+		top 0
+		left 50%
+		width 218px
+		height 22px
+		content ''
+		transform translateX(-50%)
+		@media $768
+			left 0
+			transform none
+	&--blue
+		&::before
+			background-color $colorBlue
+	&--green
+		&::before
+			background-color $colorGreen
+	&--orange
+		&::before
+			background-color $colorOrange
+.color
+	&-blue
+		color $colorBlue
+	&-green
+		color $colorGreen
+	&-orange
+		color $colorOrange
+	&-gray
+		color $colorGray
+.no-scroll
+	overflow hidden
 /*  </layout>  */
 
 /*  <animation>  */

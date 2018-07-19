@@ -300,6 +300,8 @@ img
 		font-size 2.4rem
 		padding-left 50px
 		margin 10px 0
+		@media $768
+			display none
 		&::before
 		&::after
 			position absolute
@@ -341,10 +343,12 @@ img
 			flex-wrap wrap
 			position static
 			width auto
+			background-color transparent
 			border 0
 			padding 0
 			margin-bottom 15px
 			margin-left -25px
+			transform none
 		@media $1024
 			flex-wrap nowrap
 			justify-content space-between
@@ -357,7 +361,6 @@ img
 		padding 8px 15px
 		@media $768
 			display inline
-			width 55%
 			color $colorWhite
 			border-bottom 0
 			padding 0
@@ -2857,6 +2860,9 @@ img
 		border-top 1px solid $colorBlue
 		padding-top 20px
 		margin-top 20px
+		@media $480
+			justify-content space-between
+			border-top 0
 		@media $768
 			border-top 0
 			padding-top 0
@@ -2871,6 +2877,11 @@ img
 			font-size 2rem
 			text-transform none
 			margin 8px 0
+			@media $480
+				flex-wrap wrap
+				justify-content center
+				width calc(50% - 20px)
+				text-align center
 			@media $768
 				display block
 				max-width 200px
@@ -2905,6 +2916,10 @@ img
 	&__choose
 		text-align center
 		margin 30px 0 40px
+		@media $480
+			display flex
+			flex-wrap wrap
+			justify-content center
 		span
 			display block
 			font-weight 500
@@ -2926,6 +2941,8 @@ img
 			padding 0 45px 0 0
 			margin 15px 0 10px
 			appearance none
+			@media $480
+				page-break-after always
 			@media $768
 				margin-top 0
 				margin-right 25px
@@ -2935,6 +2952,9 @@ img
 		.btn
 			text-transform uppercase
 			margin-top 15px
+			@media $480
+				margin-right 5px
+				margin-left 5px
 			@media $768
 				margin-top 0
 				margin-right 10px
@@ -2947,7 +2967,7 @@ img
 				width 100%
 				white-space nowrap
 				text-transform uppercase
-				@media $768
+				@media $480
 					width auto
 					padding 0 70px
 	&__item
@@ -2957,9 +2977,11 @@ img
 		text-align center
 		border-bottom 2px solid $colorBlue
 		padding 15px 0 20px
+		@media $480
+			padding-top 40px
 		@media $768
 			text-align left
-			padding 40px 0 75px
+			padding-bottom 75px
 		&:last-child
 			border-bottom 0
 			padding-bottom 45px
@@ -3023,6 +3045,7 @@ img
 	&__main
 		display flex
 		flex-wrap wrap
+		justify-content center
 		align-items center
 		.btn
 			line-height 1
@@ -3057,6 +3080,10 @@ img
 	&__types
 		display flex
 		flex-wrap wrap
+		@media $480
+			width 284px
+			margin-right auto
+			margin-left @margin-right
 		@media $768
 			margin-bottom 44px
 	&__type
@@ -3137,7 +3164,11 @@ img
 			font-size 3rem
 			text-transform uppercase
 			margin 10px 0 20px
+			@media $480
+				text-align center
 		&-pluses
+			@media $480
+				margin 0 40px
 			&--cols
 				@media $768
 					display flex

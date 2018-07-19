@@ -3000,6 +3000,8 @@ img
 		@media $1024
 			padding-right 300px
 			padding-bottom 40px
+		@media $1280
+			padding-right 430px
 		&:last-child
 			border-bottom 0
 			padding-bottom 45px
@@ -3050,6 +3052,9 @@ img
 			@media $1024
 				top 40px
 				left calc(100% - 300px)
+			@media $1280
+				display flex
+				left calc(100% - 430px)
 		&-col
 			width 100%
 			white-space nowrap
@@ -3236,13 +3241,15 @@ img
 					justify-content space-between
 				@media $768
 					display block
+				@media $1280
+					display flex
 				> div
 					margin-top 12px
 					@media $640
 						margin-top 0
 					@media $768
 						margin-top 12px
-					@media $1024
+					@media $1280
 						margin-top 0
 						margin-right 20px
 					&:last-child

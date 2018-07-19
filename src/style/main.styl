@@ -3280,3 +3280,121 @@ img
 			&::before
 				background-color $colorRed
 /*  </doubt>  */
+
+/*  <inner>  */
+.inner
+	&__title
+		display flex
+		flex-wrap wrap
+		justify-content space-between
+		align-items flex-end
+		line-height 1
+		border-bottom 1px solid $colorBlue
+		padding-bottom 20px
+		@media $768
+			border-width 2px
+			padding-bottom 25px
+		.page-title
+			width 100%
+			@media $768
+				width auto
+	&__links
+		display flex
+		flex-wrap wrap
+		border-top 1px solid $colorBlue
+		padding-top 20px
+		margin-top 20px
+		@media $480
+			justify-content space-between
+		@media $640
+			justify-content flex-start
+			width 100%
+		@media $1024
+			width auto
+			border-top 0
+			padding-top 0
+			margin-top 0
+		&-item
+			display flex
+			align-items center
+			position relative
+			color $colorText
+			width 100%
+			font-weight normal
+			font-size 2rem
+			text-transform none
+			margin 8px 0
+			@media $480
+				flex-wrap wrap
+				justify-content center
+				width calc(50% - 20px)
+				text-align center
+			@media $768
+				max-width 200px
+			@media $1024
+				display flex
+				text-align center
+				margin 0 0 0 26px
+			svg
+				flex-shrink 0
+				width 60px
+				height @width
+				fill @color
+				margin-right 20px
+				margin-bottom 10px
+				transition all .2s
+				@media $1024
+					margin-right 0
+			a:hover&
+				color $colorOrange
+				svg
+					fill @color
+/*  </inner>  */
+
+/*  <product-card>  */
+.product-card
+	padding 24px 0 32px
+	&__pic
+		width 100%
+		border 13px solid $colorGreen
+	&__info
+		text-align center
+		margin-top 20px
+	&__title
+		font-weight bold
+		font-size 3rem
+	&__descr
+		font-size 2.4rem
+		line-height 3rem
+		p
+			margin 0
+	&__price
+		color $colorBlue
+		font-weight bold
+		font-size 3rem
+		margin 40px 0 20px
+		&-old
+			display block
+			color $colorText
+			font-weight normal
+			text-decoration line-through
+	&__tocart
+		flex-direction column
+		align-items flex-start
+		position relative
+		width 100%
+		font-size 1.6rem
+		text-align left
+		white-space nowrap
+		padding-left 70px
+		svg
+			position absolute
+			top 50%
+			left 20px
+			width 41px
+			height 34px
+			fill $colorWhite
+			transform translateY(-50%)
+		span
+			text-transform uppercase
+/*  </product-card>  */

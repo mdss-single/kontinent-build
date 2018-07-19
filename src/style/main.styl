@@ -2866,6 +2866,7 @@ img
 			justify-content flex-start
 			width 100%
 		@media $1024
+			width auto
 			border-top 0
 			padding-top 0
 			margin-top 0
@@ -2887,9 +2888,8 @@ img
 			@media $768
 				max-width 200px
 			@media $1024
-				display block
+				display flex
 				text-align center
-				padding-top 65
 				margin 0 0 0 26px
 			svg
 				flex-shrink 0
@@ -2899,6 +2899,8 @@ img
 				margin-right 20px
 				margin-bottom 10px
 				transition all .2s
+				@media $1024
+					margin-right 0
 			a:hover&
 				color $colorOrange
 				svg
@@ -2921,6 +2923,9 @@ img
 		@media $640
 			justify-content flex-start
 			align-items center
+		@media $1024
+			display block
+			text-align left
 		span
 			display block
 			font-weight 500
@@ -2992,6 +2997,9 @@ img
 		@media $768
 			padding-bottom 75px
 			padding-left 0
+		@media $1024
+			padding-right 300px
+			padding-bottom 40px
 		&:last-child
 			border-bottom 0
 			padding-bottom 45px
@@ -3039,6 +3047,9 @@ img
 				position absolute
 				top 240px
 				left 0
+			@media $1024
+				top 40px
+				left calc(100% - 300px)
 		&-col
 			width 100%
 			white-space nowrap
@@ -3048,6 +3059,7 @@ img
 				width auto
 				margin-top 0
 				margin-right 55px
+				margin-bottom 15px
 			&:last-of-type
 				margin-right 0
 			p
@@ -3074,6 +3086,10 @@ img
 		flex-wrap wrap
 		justify-content center
 		align-items center
+		@media $1024
+			flex-direction column
+		@media $1280
+			flex-direction row
 		.btn
 			line-height 1
 			text-transform uppercase
@@ -3087,7 +3103,7 @@ img
 		@media $640
 			font-size 3.6rem
 			line-height 4.8rem
-		@media $1024
+		@media $1280
 			text-align left
 			margin-right 45px
 			margin-bottom 0
@@ -3119,6 +3135,8 @@ img
 			width 100%
 		@media $768
 			margin-bottom 44px
+		@media $1024
+			justify-content flex-start
 	&__type
 		width 100%
 		font-weight 500

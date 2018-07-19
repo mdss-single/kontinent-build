@@ -3354,15 +3354,41 @@ img
 /*  <product-card>  */
 .product-card
 	padding 24px 0 32px
+	&__main
+		@media $768
+			display flex
+			align-items flex-start
+			margin-top 35px
 	&__pic
+		display block
 		width 100%
 		border 13px solid $colorGreen
+		margin-top 35px
+		@media $480
+			width 300px
+			margin-right auto
+			margin-left @margin-right
+		@media $768
+			flex-shrink 0
+			margin-top 0
 	&__info
 		text-align center
 		margin-top 20px
+		@media $768
+			flex 1
+			text-align left
+			margin-top 0
+			margin-left 25px
+		@media $1024
+			margin-left 35px
 	&__title
 		font-weight bold
 		font-size 3rem
+		@media $768
+			margin-top -14px
+			margin-bottom 5px
+		@media $1024
+			margin-top -12px
 	&__descr
 		font-size 2.4rem
 		line-height 3rem
@@ -3373,11 +3399,18 @@ img
 		font-weight bold
 		font-size 3rem
 		margin 40px 0 20px
+		@media $768
+			margin-left -325px
+		@media $1024
+			margin-left 0
 		&-old
 			display block
 			color $colorText
 			font-weight normal
 			text-decoration line-through
+			@media $480
+				display inline
+				margin-right 26px
 	&__tocart
 		flex-direction column
 		align-items flex-start
@@ -3387,6 +3420,14 @@ img
 		text-align left
 		white-space nowrap
 		padding-left 70px
+		@media $480
+			width 322px
+			padding-left 74px
+			margin auto
+		@media $768
+			margin-left -325px
+		@media $1024
+			margin-left 0
 		svg
 			position absolute
 			top 50%

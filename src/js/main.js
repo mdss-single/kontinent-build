@@ -2,7 +2,7 @@
 	"use strict";
 
 	// certificates carousel
-	$('.js-cert-list').slick({
+	$('.js-cert-list, .js-vacancy-gallery').slick({
 		mobileFirst: true,
 		responsive: [
 		{
@@ -106,6 +106,11 @@
 		var ulIndex = $('.js-doubt-compare .doubt__types').index($(this).parents('.js-doubt-compare .doubt__types'));
 		localStorage.removeItem('tab' + ulIndex);
 		localStorage.setItem('tab' + ulIndex, $(this).index());
+	});
+
+	// input file
+	$('.js-input-file').change(function() {
+		$('label[for="' + this.id + '"]').text($(this).val().replace(/^.*\\/, ""));
 	});
 
 	function showMenu() {

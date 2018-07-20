@@ -3439,3 +3439,230 @@ img
 		span
 			text-transform uppercase
 /*  </product-card>  */
+
+/*  <vacancy>  */
+.vacancy
+	overflow hidden
+	&-splash
+		background fixed url('../i/vacancy-splash.jpg') no-repeat center center / cover
+		padding 73px 0 250px
+		&__main
+			color $colorWhite
+			font-weight bold
+			font-size 3.6rem
+			line-height 4.8rem
+			text-transform uppercase
+			background-color rgba(#ff8901, .68)
+			text-align center
+			padding 10px 5px
+	&-descr
+		font-size 2.4rem
+		line-height 3rem
+		text-align center
+		p
+			margin 0
+	&-whatis
+		position relative
+		color $colorWhite
+		font-size 3.6rem
+		line-height 4.8rem
+		text-align center
+		background-color $colorBlue
+		padding 15px 0
+		margin-top 30px
+		a
+			color #b5e5fb
+		&::before
+			position absolute
+			top 0
+			bottom 0
+			left -20000%
+			z-index -1
+			width 40000%
+			background-color $colorBlue
+			content ''
+	&-gallery
+		position relative
+		text-align center
+		background-color #e5e5e5
+		padding 32px 0
+		&::before
+			position absolute
+			top 0
+			bottom 0
+			left -20000%
+			z-index -1
+			width 40000%
+			background-color #e5e5e5
+			content ''
+		&__title
+			font-weight bold
+			font-size 3.6rem
+			line-height 1
+		&__descr
+			font-size 3rem
+			line-height 3.6rem
+			margin 15px 0
+		&__main
+			position relative
+			width 238px
+			margin auto
+			.slick-arrow
+				position absolute
+				top 50%
+				width 30px
+				height @width
+				text-indent -99999px
+				background none
+				border solid $colorText
+				margin-top -(@height / 2)
+				cursor pointer
+				outline 0
+				transition all .2s
+				&:hover
+					border-color $colorBlue
+			.slick-prev
+				left -15px
+				border-width 3px 0 0 3px
+				transform rotate(-45deg) translateY(-50%)
+			.slick-next
+				right -15px
+				border-width 3px 3px 0 0
+				transform rotate(45deg) translateY(-50%)
+	&-pluses
+		margin-top 40px
+		.page-title
+			font-weight bold
+			line-height 1
+		&__items
+			display flex
+			flex-direction column
+			margin 10px 0
+		&__item
+			display flex
+			align-items flex-start
+			width 100%
+			font-size 2.4rem
+			line-height 3rem
+			margin 15px 0
+			svg
+				flex-shrink 0
+				width 72px
+				fill $colorGreen
+				margin 8px 18px 0 0
+			&:nth-child(1)
+				order 1
+				svg
+					height 72px
+			&:nth-child(3)
+				order 2
+				svg
+					height 52px
+			&:nth-child(5)
+				order 3
+				svg
+					height 68px
+			&:nth-child(2)
+				order 4
+				svg
+					height 55px
+			&:nth-child(4)
+				order 5
+				svg
+					height 60px
+			&:nth-child(6)
+				order 6
+				svg
+					height 63px
+	&-item
+		position relative
+		color $colorWhite
+		background-color $colorBlue
+		padding 50px 0 20px
+		&::before
+			position absolute
+			top 0
+			bottom 0
+			left -20000%
+			z-index -1
+			width 40000%
+			background-color $colorBlue
+			content ''
+		&__name
+			position relative
+			font-weight bold
+			font-size 3.6rem
+			line-height 4.8rem
+			text-align center
+			padding-top 45px
+			&::before
+				position absolute
+				top 0
+				left 50%
+				width 248px
+				height 31px
+				background-color $colorWhite
+				content ''
+				transform translateX(-50%)
+		&__demands
+			margin-top 20px
+			p
+				font-weight 500
+				font-size 3rem
+				line-height 1
+				margin 0
+			ul
+				padding-left 25px
+				margin-left 0
+			li
+				font-size 2.4rem
+				line-height 3rem
+	&-feedback
+		background url('../i/vacancy-feedback-bg.jpg') no-repeat 0 0 / cover
+		padding-bottom 6px
+		&__descr
+			position relative
+			color $colorWhite
+			font-size 2.4rem
+			line-height 3rem
+			text-align center
+			background-color $colorGreen
+			padding 25px 15px
+			margin-bottom 36px
+			a
+				color #e5d62e
+		&__row
+			margin 18px 0
+			&-title
+				display block
+				font-size 2.4rem
+				line-height 3rem
+				margin-bottom 12px
+			.input-text
+			.textarea
+				border 1px solid #b9b9b9
+				transition all .2s
+				&:focus
+					box-shadow 0 0 4px #b9b9b9
+			.input-text
+				height 64px
+		&__attach
+			font-style italic
+			font-size 1.8rem
+			margin 20px 0
+		&__send
+			width 100%
+		&__notice
+			font-style italic
+			font-size 2.4rem
+			line-height 3rem
+			text-align center
+			margin 15px 0
+		&__personal
+			line-height 1.8rem
+			text-align center
+			a
+				text-decoration underline
+				&:hover
+					text-decoration none
+/*  </vacancy>  */

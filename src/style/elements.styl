@@ -55,6 +55,7 @@ button
 
 /*  <inputs>  */
 .input-text
+.textarea
 	width 100%
 	height 56px
 	font-size 1.8rem
@@ -67,6 +68,40 @@ button
 		color #292929
 	&--icon
 		padding-left 52px
+.textarea
+	height 160px
+	min-height 160px
+	padding 10px 15px
+	resize vertical
+	transition box-shadow .2s
+.input-file
+	position absolute
+	left -9999px
+	& + label
+		display inline-flex
+		align-items center
+		height 52px
+		color $colorWhite
+		font-weight 300
+		font-size 2.1rem
+		background-color $colorOrange
+		border-radius (@height / 2)
+		padding 0 30px
+		box-shadow 0 5px 0 #bb661a
+		cursor pointer
+		transition all .2s
+		-webkit-user-select none
+		user-select none
+		&:hover
+			background-color darken($colorOrange, 5)
+		&:active
+			box-shadow 0 5px 0 transparent
+			transform translateY(3px)
+		svg
+			width 30px
+			height 32px
+			fill @color
+			margin-right 13px
 /*  </inputs>  */
 
 /*  <layout>  */

@@ -3446,6 +3446,11 @@ img
 	&-splash
 		background fixed url('../i/vacancy-splash.jpg') no-repeat center center / cover
 		padding 73px 0 250px
+		@media $640
+			padding 185px 0 250px
+		@media $768
+			background-attachment scroll
+			background-position 90% 0
 		&__main
 			color $colorWhite
 			font-weight bold
@@ -3455,10 +3460,26 @@ img
 			background-color rgba(#ff8901, .68)
 			text-align center
 			padding 10px 5px
+			@media $640
+				padding 50px 5px
+				p
+					margin 0
+			@media $768
+				max-width 668px
+				padding 50px 40px
+				margin auto
 	&-descr
 		font-size 2.4rem
 		line-height 3rem
 		text-align center
+		@media $768
+			border-top 1px solid $colorBlue
+			padding-top 15px
+			margin-top 10px
+		@media $1024
+			border-width 3px
+		@media $1280
+			border-width 1px
 		p
 			margin 0
 	&-whatis
@@ -3472,6 +3493,10 @@ img
 		margin-top 30px
 		a
 			color #b5e5fb
+			@media $640
+				display block
+			@media $1024
+				display inline
 		&::before
 			position absolute
 			top 0
@@ -3486,6 +3511,8 @@ img
 		text-align center
 		background-color #e5e5e5
 		padding 32px 0
+		@media $1024
+			text-align left
 		&::before
 			position absolute
 			top 0
@@ -3507,6 +3534,13 @@ img
 			position relative
 			width 238px
 			margin auto
+			@media $480
+				width auto
+				margin 0 60px
+			@media $640
+				margin 0 30px
+			@media $1024
+				margin 40px 25px 0
 			.slick-arrow
 				position absolute
 				top 50%
@@ -3529,6 +3563,9 @@ img
 				right -15px
 				border-width 3px 3px 0 0
 				transform rotate(45deg) translateY(-50%)
+		&__item
+			@media $640
+				padding 0 10px
 	&-pluses
 		margin-top 40px
 		.page-title
@@ -3538,6 +3575,10 @@ img
 			display flex
 			flex-direction column
 			margin 10px 0
+			@media $1024
+				flex-direction row
+				flex-wrap wrap
+				justify-content space-between
 		&__item
 			display flex
 			align-items flex-start
@@ -3545,6 +3586,9 @@ img
 			font-size 2.4rem
 			line-height 3rem
 			margin 15px 0
+			@media $1024
+				width calc(50% - 22px)
+				margin 20px 0
 			svg
 				flex-shrink 0
 				width 72px
@@ -3556,22 +3600,32 @@ img
 					height 72px
 			&:nth-child(3)
 				order 2
+				@media $1024
+					order 3
 				svg
 					height 52px
 			&:nth-child(5)
 				order 3
+				@media $1024
+					order 5
 				svg
 					height 68px
 			&:nth-child(2)
 				order 4
+				@media $1024
+					order 2
 				svg
 					height 55px
 			&:nth-child(4)
 				order 5
+				@media $1024
+					order 4
 				svg
 					height 60px
 			&:nth-child(6)
 				order 6
+				@media $1024
+					order 6
 				svg
 					height 63px
 	&-item
@@ -3579,6 +3633,8 @@ img
 		color $colorWhite
 		background-color $colorBlue
 		padding 50px 0 20px
+		@media $1280
+			padding-bottom 100px
 		&::before
 			position absolute
 			top 0
@@ -3595,6 +3651,8 @@ img
 			line-height 4.8rem
 			text-align center
 			padding-top 45px
+			@media $768
+				text-align left
 			&::before
 				position absolute
 				top 0
@@ -3604,6 +3662,9 @@ img
 				background-color $colorWhite
 				content ''
 				transform translateX(-50%)
+				@media $768
+					left 0
+					transform none
 		&__demands
 			margin-top 20px
 			p
@@ -3629,15 +3690,39 @@ img
 			background-color $colorGreen
 			padding 25px 15px
 			margin-bottom 36px
+			@media $1280
+				background-color transparent
+				padding 0
+				.container
+					background-color $colorGreen
+					padding 25px
+					margin-bottom 0
+					transform translateY(-50%)
 			a
 				color #e5d62e
+		@media $1280
+			> .container
+				margin-top -50px
 		&__row
 			margin 18px 0
+			@media $768
+				position relative
+				padding-left 245px
 			&-title
 				display block
 				font-size 2.4rem
 				line-height 3rem
 				margin-bottom 12px
+				@media $768
+					position absolute
+					top 50%
+					left 0
+					width 240px
+					transform translateY(-50%)
+				^[-1]--top &
+					@media $768
+						top 10px
+						transform none
 			.input-text
 			.textarea
 				border 1px solid #b9b9b9
@@ -3652,15 +3737,22 @@ img
 			margin 20px 0
 		&__send
 			width 100%
+			@media $768
+				width auto
+				padding 0 70px
 		&__notice
 			font-style italic
 			font-size 2.4rem
 			line-height 3rem
 			text-align center
 			margin 15px 0
+			@media $768
+				text-align left
 		&__personal
 			line-height 1.8rem
 			text-align center
+			@media $768
+				text-align left
 			a
 				text-decoration underline
 				&:hover

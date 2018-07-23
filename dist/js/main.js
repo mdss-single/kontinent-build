@@ -110,7 +110,7 @@
 
 	// input file
 	$('.js-input-file').change(function() {
-		$('label[for="' + this.id + '"]').text($(this).val().replace(/^.*\\/, ""));
+		$(this).next('label[for="' + this.id + '"]').text($(this).val().replace(/^.*\\/, ""));
 	});
 
 	function showMenu() {

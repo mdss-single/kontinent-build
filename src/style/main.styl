@@ -3758,3 +3758,279 @@ img
 				&:hover
 					text-decoration none
 /*  </vacancy>  */
+
+/*  <certificates>  */
+.certificates
+	display flex
+	flex-wrap wrap
+	justify-content space-between
+	margin-top 25px
+	&__item
+		margin-bottom 30px
+		@media $640
+			width calc(50% - 15px)
+		@media $1024
+			width calc(33% - 15px)
+		&-pic
+			margin-bottom 15px
+			@media $768
+				height 400px
+			img
+				width 100%
+				@media $768
+					width auto
+					height 100%
+		&-download
+			font-size 1.8rem
+			line-height 1
+			margin-bottom 20px
+			a
+				color currentColor
+				font-size 3rem
+				text-decoration underline
+				&:hover
+					color $colorBlue
+		&-name
+			font-weight 500
+			font-size 2.4rem
+			line-height 3rem
+			margin-bottom 10px
+		&-descr
+			font-size 1.8rem
+			line-height 2.4rem
+			p
+				margin 0
+/*  </certificates>  */
+
+/*  <whatis>  */
+.whatis
+	position relative
+	color $colorWhite
+	font-size 3.6rem
+	line-height 4.8rem
+	text-align center
+	background-color $colorBlue
+	padding 15px 0
+	margin-top 20px
+	a
+		color #b5e5fb
+		@media $640
+			display block
+		@media $768
+			display inline
+			text-decoration underline
+			&:hover
+				text-decoration none
+/*  </whatis>  */
+
+/*  <article>  */
+.article
+	&__splash
+		background-repeat no-repeat
+		background-position center 0
+		background-size cover
+		padding 85px 0
+		&-main
+			color $colorWhite
+			text-align center
+			background-color rgba(#ff8901, .68)
+			padding 40px 15px
+			@media $1024
+				max-width 980px
+				margin auto
+		&-title
+			font-weight bold
+			font-size 4.4rem
+			line-height 1
+			text-transform uppercase
+			@media $480
+				font-size 4.8rem
+		&-text
+			font-size 2.4rem
+			line-height 3rem
+			margin-top 15px
+			@media $480
+				font-size 3.6rem
+				line-height 4.8rem
+	.page-title
+		@media $480
+			span:first-child
+				display block
+		@media $1024
+			border-bottom 3px solid $colorBlue
+			padding-bottom 15px
+	&__date
+		display block
+		font-style italic
+		font-weight normal
+		font-size 1.8rem
+		line-height 1
+		text-transform none
+		margin-top 15px
+		@media $480
+			display inline
+			margin-top 0
+			margin-right 15px
+	&__views
+		display block
+		color $colorBlue
+		font-weight normal
+		font-size 1.8rem
+		line-height 1
+		text-transform none
+		margin-top 15px
+		@media $480
+			display inline
+			margin-top 0
+	&__main
+		text-align center
+		@media $640
+			text-align left
+		@media $1024
+			margin-top 44px
+		h3
+			font-weight 500
+			font-size 2.4rem
+			line-height 3rem
+			margin-top 30px
+			&:first-of-type
+				margin-top 0
+		img
+			@media $480
+				width 100%
+			@media $1024
+				width auto
+				&[style*='float:left']
+					margin-right 15px
+				&[style*='float:right']
+					margin-left 15px
+	&__share
+		color $colorBlue
+		font-size 2.4rem
+		line-height 1
+		text-align center
+		border solid $colorBlue
+		border-width 2px 0
+		padding-bottom 28px
+		margin 22px 0
+		@media $480
+			padding-top 22px
+		@media $640
+			display flex
+			justify-content space-between
+			align-items center
+		@media $1024
+			justify-content flex-start
+		&-title
+			background url('../i/like.jpg') no-repeat center 20px / 45px auto
+			padding-top 76px
+			@media $480
+				text-align left
+				background-position 72px center
+				padding-top 0
+				padding-left 136px
+			@media $640
+				width 350px
+				background-position 0 center
+				padding-left 68px
+			@media $1024
+				width auto
+		&-items
+			display flex
+			justify-content center
+			margin-top 20px
+			@media $640
+				margin-top 0
+			@media $1024
+				margin-left 30px
+		&-item
+			flex-shrink 0
+			height 34px
+			margin 0 10px
+			@media $1024
+				height 44px
+			&:first-child
+				margin-left 0
+			&:last-child
+				margin-right 0
+			&:hover
+				transform scale(1.3)
+			img
+				height 100%
+	&-featured
+		margin-bottom 34px
+		&__title
+			font-weight 500
+			font-size 3.6rem
+			line-height 4.8rem
+			text-transform uppercase
+			text-align center
+		&__items
+			margin-top 10px
+			@media $640
+				display flex
+				flex-wrap wrap
+				justify-content space-between
+			@media $1024
+				margin-top 25px
+		&__item
+			display none
+			@media $640
+				display block
+				width calc(50% - 7px)
+			@media $1024
+				width calc(33% - 12px)
+			&:first-child
+				display block
+			&:last-child
+				@media $640
+					display none
+				@media $1024
+					display block
+			&-pic
+				img
+					width 100%
+			&-date
+				font-style italic
+				font-size 1.8rem
+				text-align center
+				margin 10px 0
+				@media $640
+					text-align left
+			&-name
+				display block
+				color $colorBlue
+				font-weight 500
+				font-size 2.4rem
+				line-height 3rem
+				text-align center
+				@media $640
+					text-align left
+			&-descr
+				font-size 1.8rem
+				line-height 2.4rem
+				text-align center
+				margin 20px 0
+				@media $640
+					text-align left
+				p
+					margin 0
+			&-views
+				color $colorBlue
+				font-size 1.8rem
+				text-align center
+				margin-top 20px
+				@media $640
+					text-align left
+		&__more
+			text-align center
+			margin-top 15px
+			@media $640
+				margin-top 25px
+			.btn
+				width 100%
+				text-transform uppercase
+				@media $480
+					width auto
+					padding 0 70px
+/*  </article>  */

@@ -113,6 +113,32 @@
 		$(this).next('label[for="' + this.id + '"]').text($(this).val().replace(/^.*\\/, ""));
 	});
 
+	// about us gallery
+	$('.js-about-gallery').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		fade: true,
+		asNavFor: '.js-about-gallery-nav'
+	});
+	$('.js-about-gallery-nav').slick({
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		arrows: false,
+		asNavFor: '.js-about-gallery',
+		dots: true,
+		//centerMode: true,
+		focusOnSelect: true,
+		responsive: [
+			{
+				breakpoint: 1023,
+				settings: {
+					variableWidth: true,
+					centerMode: true,
+				}
+			},
+		]
+	});
+
 	function showMenu() {
 		if (!$('.nav__cover').length) $('body').prepend('<div class="nav__cover"></div>');
 		$('html').addClass('no-scroll');

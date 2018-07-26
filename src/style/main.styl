@@ -4336,3 +4336,168 @@ img
 				@media $480
 					width 336px
 /*  </about-us>  */
+
+/*  <get-sample>  */
+.get-sample
+	&__descr
+		font-size 2.4rem
+		line-height 3rem
+		text-align center
+		margin 10px 0
+		@media $640
+			text-align left
+	&__main
+		.container
+			max-width none
+			padding-right 0
+			padding-left 0
+			@media $640
+				max-width 570px
+				padding-right 8px
+				padding-left @padding-right
+			@media $768
+				max-width 740px
+			@media $1024
+				display flex
+				max-width 988px
+			@media $1280
+				max-width 1156px
+	&__form
+		color $colorWhite
+		background-color $colorBlue
+		padding 12px
+		@media $480
+			display flex
+			flex-wrap wrap
+			justify-content space-between
+		@media $1024
+			flex-grow 1
+			margin-right 15px
+		&-item
+			margin-top 12px
+			@media $480
+				width 100%
+				&--half
+					width calc(50% - 4px)
+				&:nth-child(2)
+					margin-top 0
+			&:first-child
+				margin-top 0
+			.input-text
+				height 43px
+				border 1px solid #0176aa
+			.textarea
+				height 146px
+				min-height 146px
+				border 1px solid #0176aa
+		&-title
+			font-size 1.8rem
+			line-height 3rem
+			margin-bottom 5px
+		&-descr
+			font-size 1.8rem
+			line-height 2.4rem
+			text-align center
+			margin 15px 0
+		&-submit
+			text-align center
+			@media $480
+				width 100%
+			.btn
+				width 100%
+				@media $480
+					width auto
+					padding 0 70px
+		&-rules
+			line-height 2.4rem
+			text-align center
+			margin-top 20px
+			@media $480
+				width 100%
+			a
+				color #a9def6
+				text-decoration underline
+				&:hover
+					text-decoration none
+	&__samples
+		display flex
+		flex-wrap wrap
+		justify-content space-between
+		margin-top 20px
+		@media $1024
+			flex-shrink 0
+			width 370px
+			margin-top 0
+		@media $1280
+			width 520px
+	&__sample
+		width 150px
+		height 150px
+		margin-bottom 5px
+		@media $480
+			width calc(50% - 6px)
+			height auto
+			margin-bottom 12px
+		@media $1024
+			&:last-child
+			&:nth-last-child(2)
+				margin-bottom 0
+		img
+			width 100%
+			height @width
+			object-fit cover
+	&__info
+		margin-top 30px
+		&-descr
+			font-size 2.4rem
+			line-height 3rem
+			text-align center
+			@media $640
+				text-align left
+				margin-top 15px
+		&-items
+			text-align center
+			margin-top 30px
+			margin 10px 0
+			counter-reset samples
+			@media $640
+				display flex
+				flex-wrap wrap
+				justify-content space-between
+				margin-top 0
+		&-item
+			position relative
+			font-size 1.8rem
+			line-height 2.4rem
+			padding-top 96px
+			margin-top 20px
+			@media $640
+				width calc(50% - 25px)
+				margin-top 40px
+			@media $1024
+				width calc(25% - 15px)
+			&::before
+				display flex
+				justify-content center
+				align-items center
+				position absolute
+				top 0
+				left 50%
+				width 82px
+				height @width
+				color $colorGreen
+				font-weight bold
+				font-size 4.8rem
+				line-height 1
+				border 5px solid $colorOrange
+				border-radius 50%
+				counter-increment samples
+				content counter(samples)
+				transform translateX(-50%)
+			span
+				display block
+				font-weight bold
+				font-size 2.4rem
+				line-height 3rem
+				margin-bottom 5px
+/*  </get-sample>  */

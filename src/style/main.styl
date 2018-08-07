@@ -3291,6 +3291,8 @@ img
 		line-height 1
 		border-bottom 1px solid $colorBlue
 		padding-bottom 20px
+		&--product
+			display block
 		@media $768
 			border-width 2px
 			padding-bottom 25px
@@ -3304,6 +3306,24 @@ img
 		border-top 1px solid $colorBlue
 		padding-top 20px
 		margin-top 20px
+		^[0]__title--product &
+			border-top 1px solid $colorBlue
+			padding-top 25px
+			margin-top 20px
+			@media $480
+				max-width 300px
+				border-top 0
+				padding-top 0
+				margin-right auto
+				margin-left auto
+			@media $640
+				max-width none
+				flex-wrap nowrap
+				justify-content space-between
+			@media $768
+				border-width 2px
+			@media $1280
+				justify-content flex-start
 		@media $480
 			justify-content space-between
 		@media $640
@@ -3324,6 +3344,33 @@ img
 			font-size 2rem
 			text-transform none
 			margin 8px 0
+			^[0]__title--product &
+				width 100%
+				text-align left
+				@media $480
+					flex-wrap nowrap
+					width 100%
+					text-align left
+				@media $640
+					flex-direction column
+					font-size 1.7rem
+					text-align center
+					svg
+						width 48px
+						height 48px
+				@media $768
+					flex-shrink 0
+					max-width none
+					width calc(33% - 20px)
+					font-weight normal
+					font-size 2rem
+				@media $1024
+					flex-direction row
+					text-align left
+					margin 0
+				@media $1280
+					max-width 290px
+					margin-right 80px
 			@media $480
 				flex-wrap wrap
 				justify-content center
@@ -3343,6 +3390,14 @@ img
 				margin-right 20px
 				margin-bottom 10px
 				transition all .2s
+				^[0]__title--product &
+					margin-bottom 0
+					@media $640
+						margin-right 0
+						margin-bottom 8px
+					@media $1024
+						margin-right 20px
+						margin-bottom 0
 				@media $1024
 					margin-right 0
 			a:hover&
@@ -4951,3 +5006,228 @@ img
 				^[-1]:nth-child(3) &
 					margin-bottom -10px
 /*  </about-panel>  */
+
+/*  <product>  */
+.product
+	&__wrap
+		@media $1024
+			display flex
+			margin-top 30px
+	&__gallery
+		margin 20px 0
+		@media $1024
+			width 466px
+			margin 0
+	&-gallery
+		&__main
+			margin-bottom 32px
+			img
+				width 100%
+		&__nav
+			margin 0 60px
+			&-item
+				height 60px
+				padding 0 8px
+				@media $480
+					height 90px
+				img
+					width 100%
+					height 100%
+					object-fit cover
+					transition all .2s
+			.slick-current img
+				border 7px solid $colorGreen
+			.slick-arrow
+				position absolute
+				top 50%
+				width 30px
+				height @width
+				text-indent -99999px
+				background none
+				border solid $colorText
+				margin-top -7px
+				cursor pointer
+				outline 0
+				transition all .2s
+				&:hover
+					border-color $colorBlue
+			.slick-prev
+				left -30px
+				border-width 3px 0 0 3px
+				transform rotate(-45deg) translateY(-50%)
+			.slick-next
+				right -30px
+				border-width 3px 3px 0 0
+				transform rotate(45deg) translateY(-50%)
+	&__system
+		&-title
+			display none
+			@media $640
+				display block
+				font-weight 500
+				font-size 3rem
+				line-height 3.6rem
+				border-bottom 2px solid currentColor
+				padding-bottom 12px
+				margin-top -8px
+		@media $1024
+			flex-grow 1
+			margin-left 25px
+	&-extra
+		&__item
+			display flex
+			font-size 2rem
+			border-bottom 1px solid #414242
+			padding 12px 0
+			&-name
+				flex-shrink 0
+				width 130px
+				@media $480
+					width 50%
+				&--country
+					width 170px
+					@media $480
+						width 50%
+			&-value
+				flex-grow 1
+				&--length
+				&--width
+				&--depth
+					padding-right 60px
+				&--length
+					background url('../i/product/length.png') no-repeat right 18px center
+				&--width
+					background url('../i/product/width.png') no-repeat right 10px center
+				&--depth
+					background url('../i/product/depth.png') no-repeat right 17px center
+				&--country
+					img
+						vertical-align middle
+						margin-top -2px
+						margin-right 8px
+	&-price
+		color $colorBlue
+		font-weight bold
+		font-size 3rem
+		line-height 1
+		text-align center
+		margin 15px 0
+		@media $480
+			text-align left
+		span
+			display block
+			color $colorText
+			font-weight normal
+			text-decoration line-through
+			margin-bottom 15px
+			@media $480
+				display inline
+				margin-right 25px
+				margin-bottom 0
+	&-btns
+		margin 15px 0 40px
+		@media $480
+			width 290px
+			margin 25px auto 40px
+		@media $768
+			width auto
+			text-align center
+			margin 25px 0
+		@media $1024
+			text-align right
+			margin-bottom 70px
+		.btn
+			flex-direction column
+			align-items flex-start
+			position relative
+			height 78px
+			font-weight 300
+			font-size 1.6rem
+			line-height 1
+			padding-left 76px
+			@media $480
+				width 100%
+			@media $768
+				width 290px
+				text-align left
+			@media $1024
+				vertical-align middle
+				width calc(50% - 20px)
+				height 110px
+			@media $1280
+				width 290px
+				height 78px
+			svg
+				position absolute
+				top 50%
+				left 20px
+				fill $colorWhite
+				transform translateY(-50%)
+			span
+				display block
+				font-size 1.8rem
+				text-transform uppercase
+				margin-bottom 5px
+		&__calc
+			margin-bottom 25px
+			@media $768
+				margin-right 25px
+				margin-bottom 0
+			svg
+				width 36px
+				height 44px
+		&__order
+			svg
+				width 41px
+				height 34px
+	&-text
+		&__descr
+			font-size 2.4rem
+			line-height 3rem
+			text-align center
+			margin 15px 0 30px
+			@media $640
+				text-align left
+				margin-bottom 0
+		&__items
+			counter-reset product
+			@media $640
+				display flex
+				flex-wrap wrap
+				justify-content space-between
+		&__item
+			position relative
+			font-size 1.8rem
+			line-height 2.4rem
+			text-align center
+			padding-top 95px
+			margin-top 15px
+			@media $640
+				width calc(50% - 20px)
+				margin-top 30px
+			@media $1024
+				width calc(25% - 20px)
+			span
+				display block
+				font-weight bold
+				font-size 2.4rem
+				line-height 3rem
+				margin-bottom 5px
+			&::before
+				display flex
+				justify-content center
+				align-items center
+				position absolute
+				top 0
+				left 50%
+				width 82px
+				height @width
+				color $colorGreen
+				font-weight bold
+				font-size 4.8rem
+				border 5px solid $colorOrange
+				border-radius 50%
+				counter-increment product
+				content counter(product)
+				transform translateX(-50%)
+/*  </product>  */

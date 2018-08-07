@@ -139,6 +139,23 @@
 		]
 	});
 
+	// product gallery
+	$('.js-product-gallery-main').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		fade: true,
+		adaptiveHeight: true,
+		asNavFor: '.js-product-gallery-nav'
+	});
+	$('.js-product-gallery-nav').slick({
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		asNavFor: '.js-product-gallery-main',
+		//centerMode: true,
+		focusOnSelect: true,
+	});
+
 	function showMenu() {
 		if (!$('.nav__cover').length) $('body').prepend('<div class="nav__cover"></div>');
 		$('html').addClass('no-scroll');

@@ -5427,10 +5427,16 @@ img
 	&-about
 		text-align center
 		margin 25px 0
+		@media $768
+			text-align left
 		&__descr
 			font-size 2.4rem
 			line-height 3rem
 			margin-bottom 25px
+		&__wrap
+			@media $1024
+				display flex
+				align-items center
 		&__earnings
 			position relative
 			color $colorGreen
@@ -5439,6 +5445,24 @@ img
 			border-top 10px solid $colorBlue
 			padding-top 10px
 			margin-top 255px
+			@media $480
+				display flex
+				flex-direction column
+				justify-content center
+				min-height 225px
+				font-size 2.4rem
+				line-height 3rem
+				text-align left
+				background url('../i/dealer/dealer-bg.png') no-repeat 5px bottom / auto 100%
+				border-top 0
+				border-bottom 10px solid $colorBlue
+				padding-top 0
+				padding-left 222px
+				margin-top 25px
+			@media $1024
+				flex-shrink 0
+				width 466px
+				margin-top 0
 			&::before
 				position absolute
 				bottom calc(100% + 10px)
@@ -5447,13 +5471,20 @@ img
 				height 226px
 				background url('../i/dealer/dealer-bg.png') no-repeat center 0 / 200px auto
 				content ''
+				@media $480
+					display none
 			span
 				color $colorBlue
 				font-weight bold
+				@media $480
+					font-size 3rem
 		&__support
 			font-size 2.4rem
 			line-height 3rem
 			margin 25px 0
+			@media $1024
+				flex-grow 1
+				margin 0 0 0 40px
 			p
 				&:first-child
 					margin-top 0
@@ -5466,6 +5497,8 @@ img
 		background-color $colorGreen
 		padding 30px 0
 		margin-bottom 44px
+		@media $1024
+			text-align left
 		&::after
 			position absolute
 			bottom -44px
@@ -5481,6 +5514,9 @@ img
 			line-height 3.6rem
 			text-transform uppercase
 			margin-bottom 25px
+			@media $768
+				font-size 3.6rem
+				line-height 4.8rem
 		&__descr
 			font-size 2.4rem
 			line-height 3rem
@@ -5492,11 +5528,18 @@ img
 	&-items
 		counter-reset dealer
 		margin 80px 0 30px
+		@media $640
+			display flex
+			flex-wrap wrap
+			margin 0 -30px
 		&__item
 			position relative
 			font-size 1.8rem
 			padding-top 60px
 			margin 25px 0
+			@media $640
+				width calc(50% - 60px)
+				margin 25px 30px
 			&::before
 				display flex
 				justify-content center
@@ -5515,17 +5558,20 @@ img
 				content counter(dealer)
 			img
 				position absolute
-				top -3px
+				top -6px
 				left 60px
 			&:nth-child(1) img
+				top -8px
 				width 49px
 			&:nth-child(2) img
 				width 44px
 			&:nth-child(3) img
 				width 65px
 			&:nth-child(4) img
+				top -8px
 				width 44px
 			&:nth-child(5) img
+				top 4px
 				width 78px
 			&:nth-child(6) img
 				width 69px
@@ -5542,6 +5588,11 @@ img
 		text-align center
 		background-color $colorBlue
 		padding 50px 0
+		&__items
+			@media $640
+				display flex
+				flex-wrap wrap
+				margin 0 -11px
 		&__title
 			font-weight 500
 			font-size 3.6rem
@@ -5551,9 +5602,21 @@ img
 		&__item
 			text-align center
 			margin 20px 0
+			@media $640
+				width calc(50% - 22px)
+				text-align left
+				margin 20px 11px 0
+			@media $1024
+				width calc(25% - 22px)
 			&-pic
 				height 340px
 				border 13px solid $colorWhite
+				@media $640
+					height 224px
+				@media $768
+					height 252px
+				@media $1024
+					height 178px
 				img
 					width 100%
 					height 100%
@@ -5565,6 +5628,8 @@ img
 	&-form
 		text-align center
 		margin 30px 0
+		@media $640
+			text-align left
 		&__title
 			font-weight 500
 			font-size 3rem
@@ -5574,11 +5639,24 @@ img
 			font-size 2.4rem
 			line-height 3rem
 			margin-bottom 25px
+		&__wrap
+			@media $1280
+				display flex
 		&__fields
 			text-align left
+			@media $1280
+				flex-shrink 0
+				width 572px
+		&__system
+			@media $1280
+				flex-grow 1
+				margin-left 30px
 		&__field
 		&__row
 			margin-bottom 25px
+			@media $640
+				position relative
+				padding-left 176px
 			label
 				display block
 				color $colorBlue
@@ -5586,40 +5664,61 @@ img
 				line-height 1
 				text-align left
 				margin-bottom 10px
+				@media $640
+					position absolute
+					top 50%
+					left 0
+					max-width 170px
+					transform translateY(-50%)
 			.input-text
 			.textarea
 				border 1px solid #787878
 				&::placeholder
 					color #797a7a
+		&__row
+			@media $1280
+				padding-left 0
+				label
+					position static
+					transform none
 		&__checkbox
 			position absolute
 			left -9999px
 			& + label
-				display block
+				display flex
+				align-items center
 				position relative
+				min-height 34px
 				color $colorText
 				font-size 2.4rem
 				line-height 1
 				padding-left 46px
 				margin-bottom 15px
+				@media $640
+					max-width none
+					transform none
+				@media $768
+					max-width 440px
 				&::before
 					position absolute
-					top 4px
+					top 50%
 					left 0
 					width 34px
 					height @width
 					border 1px solid #787878
 					content ''
 					cursor pointer
+					transform translateY(-50%)
 				&::after
 					position absolute
-					top 10px
+					top 50%
 					left 6px
 					width 22px
 					height @width
 					content ''
 					transition all .2s
 					cursor pointer
+					transform translateY(-50%)
 			&:checked + label
 				&::after
 					background-color $colorBlue
@@ -5629,13 +5728,34 @@ img
 			font-size 2.4rem
 			line-height 3rem
 			margin 20px 0
+			@media $640
+				text-align center
+			@media $768
+				text-align left
+				padding-left 176px
+			@media $1280
+				padding-left 0
 		&__btn
 			margin 20px 0
+			@media $640
+				text-align center
+			@media $768
+				text-align left
+				padding-left 176px
+			@media $1280
+				padding-left 0
 			.btn
 				font-weight 300
 				padding 0 46px
 		&__rules
 			margin 20px 0
+			@media $640
+				text-align center
+			@media $768
+				text-align left
+				padding-left 176px
+			@media $1280
+				padding-left 0
 			a
 				text-decoration underline
 				&:hover
@@ -5654,12 +5774,41 @@ img
 			font-size 3rem
 			line-height 3.6rem
 		&__contacts
+			@media $480
+				max-width 400px
+				margin auto
+			@media $640
+				max-width none
+			@media $768
+				max-width 500px
+			@media $1280
+				display flex
+				max-width none
 			&-contact
 				margin-top 40px
+				@media $480
+					position relative
+					text-align left
+					padding-left 86px
+					img
+						position absolute
+						top 5px
+						left 0
+				@media $1280
+					width calc(33% - 25px)
+					text-align center
+					padding-top 64px
+					padding-left 0
+					img
+						top 0
+						left 50%
+						transform translateX(-50%)
 				&:nth-child(1) img
 					max-width 52px
 				&:nth-child(2) img
 					max-width 58px
+					@media $1280
+						top 9px
 				&:nth-child(3) img
 					max-width 56px
 			&-title

@@ -5826,3 +5826,281 @@ img
 				line-height 3rem
 				margin-top 10px
 /*  </dealer>  */
+
+/*  <text-style>  */
+.text-style
+	font-size 1.8rem
+	h1
+		font-weight bold
+		font-size 3rem
+		&:first-of-type
+			margin-top 0
+	ul
+		list-style none
+		padding-left 0
+		margin-left 0
+	li
+		position relative
+		padding-left 24px
+		margin 15px 0
+		&::before
+			position absolute
+			top 4px
+			left 0
+			width 14px
+			height @width
+			background-color $colorBlue
+			content ''
+	p
+		&:first-of-type
+			margin-top 0
+		&:last-of-type
+			margin-bottom 0
+	blockquote
+		color $colorWhite
+		font-style italic
+		background-color $colorOrange
+		border-left 14px solid #a55b19
+		padding 10px 20px
+		margin-left 0
+	.blockquote-green
+		background-color $colorGreen
+		border-left-color #75e663
+/*  </text-style>  */
+
+/*  <notice-block>  */
+.notice-block
+	display flex
+	flex-direction column
+	justify-content center
+	position relative
+	min-height 80px
+	font-size 1.8rem
+	line-height 2.4rem
+	border 8px solid
+	padding 10px 36px 10px 66px
+	&::before
+		display flex
+		justify-content center
+		align-items center
+		position absolute
+		top 16px
+		left 14px
+		width 35px
+		height @width
+		font-size 1.8rem
+		border 4px solid
+		border-radius 50%
+	&__close
+		position absolute
+		top 12px
+		right 11px
+		font-weight bold
+		font-size 2.6rem
+		&:hover
+			text-decoration none
+		&::before
+			content 'х'
+		^[0]--error &
+			color $colorRed
+		^[0]--success &
+			color $colorGreen
+	&--error
+		border-color $colorRed
+		&::before
+			color @border-color
+			border-color @border-color
+			content '!'
+	&--success
+		border-color $colorGreen
+		&::before
+			color @border-color
+			border-color @border-color
+			content '?'
+/*  </notice-block>  */
+
+/*  <modal>  */
+.modal
+	display none
+	max-width 90%
+	width 670px
+	border 18px solid $colorBlue
+.modal-city
+	&__form
+		border-bottom 1px solid $colorBlue
+		padding-bottom 25px
+		.easy-autocomplete
+			width 100% !important
+			input
+				height 74px
+				font-size 2rem
+				background-color $colorWhite
+				border 2px solid #000
+				border-radius (@height / 2)
+				padding 0 40px
+				box-shadow none
+	&__input
+		width 100%
+		height 74px
+		font-size 2rem
+		background-color $colorWhite
+		border 2px solid #000
+		border-radius (@height / 2)
+		padding 0 40px
+	&__tip
+		color #7e7e7e
+		font-size 1.8rem
+		padding 0 40px
+		margin-top 15px
+		a
+			color currentColor
+			text-decoration underline
+			&:hover
+				text-decoration none
+	&__items
+		margin 0 40px
+		&-title
+			font-weight 500
+			font-size 2rem
+			line-height 2.4rem
+			margin 20px 0
+		&-list
+			columns 2
+	&__item
+		font-size 2rem
+		margin-bottom 5px
+.modal-callback
+	display none
+	max-width 1036px
+	width 90%
+	&.fancybox-content
+		padding 0
+	.fancybox-close-small
+		svg
+			stroke $colorWhite
+	&__wrap
+		display flex
+	&__items
+		width 50%
+		background-color #ededed
+		padding 50px 30px
+	&__item
+		position relative
+		padding-left 90px
+		margin 55px 0
+		&:first-child
+			margin-top 0
+		&:last-child
+			margin-bottom 0
+		img
+			position absolute
+			top 50%
+			left 0
+			transform translateY(-50%)
+		&:nth-child(1) img
+			width 72px
+			height 75px
+		&:nth-child(2) img
+			width 67px
+			height 86px
+		&:nth-child(3) img
+			width 69px
+			height 73px
+		&-title
+			font-weight bold
+			font-size 2.4rem
+			line-height 1
+			margin-bottom 10px
+		&-text
+			font-size 2rem
+			line-height 2.4rem
+			p
+				margin 0
+	&__form
+		display flex
+		flex-direction column
+		justify-content flex-start
+		color $colorWhite
+		background-color #0274a6
+		padding 20px 25px
+	&__tabs
+		text-align center
+	&__tab
+		display inline
+		color #fbe02c
+		font-size 2rem
+		line-height 2.4rem
+		margin 0 15px
+		cursor pointer
+		&:hover
+			text-decoration underline
+		&--active
+			color $colorWhite
+			font-weight 500
+			font-size 2.4rem
+			cursor default
+			&:hover
+				text-decoration none
+	&__descr
+		font-size 1.8rem
+		line-height 2.4rem
+		text-align center
+		margin 20px 0
+		p
+			margin 0
+		p&-thanks
+			font-weight bold
+			margin-top 10px
+	&__main
+		display none
+		&--active
+			display block
+			animation fadeIn .5s
+	&__row
+		position relative
+		margin-bottom 18px
+		.input-text
+			height 42px
+	&__btn
+		display flex
+		justify-content space-between
+		align-items center
+		.btn
+			font-size 1.8rem
+			text-transform uppercase
+	&__time
+		position relative
+		padding-left 36px
+		&::before
+			position absolute
+			top 50%
+			left 0
+			width 32px
+			height @width
+			background url('../i/system/time.svg') no-repeat 0 0 / auto 100%
+			content ''
+			transform translateY(-50%) rotate(25deg)
+			filter hue-rotate(310deg) brightness(200%)
+		.input-text
+			width 100px
+			height 42px
+			margin 0 5px
+	&__callback
+		text-align center
+		margin-top 30px
+	&__rules
+		flex-grow 1
+		display flex
+		align-items flex-end
+		color $colorText
+		text-align center
+		margin 28px -25px -20px
+		&-text
+			width 100%
+			background-color #ededed
+			padding 12px
+		a
+			text-decoration underline
+			&:hover
+				text-decoration none
+/*  </modal>  */

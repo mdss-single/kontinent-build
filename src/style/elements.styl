@@ -111,6 +111,41 @@ button
 			height 32px
 			fill @color
 			margin-right 13px
+.select
+	width 100%
+.jq-selectbox
+	&__select
+		height 40px
+		font inherit
+		line-height 40px
+		text-shadow none
+		background #fff
+		border 2px solid #bec0c0
+		border-radius 0
+		box-shadow inset 0 4px 7px rgba(#000, .35)
+		&:hover
+		&:active
+			background #fff
+			box-shadow inset 0 4px 7px rgba(#000, .35)
+		^[-1].focused &
+			border 2px solid #bec0c0
+	&__dropdown
+		font inherit
+		border 2px solid #bec0c0
+		border-radius 0
+		margin 0
+	li
+		color currentColor
+		min-height auto
+		padding 6px 12px
+		&.sel
+			color $colorWhite
+			background-color #A3ABB1
+			cursor default
+		.sel
+		&:hover
+			color $colorWhite
+			background-color $colorBlue
 /*  </inputs>  */
 
 /*  <layout>  */
@@ -175,6 +210,8 @@ button
 		color $colorOrange
 	&-gray
 		color $colorGray
+	&-red
+		color $colorRed
 .no-scroll
 	overflow hidden
 /*  </layout>  */

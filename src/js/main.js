@@ -7,6 +7,7 @@
 	// certificates carousel
 	$('.js-cert-list, .js-vacancy-gallery').slick({
 		mobileFirst: true,
+		swipeToSlide: true,
 		responsive: [
 		{
 			breakpoint: 639,
@@ -56,7 +57,7 @@
 
 	// showroom carousel
 	$('.js-homepage-showroom').slick({
-		slidesToScroll: 1,
+		//slidesToScroll: 1,
 		mobileFirst: true,
 		responsive: [
 		{
@@ -145,7 +146,7 @@
 	// product gallery
 	$('.js-product-gallery-main').slick({
 		slidesToShow: 1,
-		slidesToScroll: 1,
+		//slidesToScroll: 1,
 		arrows: false,
 		fade: true,
 		adaptiveHeight: true,
@@ -153,7 +154,7 @@
 	});
 	$('.js-product-gallery-nav').slick({
 		slidesToShow: 3,
-		slidesToScroll: 1,
+		//slidesToScroll: 1,
 		asNavFor: '.js-product-gallery-main',
 		//centerMode: true,
 		focusOnSelect: true,
@@ -174,13 +175,74 @@
 		}
 	});
 
+	// open callback window
+	$('.js-callback').on('click', function(e) {
+		e.preventDefault();
+		$.fancybox.open({
+			src  : '#modalCallback',
+			type : 'inline',
+			opts : {
+				touch: false,
+				lang : 'ru',
+				i18n : {
+					'ru' : {
+						CLOSE: 'Закрыть',
+						ERROR: 'Невозможно загрузить данные. Попробуйте еще раз.',
+					}
+				}
+			}
+		})
+	});
+
+	// modal callback tabs
+	$('.modal-callback__tabs').on('click', '.modal-callback__tab:not(.active)', function() {
+		$(this).addClass('modal-callback__tab--active').siblings().removeClass('modal-callback__tab--active').closest('.modal-callback__form').find('.modal-callback__main').removeClass('modal-callback__main--active').eq($(this).index()).addClass('modal-callback__main--active');
+	});
+	var tabIndex = window.location.hash.replace('#tab','')-1;
+	if (tabIndex != -1) $('.modal-callback__tabs div').eq(tabIndex).click();
+	$('a[href*=\\#tab]').on('click', function() {
+		var tabIndex = $(this).attr('href').replace(/(.*)#tab/, '')-1;
+		$('.modal-callback__tabs div').eq(tabIndex).click();
+	});
+
 	$('.js-notice-close').on('click', function(e) {
 		e.preventDefault();
 		$(this).closest('.notice-block').remove();
 	});
 
 	// open image
-	$('.js-fancybox').fancybox();
+	$('.js-fancybox').fancybox({
+		lang : 'ru',
+		i18n : {
+			'ru' : {
+				CLOSE: 'Закрыть',
+				NEXT: "Следующая",
+				PREV: "Предыдущая",
+				ERROR: 'Невозможно загрузить данные. Попробуйте еще раз.',
+				FULL_SCREEN: "На весь экран",
+				THUMBS: "Галерея",
+				ZOOM: "Увеличить"
+			}
+		},
+		protect: true
+	});
+
+	// product gallery zoom
+	$('.js-gallery').fancybox({
+		lang : 'ru',
+		i18n : {
+			'ru' : {
+				CLOSE: 'Закрыть',
+				NEXT: "Следующая",
+				PREV: "Предыдущая",
+				ERROR: 'Невозможно загрузить данные. Попробуйте еще раз.',
+				FULL_SCREEN: "На весь экран",
+				THUMBS: "Галерея",
+				ZOOM: "Увеличить"
+			}
+		},
+		protect: true,
+	});
 
 	// modal city tip
 	$('.js-modal-city-example').on('click', function(e) {
@@ -200,20 +262,8 @@
 		highlightPhrase: false
 	});
 
-	// modal callback tabs
-	$('.modal-callback__tabs').each(function(i) {
-		var storage = localStorage.getItem('tab' + i);
-		if (storage) {
-			$(this).find('.modal-callback__tab').removeClass('modal-callback__tab--active').eq(storage).addClass('modal-callback__tab--active').closest('.modal-callback__form').find('.modal-callback__main').removeClass('modal-callback__main--active').eq(storage).addClass('modal-callback__main--active');
-		}
-	});
-	$('.modal-callback__tabs').on('click', '.modal-callback__tab:not(.modal-callback__tab--active)', function() {
-		$(this).addClass('modal-callback__tab--active').siblings().removeClass('modal-callback__tab--active').closest('.modal-callback__form').find('.modal-callback__main').removeClass('modal-callback__main--active').eq($(this).index()).addClass('modal-callback__main--active');
-		var ulIndex = $('.modal-callback__tabs').index($(this).parents('.modal-callback__tabs'));
-		localStorage.removeItem('tab' + ulIndex);
-		localStorage.setItem('tab' + ulIndex, $(this).index());
-	});
-
+	// validate form
+	$('.js-validate').validate();
 
 	function showMenu() {
 		if (!$('.nav__cover').length) $('body').prepend('<div class="nav__cover"></div>');

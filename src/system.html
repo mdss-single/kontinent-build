@@ -1,30 +1,30 @@
 //= template/header.html
 		<div class="container">
-			<div>
+			<div style="margin:30px 0;">
 				<a href="#modalOne" class="js-modal">Вызывать модальное окно с текстом</a>
 			</div>
-			<div>
+			<div style="margin:30px 0;">
 				<a href="#modalCity" class="js-modal">Вызывать модальное окно выбора города</a>
 			</div>
-			<div>
+			<div style="margin:30px 0;">
 				<a href="#modalCallback" class="js-modal">Заказать звонок или написать сообщение</a>
 			</div>
-			<div class="notice-block notice-block--error">
+			<div class="notice-block notice-block--error" style="margin:30px 0;">
 				<a href="#" class="notice-block__close js-notice-close"></a>
 				К сожалению, при заполнении Вы допустили мелкую ошибку, пожалуйста, проверьте  указанную информацию еще раз. Извините за доставленные неудобства.
 			</div>
-			<div class="notice-block notice-block--success">
+			<div class="notice-block notice-block--success" style="margin:30px 0;">
 				<a href="#" class="notice-block__close js-notice-close"></a>
 				Хотите быть всегда в курсе скидок, акций и выгодных предложений? Подпишитесь и будьте всегда в теме.
 			</div>
-			<div>
+			<div style="margin:30px 0;">
 				<select name="" id="" class="select">
 					<option value="">пункт</option>
 					<option value="">пункт</option>
 					<option value="">пункт</option>
 				</select>
 			</div>
-			<div>
+			<div style="margin:30px 0;">
 				<select name="" id="" class="select" data-placeholder="Placeholder text">
 					<option value=""></option>
 					<option value="">пункт</option>
@@ -32,7 +32,7 @@
 					<option value="">пункт</option>
 				</select>
 			</div>
-			<div>
+			<div style="margin:30px 0;">
 				<div class="text-style">
 					<h1>Заголовок текста</h1>
 					<p>
@@ -133,22 +133,24 @@
 						<p class="modal-callback__descr-thanks">Спасибо за Ваше обращение.</p>
 					</div>
 					<div class="modal-callback__main modal-callback__main--active">
-						<div class="modal-callback__row">
-							<input type="text" name="" id="c1" class="input-text" placeholder="ф.и.о">
-						</div>
-						<div class="modal-callback__row">
-							<input type="email" name="" id="c2" class="input-text" placeholder="E-mail">
-						</div>
-						<div class="modal-callback__row">
-							<input type="tel" name="" id="c3" class="input-text" data-mask="+7 (000) 000-00-00" placeholder="контактный телефон">
-						</div>
-						<div class="modal-callback__row">
-							<textarea name="" id="c4" class="textarea" placeholder="Ваше сообщение *"></textarea>
-						</div>
-						<div class="modal-callback__btn">
-							<span>* поля обязательные для заполнения</span>
-							<button class="btn">отправить сообщение</button>
-						</div>
+						<form action="" class="js-validate">
+							<div class="modal-callback__row">
+								<input type="text" name="" id="c1" class="input-text" placeholder="ф.и.о" data-rule-required="true" data-msg="необходимо заполнить поле “Ф.И.О”">
+							</div>
+							<div class="modal-callback__row">
+								<input type="email" name="" id="c2" class="input-text" placeholder="E-mail">
+							</div>
+							<div class="modal-callback__row">
+								<input type="tel" name="" id="c3" class="input-text" data-mask="+7 (000) 000-00-00" placeholder="контактный телефон">
+							</div>
+							<div class="modal-callback__row">
+								<textarea name="" id="c4" class="textarea" placeholder="Ваше сообщение *"></textarea>
+							</div>
+							<div class="modal-callback__btn">
+								<span>* поля обязательные для заполнения</span>
+								<button type="submit" class="btn">отправить сообщение</button>
+							</div>
+						</form>
 					</div>
 					<div class="modal-callback__main">
 						<div class="modal-callback__row">

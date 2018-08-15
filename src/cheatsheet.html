@@ -1,0 +1,306 @@
+//= template/header.html
+		<div class="container">
+			<style>
+				.markup table {
+					width:100%;
+					margin-bottom:20px;
+				}
+					.markup table th {
+						font-weight:bold;
+						text-align:left;
+					}
+					.markup table th, .markup table td {
+						vertical-align:top;
+						border:1px solid #dfe2e5;
+						padding:8px 12px;
+					}
+					.elements td:first-child {
+						width:20%;
+					}
+					.elements td:last-child {
+						width:40%;
+					}
+					.elements td:nth-of-type(2) {
+						width:40%;
+					}
+				.markup h2 {
+					font-weight:300;
+					font-size:2.6rem;
+					margin:20px 0 10px;
+				}
+				.markup code {
+					font-family:"Courier New", Courier, monospace, sans-serif;
+					text-align:left;
+					color:#555;
+					background:#eaeaea;
+					border-radius:3px;
+				}
+					.markup pre {
+						background:#eaeaea;
+					}
+				.markup .overflow {
+					overflow-x:auto;
+					max-width:600px;
+				}
+					.markup .overflow pre {
+						padding:15px 5px;
+						margin:0 0 10px;
+					}
+						.markup .overflow pre:last-child {
+							margin:0;
+						}
+			</style>
+			<div class="full markup">
+				<h2>Основные классы</h2>
+				<table>
+					<tr>
+						<td><code>.tl</code></td>
+						<td>text-align:left</td>
+					</tr>
+					<tr>
+						<td><code>.tc</code></td>
+						<td>text-align:center</td>
+					</tr>
+					<tr>
+						<td><code>.tr</code></td>
+						<td>text-align:right</td>
+					</tr>
+					<tr>
+						<td><code>.rel</code></td>
+						<td>position:relative</td>
+					</tr>
+					<tr>
+						<td><code>.abs</code></td>
+						<td>position:absolute</td>
+					</tr>
+					<tr>
+						<td><code>.hide</code></td>
+						<td>display:none !important</td>
+					</tr>
+					<tr>
+						<td><code>.form__row</code></td>
+						<td>Задает отступ снизу</td>
+					</tr>
+					<tr>
+						<td><code>.no-scroll</code></td>
+						<td>Убирает прокрутку страницы, применяется для тега <code>html</code></td>
+					</tr>
+					<tr>
+						<td><code>.fadeIn</code></td>
+						<td class="fadeIn">Добавляет анимацию плавного появления элемента</td>
+					</tr>
+					<tr>
+						<td><code>.color-blue</code></td>
+						<td>Делает текст <span class="color-blue">синим</span></td>
+					</tr>
+					<tr>
+						<td><code>.color-green</code></td>
+						<td>Делает текст <span class="color-green">зеленым</span></td>
+					</tr>
+					<tr>
+						<td><code>.color-orange</code></td>
+						<td>Делает текст <span class="color-orange">оранжевым</span></td>
+					</tr>
+					<tr>
+						<td><code>.color-gray</code></td>
+						<td>Делает текст <span class="color-gray">серым</span></td>
+					</tr>
+					<tr>
+						<td><code>.color-red</code></td>
+						<td>Делает текст <span class="color-red">красным</span></td>
+					</tr>
+				</table>
+				<h2>Подключенные плагины</h2>
+				<ol>
+					<li><a href="https://github.com/pawelczak/EasyAutocomplete">Easy Autocomplete</a></li>
+					<li><a href="https://github.com/fancyapps/fancybox">Fancybox</a></li>
+					<li><a href="https://github.com/Dimox/jQueryFormStyler">Form Styler</a></li>
+					<li><a href="https://github.com/igorescobar/jQuery-Mask-Plugin">Input mask</a></li>
+					<li><a href="https://github.com/jquery-validation/jquery-validation">Form Validation</a></li>
+					<li><a href="https://github.com/kenwheeler/slick">SlickJS slider</a></li>
+					<li><a href="https://github.com/leafo/sticky-kit">Sticky Kit</a></li>
+				</ol>
+				<h2>Модальные окна</h2>
+				<p>Для вызова модальных окон подключен плагин <a href="http://fancyapps.com/fancybox/3/docs/">fancybox</a>. Для вызывающего элемента необходимо добавить класс <code>.js-modal</code>. Если это ссылка, то вызываемый адрес пишет в атрибуте href, если какой-то другой элемент, то прописывается атрибут <code>data-src="%target%"</code></p>
+				Примеры вызова окон можно посмотреть на странице <a href="system.html">system.html</a>
+				<h2>Валидация форм</h2>
+				<p>Для валидации форм подключен плагин <a href="https://github.com/jquery-validation/jquery-validation">jQuery Validate plugin</a></p>
+				<p>Для валидации формы необходимо прописать ей класс <code>.js-validate</code>. Правила валидации и текст сообщений об ошибке прописывается в дата-атрибуты. <a href="https://jqueryvalidation.org/reference/#link-error-messages">Пример на официальном сайте</a></p>
+				<h2>Маски ввода в текстовые поля</h2>
+				<p>Для данного функционала подключен плагин <a href="https://github.com/igorescobar/jQuery-Mask-Plugin">jQuery Input Mask</a></p>
+				<p>Есть возможность прописывать маски через дата-атрибут <code>data-mask</code></p>
+				<h2>Основные элементы</h2>
+				<table class="elements">
+					<tr>
+						<td><code>.input-text</code></td>
+						<td>
+							<div class="overflow">
+								<pre><code>&lt;input type="text" name="" id="" class="input-text" placeholder="Input text"></code></pre>
+								<pre><code>&lt;input type="email" name="" id="" class="input-text" placeholder="Input email"></code></pre>
+								<p>При указании типа поля email на мобильном устройстве будет вызвана клавиатура для ввода email. Обычно она отличается только наличием символа @</p>
+								<pre><code>&lt;input type="tel" name="" id="" class="input-text" placeholder="Input tel"></code></pre>
+								<pre><code>&lt;input type="number" name="" id="" class="input-text" placeholder="Input number"></code></pre>
+							</div>
+						</td>
+						<td><input type="text" name="" id="" class="input-text" placeholder="Input"></td>
+					</tr>
+					<tr>
+						<td><code>.textarea</code></td>
+						<td>
+							<div class="overflow">
+								<pre><code>&lt;textarea name="" id="" cols="30" rows="10" class="textarea" placeholder="Some text">&lt;/textarea></code></pre>
+							</div>
+						</td>
+						<td><textarea name="" id="" cols="30" rows="10" class="textarea" placeholder="Some text"></textarea></td>
+					</tr>
+					<tr>
+						<td><code>.select</code></td>
+						<td>
+							<div class="overflow">
+								<pre><code>&lt;select name="" id="" class="select">
+	&lt;option value="">Option 1&lt;/option>
+	&lt;option value="">Option 2&lt;/option>
+&lt;/select></code></pre>
+							</div>
+						</td>
+						<td><select name="" id="" class="select">
+							<option value="">Option 1</option>
+							<option value="">Option 2</option>
+						</select></td>
+					</tr>
+					<tr>
+						<td><code>.select</code></td>
+						<td>
+							<div class="overflow">
+								<p>Для добавления плейсхолдера необходимо прописать его в дата-атрибут <code>data-placeholder</code>, а также добавить один пустой элемент <code>option</code></p>
+								<pre><code>&lt;select name="" id="" class="select" data-placeholder="текст плейсхолдера">
+	&lt;option>&lt;/option>
+	&lt;option value="">Option 1&lt;/option>
+	&lt;option value="">Option 2&lt;/option>
+&lt;/select></code></pre>
+							</div>
+						</td>
+						<td><select name="" id="" class="select" data-placeholder="текст плейсхолдера">
+							<option></option>
+							<option value="">Option 1</option>
+							<option value="">Option 2</option>
+						</select></td>
+					</tr>
+					<tr>
+						<td><code>.btn</code></td>
+						<td>
+							<div class="overflow">
+								<pre><code>&lt;button class="btn">Button&lt;/button></code></pre>
+							</div>
+						</td>
+						<td><button class="btn">Button</button></td>
+					</tr>
+					<tr>
+						<td><code>.btn .btn--orange</code></td>
+						<td>
+							<div class="overflow">
+								<pre><code>&lt;button class="btn btn--orange">Orange Button&lt;/button></code></pre>
+							</div>
+						</td>
+						<td><button class="btn btn--orange">Orange Button</button></td>
+					</tr>
+					<tr>
+						<td><code>.btn .btn--gray</code></td>
+						<td>
+							<div class="overflow">
+								<pre><code>&lt;button class="btn btn--gray">Gray Button&lt;/button></code></pre>
+							</div>
+						</td>
+						<td><button class="btn btn--gray">Gray Button</button></td>
+					</tr>
+					<tr>
+						<td><code>.btn .btn--blue</code></td>
+						<td>
+							<div class="overflow">
+								<pre><code>&lt;button class="btn btn--blue">Blue Button&lt;/button></code></pre>
+							</div>
+						</td>
+						<td><button class="btn btn--blue">Blue Button</button></td>
+					</tr>
+					<tr>
+						<td><code>.btn .btn--small</code></td>
+						<td>
+							<div class="overflow">
+								<pre><code>&lt;button class="btn btn--small">Small Button&lt;/button></code></pre>
+							</div>
+						</td>
+						<td><button class="btn btn--small">Small Button</button></td>
+					</tr>
+					<tr>
+						<td><code>.btn .btn--large</code></td>
+						<td>
+							<div class="overflow">
+								<pre><code>&lt;button class="btn btn--large">Large Button&lt;/button></code></pre>
+							</div>
+						</td>
+						<td><button class="btn btn--large">Large Button</button></td>
+					</tr>
+					<tr>
+						<td><code>.btn .btn--fullwidth</code></td>
+						<td>
+							<div class="overflow">
+								<pre><code>&lt;button class="btn btn--fullwidth">Fullwidth button&lt;/button></code></pre>
+							</div>
+						</td>
+						<td><button class="btn btn--fullwidth">Fullwidth button</button></td>
+					</tr>
+					<tr>
+						<td><code>.btn .btn--blue .btn--fullwidth</code></td>
+						<td>
+							<div class="overflow">
+								<pre><code>&lt;button class="btn btn--blue btn--fullwidth">Combined button&lt;/button></code></pre>
+							</div>
+						</td>
+						<td><button class="btn btn--blue btn--fullwidth">Combined button</button></td>
+					</tr>
+					<tr>
+						<td><code>.input-file</code></td>
+						<td>
+							<div class="overflow">
+								<pre><code>&lt;input type="file" name="" id="inputFile" class="input-file js-input-file">&lt;label for="inputFile">Выбор файла&lt;/label></code></pre>
+							</div>
+						</td>
+						<td><input type="file" name="" id="inputFile" class="input-file js-input-file"><label for="inputFile">Выбор файла</label></td>
+					</tr>
+					<tr>
+						<td><code>.page-title.page-title--blue</code></td>
+						<td>
+							<div class="overflow">
+								<pre><code>&lt;div class="page-title page-title--blue">Синий Заголовок&lt;/div></code></pre>
+							</div>
+						</td>
+						<td>
+							<div class="page-title page-title--blue">Синий Заголовок</div>
+						</td>
+					</tr>
+					<tr>
+						<td><code>.page-title.page-title-green</code></td>
+						<td>
+							<div class="overflow">
+								<pre><code>&lt;div class="page-title page-title--green">Зеленый Заголовок&lt;/div></code></pre>
+							</div>
+						</td>
+						<td>
+							<div class="page-title page-title--green">Зеленый Заголовок</div>
+						</td>
+					</tr>
+					<tr>
+						<td><code>.page-title.page-title--orange</code></td>
+						<td>
+							<div class="overflow">
+								<pre><code>&lt;div class="page-title page-title--orange">Оранжевый Заголовок&lt;/div></code></pre>
+							</div>
+						</td>
+						<td>
+							<div class="page-title page-title--orange">Оранжевый Заголовок</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+//= template/footer.html

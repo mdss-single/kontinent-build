@@ -2938,7 +2938,7 @@ img
 		&-select
 			vertical-align middle
 			overflow hidden
-			width 160px
+			//width 160px
 			color $colorOrange
 			font-size 3rem
 			text-overflow ellipsis
@@ -4220,6 +4220,7 @@ img
 			width calc(100% - 420px)
 			margin-right 0
 		&-big
+			overflow hidden
 			border 8px solid $colorWhite
 			margin 0 25px
 			@media $480
@@ -4258,18 +4259,20 @@ img
 					display inline
 					vertical-align top
 		&-nav
+			overflow hidden
 			margin-top 17px
 			.slick-slide
+				width 100px
 				margin 0 3px
 			.slick-current
 				.about-us__gallery-item
 					border 5px solid $colorOrange
-					transition all .2s
 				a
 					display block
 				img
 					width 100%
 			.about-us__gallery-item
+				width 100px
 				@media $1024
 					width 100px
 	&__code
@@ -4486,12 +4489,10 @@ img
 		@media $1280
 			width 520px
 	&__sample
-		width 150px
-		height 150px
+		width calc(50% - 6px)
+		height auto
 		margin-bottom 5px
 		@media $480
-			width calc(50% - 6px)
-			height auto
 			margin-bottom 12px
 		@media $1024
 			&:last-child
@@ -5019,22 +5020,25 @@ img
 			width 466px
 			margin 0
 	&-gallery
+		overflow hidden
 		&__main
 			margin-bottom 32px
 			img
 				width 100%
 		&__nav
 			margin 0 60px
+			.slick-slide
+				outline none
 			&-item
 				height 60px
 				padding 0 8px
+				cursor pointer
 				@media $480
 					height 90px
 				img
 					width 100%
 					height 100%
 					object-fit cover
-					transition all .2s
 			.slick-current img
 				border 7px solid $colorGreen
 			.slick-arrow
@@ -5366,18 +5370,10 @@ img
 		@media $640
 			width calc(33% - 22px)
 		@media $1024
-			width calc(25% - 22px)
+			//width calc(25% - 22px)
 			margin 0 11px 50px
 		@media $1280
-			width calc(20% - 22px)
-		&-pic
-			margin-bottom 18px
-			transition all .2s
-			img
-				vertical-align top
-				width 100%
-			^[-1]:hover &
-				box-shadow 0 0 0 8px $colorOrange
+			//width calc(20% - 22px)
 		&-name
 			font-weight 500
 			font-size 2rem
@@ -5401,14 +5397,16 @@ img
 			margin 25px 0
 		&-btn
 			margin-top 25px
+			@media $1024
+				text-align center
 			.btn
 				width 100%
 				font-size 1.8rem
 				text-transform uppercase
 				text-align left
-				&:hover
-					svg
-						fill $colorWhite
+				@media $1024
+					width auto
+					padding 0 50px
 				svg
 					flex-shrink 0
 					width 36px
@@ -5420,6 +5418,63 @@ img
 						width 41px
 						height 34px
 						margin-right 12px
+				&:hover
+					svg
+						fill $colorWhite
+	&-item
+		&__gallery
+			margin-bottom 18px
+			transition all .2s
+			img
+				vertical-align top
+				width 100%
+			&-big
+				overflow hidden
+				border 8px solid $colorOrange
+				.catalog-item__gallery-item
+					vertical-align top
+					a
+						display block
+					img
+						display inline
+						vertical-align top
+			&-nav
+				padding 0 30px
+				margin-top 17px
+				.slick-slide
+					width 100px
+					margin 0 3px
+				.slick-current
+					.catalog-item__gallery-item
+						border 5px solid $colorOrange
+					a
+						display block
+					img
+						width 100%
+				.slick-arrow
+					position absolute
+					top 50%
+					width 30px
+					height @width
+					text-indent -99999px
+					background none
+					border solid $colorBlue
+					margin-top -8px
+					cursor pointer
+					outline 0
+					transition all .2s
+				.slick-prev
+					left 15px
+					border-width 3px 0 0 3px
+					transform rotate(-45deg) translateY(-50%)
+				.slick-next
+					right 15px
+					border-width 3px 3px 0 0
+					transform rotate(45deg) translateY(-50%)
+				.catalog-item__gallery-item
+					width 100px
+					@media $1024
+						width 100px
 /*  </catalog>  */
 
 /*  <dealer>  */

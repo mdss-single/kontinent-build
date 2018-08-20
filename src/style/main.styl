@@ -2938,7 +2938,7 @@ img
 		&-select
 			vertical-align middle
 			overflow hidden
-			//width 160px
+			max-width 320px
 			color $colorOrange
 			font-size 3rem
 			text-overflow ellipsis
@@ -3300,6 +3300,7 @@ img
 			width 100%
 			@media $768
 				width auto
+				max-width calc(100% - 470px)
 	&__links
 		display flex
 		flex-wrap wrap
@@ -5078,6 +5079,8 @@ img
 			flex-grow 1
 			margin-left 25px
 	&-extra
+		@media $1280
+			columns 2
 		&__item
 			display flex
 			font-size 2rem
@@ -5088,10 +5091,14 @@ img
 				width 130px
 				@media $480
 					width 50%
+				@media $1280
+					width 110px
 				&--country
 					width 170px
 					@media $480
 						width 50%
+					@media $1280
+						width 164px
 			&-value
 				flex-grow 1
 				&--length
@@ -5118,6 +5125,8 @@ img
 		margin 15px 0
 		@media $480
 			text-align left
+		@media $1280
+			margin 50px 0 25px
 		span
 			display block
 			color $colorText
@@ -5140,6 +5149,8 @@ img
 		@media $1024
 			text-align right
 			margin-bottom 70px
+		@media $1280
+			text-align left
 		.btn
 			flex-direction column
 			align-items flex-start
@@ -5917,6 +5928,7 @@ img
 		background-color $colorOrange
 		border-left 14px solid #a55b19
 		padding 10px 20px
+		margin-right 0
 		margin-left 0
 	.blockquote-green
 		background-color $colorGreen
@@ -6005,22 +6017,25 @@ img
 	&__tip
 		color #7e7e7e
 		font-size 1.8rem
-		padding 0 40px
 		margin-top 15px
+		@media $640
+			padding 0 40px
 		a
 			color currentColor
 			text-decoration underline
 			&:hover
 				text-decoration none
 	&__items
-		margin 0 40px
+		@media $640
+			margin 0 40px
 		&-title
 			font-weight 500
 			font-size 2rem
 			line-height 2.4rem
 			margin 20px 0
 		&-list
-			columns 2
+			@media $640
+				columns 2
 	&__item
 		font-size 2rem
 		margin-bottom 5px
@@ -6036,10 +6051,13 @@ img
 	&__wrap
 		display flex
 	&__items
-		flex-shrink 0
-		width 50%
-		background-color #ededed
-		padding 50px 30px
+		display none
+		@media $1024
+			display block
+			flex-shrink 0
+			width 50%
+			background-color #ededed
+			padding 50px 30px
 	&__item
 		position relative
 		padding-left 90px
@@ -6149,12 +6167,18 @@ img
 					content '!'
 					transform translateY(-50%)
 	&__btn
-		display flex
-		justify-content space-between
-		align-items center
+		text-align center
+		@media $640
+			display flex
+			justify-content space-between
+			align-items center
+			text-align left
 		.btn
 			font-size 1.8rem
 			text-transform uppercase
+			margin-top 10px
+			@media $640
+				margin-top 0
 	&__time
 		position relative
 		padding-left 36px
@@ -6169,9 +6193,13 @@ img
 			transform translateY(-50%) rotate(25deg)
 			filter hue-rotate(310deg) brightness(200%)
 		.input-text
-			width 100px
+			display block
+			width 100%
 			height 42px
-			margin 0 5px
+			@media $640
+				display inline
+				width 100px
+				margin 0 5px
 	&__callback
 		text-align center
 		margin-top 30px

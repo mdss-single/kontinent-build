@@ -1,14 +1,11 @@
-(function ( $ ) {
+$(function($, window){
 	$.fn.resizeselect = function(settings) {  
 		return this.each(function() { 
 			$(this).change(function(){
 				var $this = $(this);
 				// create test element
 				var text = $this.find("option:selected").text();
-				var $test = $("<span>").html(text).css({
-					"font-size": $this.css("font-size"), // ensures same size text
-					"visibility": "hidden"               // prevents FOUC
-				});
+				var $test = $("<span style=\"font-size:"+$this.css("font-size")+"\">").html(text);
 				// add to parent, get width, and get out
 				$test.appendTo($this.parent());
 				var width = $test.width();

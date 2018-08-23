@@ -6241,3 +6241,47 @@ img
 			&:hover
 				text-decoration none
 /*  </modal>  */
+
+/*  <error-page>  */
+.error-page
+	&__main
+		text-align center
+		margin 30px 0 20px
+		@media $1024
+			text-align left
+		&--404
+			background url('../i/error/404.jpg') no-repeat 0 0 / 110% auto
+			padding-top 180px
+			@media $480
+				padding-top 270px
+			@media $640
+				background-size 100% auto
+				padding-top 310px
+			@media $768
+				background-position center 0
+				background-size auto auto
+				padding-top 350px
+			@media $1024
+				display flex
+				flex-direction column
+				justify-content center
+				min-height 320px
+				background-position 0 0
+				padding-top 0
+				padding-left 570px
+			@media $1280
+				padding-left 620px
+		&-title
+			font-weight bold
+			font-size 2.4rem
+			line-height 3rem
+			@media $640
+				font-size 3rem
+				line-height 3.6rem
+		&-descr
+			font-size 1.8rem
+			margin-top 15px
+			@media $640
+				font-size 2.4rem
+				line-height 3.6rem
+/*  </error-page>  */

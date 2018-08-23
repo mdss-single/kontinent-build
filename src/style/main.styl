@@ -4,13 +4,14 @@
 html
 	font-size 62.5%
 	cursor default
-    -webkit-text-size-adjust 100%
-    -ms-text-size-adjust 100%
-	-webkit-tap-highlight-color rgba(0, 0, 0, 0)
+	-webkit-text-size-adjust 100%
+	-ms-text-size-adjust 100%
+	-webkit-tap-highlight-color #000
 	text-rendering optimizeLegibility
 	-webkit-font-smoothing antialiased
 	font-smoothing antialiased
 	-moz-osx-font-smoothing grayscale
+
 body
 	display flex
 	flex-direction column
@@ -318,7 +319,7 @@ img
 			height 2px
 			background-color $colorWhite
 	&__main
-		overflow-y auto
+		//overflow-y auto
 		position fixed
 		top 0
 		bottom @top
@@ -359,6 +360,7 @@ img
 		text-transform uppercase
 		border-bottom 1px solid $colorBlue
 		padding 8px 15px
+		position relative
 		@media $768
 			display inline
 			color $colorWhite
@@ -380,6 +382,26 @@ img
 				margin-left 10px
 				transform translateY(calc(-50% + 1px)) rotate(-45deg)
 				content ''
+		.sub
+			display none
+			position absolute;
+			left 0
+			top 100%
+			background $colorGreen
+			color $colorWhite
+			padding 10px 20px 15px
+			margin-left -20px
+			z-index 100
+			div
+				padding-top 5px
+				font-size 85%
+				a
+					white-space nowrap
+		a
+			color $colorWhite
+		&:hover .sub
+			display block
+
 /*  </nav>  */
 
 /*  <footer>  */
@@ -389,7 +411,7 @@ img
 	&__main
 		color $colorWhite
 		text-align center
-		margin 40px 0 35px
+		padding 40px 0 35px
 		@media $1024
 			display flex
 			flex-wrap wrap

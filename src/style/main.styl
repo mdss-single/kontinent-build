@@ -6285,3 +6285,267 @@ img
 				font-size 2.4rem
 				line-height 3.6rem
 /*  </error-page>  */
+
+/*  <contacts>  */
+.contacts
+	.container
+		padding-right 0
+		padding-left 0
+		@media $480
+			padding-right 8px
+			padding-left 8px
+	&-item
+		&:first-child
+			border-bottom 2px solid $colorBlue
+		&__address
+			display flex
+			flex-direction column
+			margin-top 15px
+			@media $480
+				margin-top 25px
+			@media $1024
+				flex-direction row
+		&__info
+			order 2
+			padding 0 8px
+			margin-top 25px
+			@media $480
+				padding 0
+			@media $1024
+				flex-shrink 0
+				order 1
+				width 344px
+				margin-top 0
+			&-title
+				color $colorBlue
+				font-weight 500
+				font-size 2.4rem
+				line-height 3rem
+				text-align center
+				margin-bottom 20px
+				@media $480
+					text-align left
+			&-item
+				position relative
+				padding-left 66px
+				margin 25px 0
+				&:nth-child(1) .contacts-item__info-pic
+					left 3px
+					width 50px
+					height 56px
+				&:nth-child(2) .contacts-item__info-pic
+					left 0
+					width 52px
+					height 55px
+				&:nth-child(3) .contacts-item__info-pic
+					left 3px
+					width 46px
+					height 33px
+				&:nth-child(4) .contacts-item__info-pic
+					left 6px
+					width 45px
+					height 51px
+			&-pic
+				position absolute
+				top 50%
+				transform translateY(-50%)
+			&-name
+				font-weight bold
+				font-size 2rem
+				line-height 2.4rem
+			&-value
+				font-size 1.8rem
+				line-height 2.4rem
+			&-text
+				font-size 1.8rem
+				line-height 1
+				text-align center
+				margin 15px 0
+				@media $480
+					text-align left
+				p
+					&:first-child
+						margin-top 0
+					&:last-child
+						margin-bottom 0
+			&-print
+				.btn
+					width 100%
+					height 69px
+					line-height 1
+					border-radius 20px
+					padding-left 56px
+					@media $480
+						width auto
+						height 50px
+						border-radius (@height / 2)
+						padding 0 20px
+					img
+						flex-shrink 0
+						margin-right 12px
+		&__map
+			order 1
+			height 305px
+			@media $640
+				height 400px
+			@media $1024
+				flex-grow 1
+				order 2
+				overflow hidden
+				height auto
+				margin-left 20px
+		&__route
+			text-align center
+			padding 0 8px
+			@media $480
+				text-align left
+				padding 0
+			@media $640
+				display flex
+				margin 40px 0 30px
+			&-item
+				padding 20px 0
+				@media $640
+					padding 0
+				&:nth-child(1)
+					@media $640
+						flex-grow 1
+						margin-right 25px
+				&:nth-child(2)
+					border-top 5px solid $colorBlue
+					@media $640
+						flex-shrink 0
+						width 300px
+						border-top 0
+						border-left 5px solid $colorBlue
+						padding-left 30px
+			&-title
+				font-weight 500
+				font-size 2.4rem
+				line-height 3rem
+				margin-bottom 10px
+				@media $640
+					text-transform uppercase
+			&-descr
+				font-size 1.8rem
+				line-height 2.4rem
+				p
+					margin 0
+		&__photo
+			margin-bottom 25px
+			img
+				vertical-align top
+	&-requisites
+		padding 0 8px
+		@media $480
+			padding 0
+		&__title
+			font-weight 500
+			font-size 2.4rem
+			line-height 3rem
+			text-align center
+			margin-bottom 10px
+			@media $480
+				text-align left
+			a
+				display block
+				font-weight normal
+				text-decoration underline
+				@media $480
+					display inline
+					margin-left 20px
+				&:hover
+					text-decoration none
+		&__text
+			font-size 1.8rem
+			line-height 3rem
+			text-align center
+			@media $480
+				text-align left
+			p
+				margin 0
+	&-dealer
+		margin 15px 0
+		@media $1024
+			display flex
+			justify-content space-between
+			align-items flex-start
+		&__attention
+			position relative
+			color $colorWhite
+			background-color $colorGreen
+			padding 35px 12px 35px 88px
+			@media $480
+				padding 30px 12px 30px 105px
+			@media $640
+				padding-top 15px
+				padding-bottom 20px
+			@media $1024
+				width calc(50% - 12px)
+				padding-top 30px
+				padding-bottom 40px
+			&::before
+				display flex
+				justify-content center
+				align-items center
+				position absolute
+				top 68px
+				left 17px
+				width 48px
+				height @width
+				color $colorWhite
+				font-weight 500
+				font-size 3.6rem
+				border 5px solid @color
+				border-radius 50%
+				content '!'
+				@media $480
+					left 36px
+				@media $640
+					top 50%
+					transform translateY(-50%)
+			&-title
+				font-weight 500
+				font-size 3.6rem
+				text-transform uppercase
+				margin-bottom 5px
+			&-descr
+				font-size 2.4rem
+				line-height 3rem
+		&__main
+			text-align center
+			padding 0 8px
+			margin-top 15px
+			@media $480
+				text-align left
+				padding 0
+			@media $640
+				margin-top 25px
+			@media $1024
+				width calc(50% - 12px)
+				margin-top 0
+				margin-left 25px
+			&-title
+				font-weight 500
+				font-size 3rem
+				line-height 3.6rem
+				@media $640
+					text-transform uppercase
+			&-descr
+				font-size 1.8rem
+				line-height 2.4rem
+				margin 10px 0
+				@media $480
+					font-size 2.4rem
+					line-height 3rem
+			&-btn
+				margin-top 20px
+				@media $1024
+					margin-top 25px
+				.btn
+					width 100%
+					@media $480
+						width auto
+						height 50px
+						padding 0 34px
+/*  </contacts>  */

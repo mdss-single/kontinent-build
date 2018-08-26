@@ -6549,3 +6549,79 @@ img
 						height 50px
 						padding 0 34px
 /*  </contacts>  */
+
+/*  <for-partners>  */
+.for-partners
+	&__descr
+		font-size 2.4rem
+		line-height 3rem
+		text-align center
+		margin 25px 0
+		@media $1024
+			text-align left
+	&__items
+		@media $1024
+			display flex
+			justify-content space-between
+	&__item
+		color $colorWhite
+		text-align center
+		background-color $colorBlue
+		padding-bottom 20px
+		margin 15px 0
+		transition all .2s
+		@media $640
+			padding-bottom 35px
+			margin 25px 0
+		@media $1024
+			width calc(33% - 13px)
+			padding-bottom 30px
+			margin 0
+		&:hover
+			background-color $colorOrange
+		&-pic
+			height 314px
+			@media $480
+				height 382px
+			@media $1024
+				height 188px
+			@media $1280
+				height 234px
+			img
+				width 100%
+				height 100%
+				object-fit cover
+		&-name
+			font-weight 500
+			font-size 2.4rem
+			line-height 3rem
+			margin 20px 10px 5px
+			@media $640
+				margin-top 30px
+				margin-bottom 15px
+			@media $1024
+				margin-top 25px
+		&-descr
+			font-size 1.8rem
+			line-height 2.4rem
+			margin 0 10px
+	&__call
+		font-size 2.4rem
+		line-height 3rem
+		text-align center
+		margin 20px 0
+		@media $1024
+			text-align left
+		a
+			color currentColor
+			font-weight bold
+			white-space nowrap
+	&__likeaboss
+		color $colorBlue
+		font-size 2.4rem
+		line-height 3rem
+		text-transform uppercase
+		text-align center
+		@media $1024
+			text-align left
+/*  </for-partners>  */

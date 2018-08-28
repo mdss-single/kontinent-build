@@ -286,6 +286,60 @@
 	// variable select width
 	$('.js-variable-select-width').resizeselect();
 
+	// objects gallery
+	$('.js-object-gallery-big').each(function() {
+		$(this).slick({
+			slidesToShow: 1,
+			arrows: false,
+			asNavFor: $(this).next('.js-object-gallery-preview'),
+		});
+	});
+	$('.js-object-gallery-preview').each(function() {
+		$(this).slick({
+			//slidesToScroll: 2,
+			mobileFirst: true,
+			slidesToShow: 2,
+			focusOnSelect: true,
+			asNavFor: $(this).prev('.js-object-gallery-big'),
+			responsive: [{
+				breakpoint: 479,
+				settings: {
+					slidesToShow: 3,
+					//slidesToScroll: 3,
+				}
+			},],
+		});
+	});
+
+	// object materials gallery
+	$('.js-object-materials').slick({
+		slidesToScroll: 2,
+		slidesToShow: 2,
+		mobileFirst: true,
+		responsive: [{
+			breakpoint: 479,
+			settings: {
+				slidesToShow: 4,
+				slidesToScroll: 4,
+			}
+		},
+		{
+			breakpoint: 1023,
+			settings: {
+				slidesToShow: 5,
+				slidesToScroll: 5,
+			}
+		},
+		],
+	});
+
+	// object show more text
+	$('.js-object-text-more').on('click', function(e) {
+		e.preventDefault();
+		$(this).next('.objects-item__more').addClass('objects-item__more--active');
+		$(this).remove();
+	});
+
 	function showMenu() {
 		if (!$('.nav__cover').length) $('body').prepend('<div class="nav__cover"></div>');
 		$('html').addClass('no-scroll');

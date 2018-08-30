@@ -135,12 +135,13 @@
 		asNavFor: '.js-about-gallery-nav',
 	});
 	$('.js-about-gallery-nav').slick({
-		slidesToShow: 4,
+		slidesToShow: 5,
 		slidesToScroll: 4,
-		arrows: false,
 		asNavFor: '.js-about-gallery',
 		//centerMode: true,
 		focusOnSelect: true,
+		infinite: false,
+		swipeToSlide: true,
 	});
 
 	// product gallery
@@ -156,6 +157,7 @@
 		asNavFor: '.js-product-gallery-main',
 		//centerMode: true,
 		focusOnSelect: true,
+		swipeToSlide: true,
 	});
 
 	// catalog gallery
@@ -175,6 +177,7 @@
 			//centerMode: true,
 			focusOnSelect: true,
 			asNavFor: $(this).prev('.js-catalog-gallery-main'),
+			swipeToSlide: true,
 		});
 	});
 
@@ -301,6 +304,7 @@
 			slidesToShow: 2,
 			focusOnSelect: true,
 			asNavFor: $(this).prev('.js-object-gallery-big'),
+			swipeToSlide: true,
 			responsive: [{
 				breakpoint: 479,
 				settings: {
@@ -316,6 +320,7 @@
 		slidesToScroll: 2,
 		slidesToShow: 2,
 		mobileFirst: true,
+		swipeToSlide: true,
 		responsive: [{
 			breakpoint: 479,
 			settings: {
